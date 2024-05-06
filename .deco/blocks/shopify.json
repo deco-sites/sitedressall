@@ -1,1 +1,1 @@
-{"__resolveType":"decohub/apps/shopify.ts","adminAccessToken":{},"platform":"shopify","storeName":"gimenesdevstore","storefrontAccessToken":"27c1ac16fe30a0fb6c5d634eeb63bf81"}
+{"__resolveType":"decohub/apps/shopify.ts","adminAccessToken":{"__resolveType":"website/loaders/secret.ts","encrypted":"28f00c3715d2339819ea29d435fb3fee6c8852ae82422f093d8f3b9e858149e3f0de40945787d52dbaba9809d6bb28d9"},"platform":"shopify","storeName":"19816d-54","storefrontAccessToken":"23bd0d0313294ced05e6b50506ceaa46"}
