@@ -227,7 +227,7 @@ function Footer({
         LAYOUT[layout?.backgroundColor ?? "Primary"],
       )}
     >
-      <div class=" bg-gray-200">
+      <div class="bg-gray-200">
         {(!layout?.variation || layout?.variation == "Variation 1") && (
           <div class="flex flex-col gap-10">
             <div class="flex flex-col md:flex-row md:justify-between md:flex-wrap lg:flex-nowrap gap-8 lg:gap-12">
@@ -303,7 +303,7 @@ function Footer({
           <div class="flex flex-col gap-10">
             {_newsletter}
             {layout?.hide?.newsletter ? <></> : <Divider />}
-            <div class="flex flex-col lg:flex-row gap-10 lg:gap-20 lg:justify-between px-12">
+            <div class="flex flex-col lg:flex-row gap-10 lg:gap-20 lg:justify-between px-12 container-newsletter">
               {_sectionLinks}
               <div class="flex flex-col md:flex-row lg:flex-col gap-10 lg:gap-10 lg:w-2/5 lg:pl-10">
                 <div class="flex flex-col md:flex-row gap-10 lg:gap-20">

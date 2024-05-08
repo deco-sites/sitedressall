@@ -54,6 +54,10 @@
     --dot-progress: 100%
   }
 }
+.collapse-arrow > .collapse-title:after{
+  display: none;
+}
+
 @media(max-width:1023px) {
   
   .max-width-100{
