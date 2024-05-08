@@ -32,7 +32,10 @@ export default function FooterItems(
                   <ul class={`flex flex-col gap-2 flex-wrap text-sm`}>
                     {section.items?.map((item) => (
                       <li>
-                        <a href={item.href} class="block py-1 link link-hover font-normal text-sm leading-5">
+                        <a
+                          href={item.href}
+                          class="block py-1 link link-hover font-normal text-sm leading-5"
+                        >
                           {item.label}
                         </a>
                       </li>
@@ -48,7 +51,6 @@ export default function FooterItems(
             {sections.map((section) => (
               <li>
                 <div class="collapse collapse-arrow ">
-                  
                   <label
                     htmlFor={section.label}
                     class="collapse-title min-h-[0] !p-0 flex gap-2 font-bold text-2xl collapse-arrow > collapse-title:after"
