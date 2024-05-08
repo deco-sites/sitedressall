@@ -54,3 +54,23 @@
     --dot-progress: 100%
   }
 }
+@media(max-width:1023px) {
+  
+  .max-width-100{
+    width: 100%;
+  }
+  .container-newsletter{
+    padding: 16px;
+  }
+  .flex-colunm{
+    display: flex;
+    flex-direction: column;
+  }
+}
+@media(min-width:375px) {
+  .check-box-text{
+    font-size: 12px;
+
+  }
+  
+}
