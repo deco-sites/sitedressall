@@ -17,8 +17,8 @@ export default {
         },
       },
       colors: {
-        orangePrimary: "#FE8330"
-      }
+        orangePrimary: "#FE8330",
+      },
     },
   },
 };
