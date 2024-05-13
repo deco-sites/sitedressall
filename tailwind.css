@@ -92,3 +92,7 @@
   }
   
 }
+
+.collapse-arrow .collapse-title:after {
+  top: 1rem;
+}
