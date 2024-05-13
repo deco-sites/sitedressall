@@ -27,7 +27,6 @@ export interface Props {
   // };
   list?: CategoryGridProps[];
   layout?: {
-    headerAlignment?: "center" | "left";
     categoryCard?: {
       textPosition?: "top" | "bottom";
       textAlignment?: "center" | "left";
@@ -79,7 +78,6 @@ function CategoryGrid(props: Props) {
     // },
     list = DEFAULT_LIST,
     layout = {
-      headerAlignment: "center",
       categoryCard: {
         textPosition: "bottom",
         textAlignment: "left",
@@ -125,7 +123,7 @@ function CategoryGrid(props: Props) {
                 </figure>
               )}
               <div class="absolute m-6">
-                <RichText text={text} />
+                <RichText text={text} textStyle="text-white" />
                 <Button
                   class="font-bold text-xl text-orangePrimary bg-white py-3 px-8 leading-none rounded-full"
                   aria-label={label}
