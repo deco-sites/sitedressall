@@ -34,7 +34,7 @@ export default function FooterItems(
                       <li>
                         <a
                           href={item.href}
-                          class="block py-1 link link-hover font-normal text-sm leading-5"
+                          class="block py-1 link link-hover font-normal text-sm leading-5 w-fit"
                         >
                           {item.label}
                         </a>
