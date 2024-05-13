@@ -60,6 +60,7 @@
 
 @media(max-width:1023px) {
   
+  
   .max-width-100{
     width: 100%;
   }
@@ -69,6 +70,19 @@
   .flex-colunm{
     display: flex;
     flex-direction: column;
+  }
+}
+
+@media(max-width:767px){
+  .socialmedia{
+    position: absolute;
+    left: 78%;
+    top: 76%;
+  }
+}
+@media(max-width:768px){
+  .sectionsocial{
+    flex-direction: row;
   }
 }
 @media(min-width:375px) {

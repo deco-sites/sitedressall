@@ -19,12 +19,12 @@ export default function FooterItems(
         <>
           {/* Tablet and Desktop view */}
           <ul
-            class={`hidden md:flex flex-row gap-6 lg:gap-10 ${
+            class={`hidden md:flex flex-row gap-6 lg:gap-10 w-full ${
               justify && "lg:justify-between"
             }`}
           >
             {sections.map((section) => (
-              <li>
+              <li class="w-full">
                 <div class="flex flex-col gap-2">
                   <span class="font-bold text-3xl leading-9">
                     {section.label}
