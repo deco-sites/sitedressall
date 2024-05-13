@@ -3,26 +3,28 @@ import { useId } from "../../sdk/useId.ts";
 import Image from "apps/website/components/Image.tsx";
 import type { ImageWidget } from "apps/admin/widgets.ts";
 import Button from "../../components/ui/Button.tsx";
+import RichText from "../Content/RichText.tsx";
 
 export interface CategoryGridProps {
   href?: string;
   image?: ImageWidget;
-  /** @description Alternative text */
+  // /** @description Alternative text */
   label?: string;
+  text: string;
   buttonText?: string;
 }
 
 export interface Props {
-  header?: {
-    /**
-     * @default Explore Our Categories
-     */
-    title?: string;
-    /**
-     * @default Your description here
-     */
-    description?: string;
-  };
+  // header?: {
+  //   /**
+  //    * @default Explore Our Categories
+  //    */
+  //   title?: string;
+  //   /**
+  //    * @default Your description here
+  //    */
+  //   description?: string;
+  // };
   list?: CategoryGridProps[];
   layout?: {
     headerAlignment?: "center" | "left";
@@ -39,38 +41,42 @@ const DEFAULT_LIST = [
     image:
       "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/2753/b2278d2d-2270-482b-98d4-f09d5f05ba97",
     label: "category",
-    buttonText: "Explore collection",
+    text: "teste",
+    buttonText: "conheça o simulador",
   },
   {
     href: "/category",
     image:
       "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/2753/b2278d2d-2270-482b-98d4-f09d5f05ba97",
     label: "category",
-    buttonText: "Explore collection",
+    text: "teste",
+    buttonText: "conheça o simulador",
   },
   {
     href: "/category",
     image:
       "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/2753/b2278d2d-2270-482b-98d4-f09d5f05ba97",
     label: "category",
-    buttonText: "Explore collection",
+    text: "teste",
+    buttonText: "conheça o simulador",
   },
   {
     href: "/category",
     image:
       "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/2753/b2278d2d-2270-482b-98d4-f09d5f05ba97",
     label: "category",
-    buttonText: "Explore collection",
+    text: "teste",
+    buttonText: "conheça o simulador",
   },
 ];
 
 function CategoryGrid(props: Props) {
   const id = useId();
   const {
-    header = {
-      title: "Explore Our Categories",
-      description: "Your description",
-    },
+    // header = {
+    //   title: "Explore Our Categories",
+    //   description: "Your description",
+    // },
     list = DEFAULT_LIST,
     layout = {
       headerAlignment: "center",
@@ -82,21 +88,16 @@ function CategoryGrid(props: Props) {
   } = props;
 
   return (
-    <div
-      id={id}
-      class="container mt-16"
-    >
-      <Header
+    <div id={id} class="container mt-16">
+      {/* <Header
         title={header.title}
         description={header.description || ""}
         alignment={layout.headerAlignment || "center"}
-      />
+      /> */}
 
       <div class="grid md:grid-cols-2 grid-cols-1 mt-6">
-        {list.map((
-          { href, image, label, buttonText },
-        ) => (
-          <div>
+        {list.map(({ href, image, label, text, buttonText }) => (
+          <div class="relative">
             <a
               href={href}
               class={`relative flex ${
@@ -109,25 +110,27 @@ function CategoryGrid(props: Props) {
                   : "flex-col"
               }`}
             >
-              {image &&
-                (
-                  <figure>
-                    <Image
-                      class="w-full"
-                      src={image}
-                      alt={label}
-                      width={720}
-                      height={480}
-                      loading="lazy"
-                    />
-                  </figure>
-                )}
-              <Button
-                class="font-light text-base-content bg-base-100 py-4 px-6 absolute m-6"
-                aria-label={label}
-              >
-                {buttonText}
-              </Button>
+              {image && (
+                <figure>
+                  <Image
+                    class="w-full"
+                    src={image}
+                    alt={label}
+                    width={720}
+                    height={480}
+                    loading="lazy"
+                  />
+                </figure>
+              )}
+              <div class="absolute m-6">
+                <RichText text={text} />
+                <Button
+                  class="font-bold text-xl text-orangePrimary bg-white py-3 px-8 leading-none rounded-full"
+                  aria-label={label}
+                >
+                  {buttonText}
+                </Button>
+              </div>
             </a>
           </div>
         ))}
