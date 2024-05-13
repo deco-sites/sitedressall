@@ -6,12 +6,12 @@ export interface FooterSocialMedia {
 }
 
 interface SocialMediaProps {
-  FooterSocialMedia?: FooterSocialMedia; 
+  FooterSocialMedia?: FooterSocialMedia;
 }
 
 export default function SocialMedia({ FooterSocialMedia }: SocialMediaProps) {
   if (!FooterSocialMedia) {
-    return null; 
+    return null;
   }
 
   return (
