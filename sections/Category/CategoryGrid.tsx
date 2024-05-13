@@ -87,15 +87,13 @@ function CategoryGrid(props: Props) {
 
   return (
     <div id={id} class="container mt-16">
-      {
-        /* <Header
+      {/* <Header
         title={header.title}
         description={header.description || ""}
         alignment={layout.headerAlignment || "center"}
-      /> */
-      }
+      /> */}
 
-      <div class="grid md:grid-cols-2 grid-cols-1 mt-6">
+      <div class="grid md:grid-cols-2 grid-cols-1 mt-6 gap-x-8">
         {list.map(({ href, image, label, text, buttonText }) => (
           <div class="relative">
             <a
@@ -113,7 +111,7 @@ function CategoryGrid(props: Props) {
               {image && (
                 <figure>
                   <Image
-                    class="w-full"
+                    class="w-full rounded-3xl"
                     src={image}
                     alt={label}
                     width={720}
@@ -123,9 +121,12 @@ function CategoryGrid(props: Props) {
                 </figure>
               )}
               <div class="absolute m-6">
-                <RichText text={text} textStyle="text-white" />
+                <RichText
+                  text={text}
+                  textStyle="text-white font-medium text-4xl"
+                />
                 <Button
-                  class="font-bold text-xl text-orangePrimary bg-white py-3 px-8 leading-none rounded-full"
+                  class="font-bold text-xl text-orangePrimary bg-white py-3 px-8 leading-none rounded-full mt-2.5 hover:bg-orangePrimary hover:text-white hover:underline"
                   aria-label={label}
                 >
                   {buttonText}
