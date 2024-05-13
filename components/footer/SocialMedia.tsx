@@ -2,27 +2,25 @@ import type { ImageWidget } from "apps/admin/widgets.ts";
 import Image from "apps/website/components/Image.tsx";
 
 export interface FooterSocialMedia {
-  src: ImageWidget;
+  image: ImageWidget;
   alt: string;
 }
 
 interface SocialMediaProps {
-  FooterSocialMedia?: FooterSocialMedia[];
+  footerSocialMedia?: FooterSocialMedia[];
 }
 
-export default function SocialMedia({ FooterSocialMedia }: SocialMediaProps) {
+export default function SocialMedia({ footerSocialMedia }: SocialMediaProps) {
   return (
     <div className="flex flex-col gap-4 socialmedia">
-      {FooterSocialMedia?.map((option, index) => (
-        <a key={index} href={option.src ? `/link-${index}` : "#"}>
-          <Image
-            loading="lazy"
-            src={option.src}
-            alt={option.alt}
-            width={200}
-            height={200}
-          />
-        </a>
+      {footerSocialMedia && footerSocialMedia.map((item, index) => (
+        <Image
+          key={index}
+          loading="lazy"
+          src={item.image}
+          alt={item.alt}
+          width={100}
+        />
       ))}
     </div>
   );
