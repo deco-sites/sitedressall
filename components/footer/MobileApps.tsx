@@ -4,7 +4,7 @@ export default function MobileApps(
   return (
     <>
       {(content?.apple || content?.android) && (
-        <div class="flex gap-2 lg:flex-wrap">
+        <div class="flex gap-2 lg:flex-wrap hidden">
           {content?.apple && (
             <a
               href={content?.apple}

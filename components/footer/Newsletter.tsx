@@ -46,44 +46,52 @@ function Newsletter(
   return (
     <div
       class={clx(
-        "flex flex-col gap-4",
-        tiled && "lg:flex-row lg:w-full lg:justify-between",
+        "flex flex-col gap-4 p-12 border-t border-b border-gray-700 container-newsletter",
+        tiled &&
+          "lg:flex-col lg:w-full lg:justify-between p-12 border-t border-b border-gray-700 container-newsletter",
       )}
     >
       <div class="flex flex-col gap-4">
         {content?.title && (
-          <h4 class={tiled ? "text-2xl lg:text-3xl" : "text-lg"}>
+          <h4 class={tiled ? "font-bold text-3xl leading-9" : "text-lg"}>
             {content?.title}
           </h4>
         )}
-        {content?.description && <div>{content?.description}</div>}
+        {content?.description && (
+          <div class="text-base font-normal">{content?.description}</div>
+        )}
       </div>
       <div class="flex flex-col gap-4">
         <form
-          class="form-control"
+          class="form-control gap-4"
           onSubmit={handleSubmit}
         >
-          <div class="flex flex-wrap gap-3">
+          <div class="flex flex-wrap gap-4 flex-colunm">
             <input
               name="email"
-              class="flex-auto md:flex-none input input-bordered md:w-80 text-base-content"
+              class=" flex-auto input rounded-3xl border-slate-600"
               placeholder={content?.form?.placeholder || "Digite seu email"}
+            />
+            <input
+              name="name"
+              class=" flex-auto input rounded-3xl border-slate-600"
+              placeholder={content?.form?.placeholder || "Digite seu nome"}
             />
             <button
               type="submit"
-              class="btn disabled:loading"
+              class=" btn disabled:loading rounded-3xl bg-gray-300 text-white w-1/5 text-xl hover:bg-orange-500 max-width-100"
               disabled={loading}
             >
-              {content?.form?.buttonText || "Inscrever"}
+              {content?.form?.buttonText || "me inscrever"}
             </button>
           </div>
+          <div class="flex gap-2">
+            <input type="checkbox" />
+            <span class="check-box-text text-base">
+              Preciso de ajuda para escolher e comprar
+            </span>
+          </div>
         </form>
-        {content?.form?.helpText && (
-          <div
-            class="text-sm"
-            dangerouslySetInnerHTML={{ __html: content?.form?.helpText }}
-          />
-        )}
       </div>
     </div>
   );

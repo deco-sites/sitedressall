@@ -1,16 +1,9 @@
-import BackToTop from "../../components/footer/BackToTop.tsx";
-import Divider from "../../components/footer/Divider.tsx";
-import ExtraLinks from "../../components/footer/ExtraLinks.tsx";
 import FooterItems from "../../components/footer/FooterItems.tsx";
 import Logo from "../../components/footer/Logo.tsx";
-import MobileApps from "../../components/footer/MobileApps.tsx";
-import PaymentMethods from "../../components/footer/PaymentMethods.tsx";
-import RegionSelector from "../../components/footer/RegionSelector.tsx";
-import Social from "../../components/footer/Social.tsx";
 import Newsletter from "../../islands/Newsletter.tsx";
 import { clx } from "../../sdk/clx.ts";
 import type { ImageWidget } from "apps/admin/widgets.ts";
-import PoweredByDeco from "apps/website/components/PoweredByDeco.tsx";
+import SocialMedia from "../../components/footer/SocialMedia.tsx";
 
 export type Item = {
   label: string;
@@ -21,28 +14,6 @@ export type Section = {
   label: string;
   items: Item[];
 };
-
-export interface SocialItem {
-  label:
-    | "Discord"
-    | "Facebook"
-    | "Instagram"
-    | "Linkedin"
-    | "Tiktok"
-    | "Twitter";
-  link: string;
-}
-
-export interface PaymentItem {
-  label: "Diners" | "Elo" | "Mastercard" | "Pix" | "Visa";
-}
-
-export interface MobileApps {
-  /** @description Link to the app */
-  apple?: string;
-  /** @description Link to the app */
-  android?: string;
-}
 
 export interface RegionOptions {
   currency?: Item[];
@@ -73,12 +44,7 @@ export interface Layout {
     logo?: boolean;
     newsletter?: boolean;
     sectionLinks?: boolean;
-    socialLinks?: boolean;
-    paymentMethods?: boolean;
-    mobileApps?: boolean;
-    regionOptions?: boolean;
-    extraLinks?: boolean;
-    backToTheTop?: boolean;
+    SocialMedia?: boolean;
   };
 }
 
@@ -94,20 +60,7 @@ export interface Props {
     form?: NewsletterForm;
   };
   sections?: Section[];
-  social?: {
-    title?: string;
-    items: SocialItem[];
-  };
-  payments?: {
-    title?: string;
-    items: PaymentItem[];
-  };
-  mobileApps?: MobileApps;
-  regionOptions?: RegionOptions;
-  extraLinks?: Item[];
-  backToTheTop?: {
-    text?: string;
-  };
+  SocialMedia?: SVGSVGElement;
   layout?: Layout;
 }
 
@@ -159,18 +112,7 @@ function Footer({
       },
     ],
   }],
-  social = {
-    title: "Redes sociais",
-    items: [{ label: "Instagram", link: "/" }, { label: "Tiktok", link: "/" }],
-  },
-  payments = {
-    title: "Formas de pagamento",
-    items: [{ label: "Mastercard" }, { label: "Visa" }, { label: "Pix" }],
-  },
-  mobileApps = { apple: "/", android: "/" },
-  regionOptions = { currency: [], language: [] },
-  extraLinks = [],
-  backToTheTop,
+
   layout = {
     backgroundColor: "Primary",
     variation: "Variation 1",
@@ -178,15 +120,11 @@ function Footer({
       logo: false,
       newsletter: false,
       sectionLinks: false,
-      socialLinks: false,
-      paymentMethods: false,
-      mobileApps: false,
-      regionOptions: false,
-      extraLinks: false,
-      backToTheTop: false,
+      SocialMedia: false,
     },
   },
 }: Props) {
+  const _SocialMedia = layout?.hide?.SocialMedia ? <></> : <SocialMedia />;
   const _logo = layout?.hide?.logo ? <></> : <Logo logo={logo} />;
   const _newsletter = layout?.hide?.newsletter ? <></> : (
     <Newsletter
@@ -204,72 +142,33 @@ function Footer({
         layout?.variation == "Variation 3"}
     />
   );
-  const _social = layout?.hide?.socialLinks
-    ? <></>
-    : <Social content={social} vertical={layout?.variation == "Variation 3"} />;
-  const _payments = layout?.hide?.paymentMethods
-    ? <></>
-    : <PaymentMethods content={payments} />;
-  const _apps = layout?.hide?.mobileApps
-    ? <></>
-    : <MobileApps content={mobileApps} />;
-  const _region = layout?.hide?.regionOptions
-    ? <></>
-    : <RegionSelector content={regionOptions} />;
-  const _links = layout?.hide?.extraLinks
-    ? <></>
-    : <ExtraLinks content={extraLinks} />;
 
   return (
     <footer
       class={clx(
-        "w-full flex flex-col pt-10 pb-2 md:pb-10 gap-10",
+        "w-full flex flex-col pt-10 gap-10",
         LAYOUT[layout?.backgroundColor ?? "Primary"],
       )}
     >
-      <div class="lg:container mx-6 lg:mx-auto">
+      <div class="bg-gray-200">
         {(!layout?.variation || layout?.variation == "Variation 1") && (
           <div class="flex flex-col gap-10">
             <div class="flex flex-col md:flex-row md:justify-between md:flex-wrap lg:flex-nowrap gap-8 lg:gap-12">
               {_logo}
               {_sectionLinks}
               {_newsletter}
-            </div>
-            <Divider />
-            <div class="flex flex-col md:flex-row gap-10 md:gap-14 md:items-end">
-              {_payments}
-              {_social}
-              <div class="flex flex-col lg:flex-row gap-10 lg:gap-14 lg:items-end">
-                {_apps}
-                {_region}
-              </div>
-            </div>
-            <Divider />
-            <div class="flex flex-col-reverse md:flex-row md:justify-between gap-10">
-              <PoweredByDeco />
-              {_links}
+              {_SocialMedia}
             </div>
           </div>
         )}
         {layout?.variation == "Variation 2" && (
           <div class="flex flex-col gap-10">
             <div class="flex flex-col md:flex-row gap-10">
-              <div class="flex flex-col gap-10 lg:w-1/2">
-                {_logo}
-                {_social}
-                {_payments}
-                {_apps}
-                {_region}
-              </div>
               <div class="flex flex-col gap-10 lg:gap-20 lg:w-1/2 lg:pr-10">
                 {_newsletter}
                 {_sectionLinks}
+                {_SocialMedia}
               </div>
-            </div>
-            <Divider />
-            <div class="flex flex-col-reverse md:flex-row md:justify-between gap-10">
-              <PoweredByDeco />
-              {_links}
             </div>
           </div>
         )}
@@ -279,81 +178,36 @@ function Footer({
             <div class="flex flex-col lg:flex-row gap-14">
               <div class="flex flex-col md:flex-row lg:flex-col md:justify-between lg:justify-normal gap-10 lg:w-2/5">
                 {_newsletter}
-                <div class="flex flex-col gap-10">
-                  {_payments}
-                  {_apps}
-                </div>
               </div>
               <div class="flex flex-col gap-10 lg:gap-20 lg:w-3/5 lg:items-end">
                 <div class="flex flex-col md:flex-row gap-10">
                   {_sectionLinks}
-                  {_social}
+                  {_SocialMedia}
                 </div>
-                {_region}
               </div>
-            </div>
-            <Divider />
-            <div class="flex flex-col-reverse md:flex-row md:justify-between gap-10">
-              <PoweredByDeco />
-              {_links}
             </div>
           </div>
         )}
         {layout?.variation == "Variation 4" && (
           <div class="flex flex-col gap-10">
             {_newsletter}
-            {layout?.hide?.newsletter ? <></> : <Divider />}
-            <div class="flex flex-col lg:flex-row gap-10 lg:gap-20 lg:justify-between">
+            <div class="flex flex-col lg:flex-row gap-10 lg:gap-20 lg:justify-between px-12 container-newsletter relative sectionsocial pb-12">
               {_sectionLinks}
-              <div class="flex flex-col md:flex-row lg:flex-col gap-10 lg:gap-10 lg:w-2/5 lg:pl-10">
-                <div class="flex flex-col md:flex-row gap-10 lg:gap-20">
-                  <div class="lg:flex-auto">
-                    {_payments}
-                  </div>
-                  <div class="lg:flex-auto">
-                    {_social}
-                  </div>
-                </div>
-                <div class="flex flex-col gap-10 lg:gap-10">
-                  {_region}
-                  {_apps}
-                </div>
-              </div>
-            </div>
-            <Divider />
-            <div class="flex flex-col md:flex-row md:justify-between gap-10 md:items-center">
-              {_logo}
-              <PoweredByDeco />
+              {_SocialMedia}
             </div>
           </div>
         )}
         {layout?.variation == "Variation 5" && (
           <div class="flex flex-col gap-10">
             {_newsletter}
-            {layout?.hide?.newsletter ? <></> : <Divider />}
             {_logo}
             <div class="flex flex-col md:flex-row gap-10 lg:gap-20 md:justify-between">
               {_sectionLinks}
-              <div class="flex flex-col gap-10 md:w-2/5 lg:pl-10">
-                {_payments}
-                {_social}
-                {_apps}
-              </div>
-            </div>
-            <Divider />
-            <div class="flex flex-col-reverse md:flex-row md:justify-between gap-10 md:items-center">
-              <PoweredByDeco />
-              <div class="flex flex-col md:flex-row gap-10 md:items-center">
-                {_links}
-                {_region}
-              </div>
+              {_SocialMedia}
             </div>
           </div>
         )}
       </div>
-      {layout?.hide?.backToTheTop
-        ? <></>
-        : <BackToTop content={backToTheTop?.text} />}
     </footer>
   );
 }
