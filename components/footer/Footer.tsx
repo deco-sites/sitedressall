@@ -3,7 +3,7 @@ import Logo from "../../components/footer/Logo.tsx";
 import Newsletter from "../../islands/Newsletter.tsx";
 import { clx } from "../../sdk/clx.ts";
 import type { ImageWidget } from "apps/admin/widgets.ts";
-import SocialMedia from "../../components/footer/SocialMedia.tsx";
+import SocialMedia from "./SocialMedia.tsx";
 
 export type Item = {
   label: string;
