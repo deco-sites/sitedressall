@@ -87,11 +87,13 @@ function CategoryGrid(props: Props) {
 
   return (
     <div id={id} class="container mt-16">
-      {/* <Header
+      {
+        /* <Header
         title={header.title}
         description={header.description || ""}
         alignment={layout.headerAlignment || "center"}
-      /> */}
+      /> */
+      }
 
       <div
         class={`grid md:${
