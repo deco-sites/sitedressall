@@ -31,6 +31,7 @@ export default function SocialMedia() {
             />
           </defs>
         </svg>
+        <span class="font-bold">texto</span>
       </a>
       <a href="/whatsapp">
         <svg
