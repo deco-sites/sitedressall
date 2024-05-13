@@ -2,7 +2,7 @@ import type { ImageWidget } from "apps/admin/widgets.ts";
 import Image from "apps/website/components/Image.tsx";
 
 export interface FooterSocialMedia {
-  image:ImageWidget; 
+  image: ImageWidget;
   alt: string;
 }
 
@@ -19,7 +19,7 @@ export default function SocialMedia({ footerSocialMedia }: SocialMediaProps) {
           loading="lazy"
           src={item.image}
           alt={item.alt}
-          width={100} 
+          width={100}
         />
       ))}
     </div>

@@ -495,6 +495,10 @@
       "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/239/79a5eab5-4a2c-4bf5-a424-ff6f141a430c",
       "description": "O estilo pensado para você"
     },
+    "FooterSocialMedia": {
+      "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/239/79a5eab5-4a2c-4bf5-a424-ff6f141a430c",
+      "alt": "texto"
+    },
     "layout": {
       "hide": {
         "logo": false,
@@ -703,6 +707,10 @@
       "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/239/79a5eab5-4a2c-4bf5-a424-ff6f141a430c",
       "description": "O estilo pensado para você"
     },
+    "FooterSocialMedia": {
+      "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/239/79a5eab5-4a2c-4bf5-a424-ff6f141a430c",
+      "alt": "texto"
+    },
     "layout": {
       "hide": {
         "logo": false,
@@ -909,6 +917,10 @@
     "logo": {
       "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/239/79a5eab5-4a2c-4bf5-a424-ff6f141a430c",
       "description": "O estilo pensado para você"
+    },
+    "FooterSocialMedia": {
+      "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/239/79a5eab5-4a2c-4bf5-a424-ff6f141a430c",
+      "alt": "texto"
     },
     "layout": {
       "hide": {
@@ -1117,6 +1129,7 @@
       "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/239/79a5eab5-4a2c-4bf5-a424-ff6f141a430c",
       "description": "O estilo pensado para você"
     },
+    
     "layout": {
       "hide": {
         "logo": false,
@@ -1269,6 +1282,10 @@
         ]
       }
     ],
+    "FooterSocialMedia": {
+      "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/239/79a5eab5-4a2c-4bf5-a424-ff6f141a430c",
+      "alt": "texto"
+    },
     "extraLinks": [
       {
         "href": "http://www.google.com",
@@ -1323,6 +1340,10 @@
     "logo": {
       "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/239/79a5eab5-4a2c-4bf5-a424-ff6f141a430c",
       "description": "O estilo pensado para você"
+    },
+    "FooterSocialMedia": {
+      "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/239/79a5eab5-4a2c-4bf5-a424-ff6f141a430c",
+      "alt": "texto"
     },
     "layout": {
       "hide": {
