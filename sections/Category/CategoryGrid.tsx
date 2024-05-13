@@ -89,11 +89,13 @@ function CategoryGrid(props: Props) {
 
   return (
     <div id={id} class="container mt-16">
-      {/* <Header
+      {
+        /* <Header
         title={header.title}
         description={header.description || ""}
         alignment={layout.headerAlignment || "center"}
-      /> */}
+      /> */
+      }
 
       <div class="grid md:grid-cols-2 grid-cols-1 mt-6">
         {list.map(({ href, image, label, text, buttonText }) => (
