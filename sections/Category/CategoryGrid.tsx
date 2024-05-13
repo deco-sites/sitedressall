@@ -93,7 +93,11 @@ function CategoryGrid(props: Props) {
         alignment={layout.headerAlignment || "center"}
       /> */}
 
-      <div class="grid md:grid-cols-2 grid-cols-1 mt-6 gap-x-8">
+      <div
+        class={`grid md:${
+          list.length > 1 ? "grid-cols-2" : "grid-cols-1"
+        } grid-cols-1 mt-6 gap-x-8`}
+      >
         {list.map(({ href, image, label, text, buttonText }) => (
           <div class="relative">
             <a
@@ -124,6 +128,7 @@ function CategoryGrid(props: Props) {
                 <RichText
                   text={text}
                   textStyle="text-white font-medium text-4xl"
+                  containerWidth={490}
                 />
                 <Button
                   class="font-bold text-xl text-orangePrimary bg-white py-3 px-8 leading-none rounded-full mt-2.5 hover:bg-orangePrimary hover:text-white hover:underline"
