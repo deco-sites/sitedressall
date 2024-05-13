@@ -84,20 +84,18 @@ function CategoryGrid(props: Props) {
       },
     },
   } = props;
-
+  const listQTE = list?.length > 1;
   return (
     <div id={id} class="container mt-16">
-      {
-        /* <Header
+      {/* <Header
         title={header.title}
         description={header.description || ""}
         alignment={layout.headerAlignment || "center"}
-      /> */
-      }
+      /> */}
 
       <div
         class={`grid md:${
-          list.length > 1 ? "grid-cols-2" : "grid-cols-1"
+          listQTE ? "grid-cols-2" : "grid-cols-1"
         } grid-cols-1 mt-6 gap-x-8`}
       >
         {list.map(({ href, image, label, text, buttonText }) => (
@@ -126,7 +124,7 @@ function CategoryGrid(props: Props) {
                   />
                 </figure>
               )}
-              <div class="absolute m-6">
+              <div class={`absolute ${listQTE ? "m-6" : "ml-6 mb-[105px]"}`}>
                 <RichText
                   text={text}
                   textStyle="text-white font-medium text-4xl"
