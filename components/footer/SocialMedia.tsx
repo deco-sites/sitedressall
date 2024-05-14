@@ -18,8 +18,6 @@ export default function SocialMedia({ footerSocialMedia }: Props) {
           alt={footerSocialMedia?.alt}
           width={100}
         />
-        
-        
       )}
       {footerSocialMedia?.image && (
         <Image
@@ -28,7 +26,6 @@ export default function SocialMedia({ footerSocialMedia }: Props) {
           alt={footerSocialMedia?.alt}
           width={100}
         />
-        
       )}
     </div>
   );
