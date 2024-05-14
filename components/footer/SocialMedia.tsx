@@ -24,7 +24,7 @@ export default function SocialMedia({ footerSocialMedia }: Props) {
           loading="lazy"
           src={footerSocialMedia?.image}
           alt={footerSocialMedia?.alt}
-          width={100}
+          width={50}
         />
       )}
     </div>
