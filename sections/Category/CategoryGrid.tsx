@@ -87,13 +87,11 @@ function CategoryGrid(props: Props) {
   const listQTE = list?.length > 1;
   return (
     <div id={id} class="container mt-16">
-      {
-        /* <Header
+      {/* <Header
         title={header.title}
         description={header.description || ""}
         alignment={layout.headerAlignment || "center"}
-      /> */
-      }
+      /> */}
 
       <div
         class={`grid md:${
@@ -105,8 +103,8 @@ function CategoryGrid(props: Props) {
             <div
               class="absolute bg-gradient-to-b from-transparent via-transparent to-black h-full w-full rounded-3xl"
               style={{
-                backgroundImage:
-                  "linear-gradient(254.71deg, rgba(0, 0, 0, 0) 33.72%, rgba(0, 0, 0, 0.8) 100.2%)",
+                background:
+                  "linear-gradient(254deg, rgba(0, 0, 0, 0) 33%, rgba(0, 0, 0, 0.8) 100%)",
               }}
             />
             <a
