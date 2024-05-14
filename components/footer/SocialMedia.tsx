@@ -6,11 +6,11 @@ export interface FooterSocialMedia {
   alt: string;
 }
 
-interface SocialMediaProps {
+interface Props {
   footerSocialMedia?: FooterSocialMedia[];
 }
 
-export default function SocialMedia({ footerSocialMedia }: SocialMediaProps) {
+export default function SocialMedia({ footerSocialMedia }: Props) {
   return (
     <div className="flex flex-col gap-4 socialmedia">
       {footerSocialMedia && footerSocialMedia.map((item, index) => (

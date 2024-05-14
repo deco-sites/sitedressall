@@ -495,10 +495,6 @@
       "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/239/79a5eab5-4a2c-4bf5-a424-ff6f141a430c",
       "description": "O estilo pensado para você"
     },
-    "FooterSocialMedia": {
-      "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/239/79a5eab5-4a2c-4bf5-a424-ff6f141a430c",
-      "alt": "texto"
-    },
     "layout": {
       "hide": {
         "logo": false,
