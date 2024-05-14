@@ -58,7 +58,7 @@ export default function ReusableSection(
       const index = parseInt(tabIndex, 10);
       const tabButtons = document.querySelectorAll(".tab-button");
       const tabContents = document.querySelectorAll(".tab-content");
-
+  
       tabButtons.forEach((btn, idx) => {
         if (idx === index) {
           btn.classList.add("active");
@@ -66,7 +66,7 @@ export default function ReusableSection(
           btn.classList.remove("active");
         }
       });
-
+  
       tabContents.forEach((content, idx) => {
         if (idx === index) {
           content.classList.add("active");
@@ -76,4 +76,5 @@ export default function ReusableSection(
       });
     }
   }
+  
 }
