@@ -9,8 +9,7 @@ export interface Props {
 }
 
 const defaultProps = {
-  image:
-    "https://placehold.co/100x100",
+  image: "https://placehold.co/100x100",
   alt: "teste",
 };
 
