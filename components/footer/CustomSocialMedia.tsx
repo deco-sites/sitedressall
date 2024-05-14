@@ -8,7 +8,15 @@ export interface Props {
   };
 }
 
-export default function SocialMedia({ footerSocialMedia }: Props) {
+const defaultProps = {
+  image:
+    "https://placehold.co/100x100",
+  alt: "teste",
+};
+
+export default function CustomSocialMedia({
+  footerSocialMedia = defaultProps,
+}: Props) {
   return (
     <div className="flex flex-col gap-4 socialmedia">
       {footerSocialMedia?.image && (
@@ -17,6 +25,7 @@ export default function SocialMedia({ footerSocialMedia }: Props) {
           src={footerSocialMedia?.image}
           alt={footerSocialMedia?.alt}
           width={100}
+          height={100}
         />
       )}
       {footerSocialMedia?.image && (
@@ -25,6 +34,7 @@ export default function SocialMedia({ footerSocialMedia }: Props) {
           src={footerSocialMedia?.image}
           alt={footerSocialMedia?.alt}
           width={100}
+          height={100}
         />
       )}
     </div>
