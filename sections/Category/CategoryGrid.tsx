@@ -84,7 +84,7 @@ function CategoryGrid(props: Props) {
       },
     },
   } = props;
-
+  const listQTE = list?.length > 1;
   return (
     <div id={id} class="container mt-16">
       {
@@ -95,12 +95,23 @@ function CategoryGrid(props: Props) {
       /> */
       }
 
-      <div class="grid md:grid-cols-2 grid-cols-1 mt-6">
+      <div
+        class={`grid md:${
+          listQTE ? "grid-cols-2" : "grid-cols-1"
+        } grid-cols-1 mt-6 gap-x-8`}
+      >
         {list.map(({ href, image, label, text, buttonText }) => (
           <div class="relative">
+            <div
+              class="absolute bg-gradient-to-b from-transparent via-transparent to-black h-full w-full rounded-3xl"
+              style={{
+                background:
+                  "linear-gradient(254deg, rgba(0, 0, 0, 0) 33%, rgba(0, 0, 0, 0.8) 100%)",
+              }}
+            />
             <a
               href={href}
-              class={`relative flex ${
+              class={`flex ${
                 layout.categoryCard?.textAlignment === "left"
                   ? "justify-start"
                   : "justify-start items-center"
@@ -113,7 +124,7 @@ function CategoryGrid(props: Props) {
               {image && (
                 <figure>
                   <Image
-                    class="w-full"
+                    class="w-full rounded-3xl"
                     src={image}
                     alt={label}
                     width={720}
@@ -122,10 +133,14 @@ function CategoryGrid(props: Props) {
                   />
                 </figure>
               )}
-              <div class="absolute m-6">
-                <RichText text={text} textStyle="text-white" />
+              <div class={`absolute ${listQTE ? "m-6" : "ml-6 mb-[105px]"}`}>
+                <RichText
+                  text={text}
+                  textStyle="text-white font-medium text-4xl"
+                  containerWidth={490}
+                />
                 <Button
-                  class="font-bold text-xl text-orangePrimary bg-white py-3 px-8 leading-none rounded-full"
+                  class="font-bold text-xl text-orangePrimary bg-white py-3 px-8 leading-none rounded-full mt-2.5 hover:bg-orangePrimary hover:text-white hover:underline"
                   aria-label={label}
                 >
                   {buttonText}
