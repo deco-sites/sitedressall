@@ -20,8 +20,8 @@ export default function CustomSocialMedia(props: ICustomSocialMedia) {
             loading="lazy"
             src={icon.image}
             alt={icon.alt || ""}
-            width={100}
-            height={100}
+            width={30}
+            height={30}
           />
         </a>
       ))}
