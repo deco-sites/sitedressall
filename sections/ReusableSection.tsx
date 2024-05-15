@@ -14,43 +14,6 @@ interface Props {
 export default function ReusableSection(
   { title, description, linkText, linkUrl, tabs }: Props,
 ) {
-  return (
-    <div className="header-section">
-      <h1>{title}</h1>
-      <p>{description}</p>
-      {linkText && linkUrl && (
-        <a href={linkUrl} className="link">
-          {linkText}
-        </a>
-      )}
-      {tabs && tabs.length > 0 && (
-        <div className="tab-list">
-          <div className="tab-buttons">
-            {tabs.map((tab, index) => (
-              <button
-                key={index}
-                className={`tab-button ${index === 0 ? "active" : ""}`}
-                data-tab-index={index}
-                onClick={(event) => handleTabClick(event)}
-              >
-                {tab.label}
-              </button>
-            ))}
-          </div>
-          {tabs.map((tab, index) => (
-            <div
-              key={index}
-              className={`tab-content ${index === 0 ? "active" : ""}`}
-              data-tab-index={index}
-            >
-              {tab.content}
-            </div>
-          ))}
-        </div>
-      )}
-    </div>
-  );
-
   function handleTabClick(event: Event) {
     const button = event.currentTarget as HTMLElement;
     const tabIndex = button.getAttribute("data-tab-index");
@@ -76,4 +39,48 @@ export default function ReusableSection(
       });
     }
   }
+
+  // Adiciona ouvintes de eventos após o componente ser montado
+  setTimeout(() => {
+    const tabButtons = document.querySelectorAll(".tab-button");
+    tabButtons.forEach((button) => {
+      button.addEventListener("click", handleTabClick);
+    });
+  }, 0);
+
+  return (
+    <div className="header-section">
+      <h1>{title}</h1>
+      <p>{description}</p>
+      {linkText && linkUrl && (
+        <a href={linkUrl} className="link">
+          {linkText}
+        </a>
+      )}
+      {tabs && tabs.length > 0 && (
+        <div className="tab-list">
+          <div className="tab-buttons">
+            {tabs.map((tab, index) => (
+              <button
+                key={index}
+                className={`tab-button ${index === 0 ? "active" : ""}`}
+                data-tab-index={index}
+              >
+                {tab.label}
+              </button>
+            ))}
+          </div>
+          {tabs.map((tab, index) => (
+            <div
+              key={index}
+              className={`tab-content ${index === 0 ? "active" : ""}`}
+              data-tab-index={index}
+            >
+              {tab.content}
+            </div>
+          ))}
+        </div>
+      )}
+    </div>
+  );
 }
