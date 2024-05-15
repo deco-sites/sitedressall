@@ -12,9 +12,8 @@ interface Props {
 }
 
 export default function ReusableSection(
-  { title, description, linkText, linkUrl, tabs }: Props
+  { title, description, linkText, linkUrl, tabs }: Props,
 ) {
-
   return (
     <div className="header-section">
       <h1>{title}</h1>
