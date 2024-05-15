@@ -127,26 +127,20 @@ function Footer({
   customSocialProps,
 }: Props) {
   const _logo = layout?.hide?.logo ? <></> : <Logo logo={logo} />;
-  const _newsletter = layout?.hide?.newsletter ? (
-    <></>
-  ) : (
+  const _newsletter = layout?.hide?.newsletter ? <></> : (
     <Newsletter
       content={newsletter}
       layout={{
-        tiled:
-          layout?.variation == "Variation 4" ||
+        tiled: layout?.variation == "Variation 4" ||
           layout?.variation == "Variation 5",
       }}
     />
   );
-  const _sectionLinks = layout?.hide?.sectionLinks ? (
-    <></>
-  ) : (
+  const _sectionLinks = layout?.hide?.sectionLinks ? <></> : (
     <FooterItems
       sections={sections}
-      justify={
-        layout?.variation == "Variation 2" || layout?.variation == "Variation 3"
-      }
+      justify={layout?.variation == "Variation 2" ||
+        layout?.variation == "Variation 3"}
     />
   );
 
@@ -154,7 +148,7 @@ function Footer({
     <footer
       class={clx(
         "w-full flex flex-col pt-10 gap-10",
-        LAYOUT[layout?.backgroundColor ?? "Primary"]
+        LAYOUT[layout?.backgroundColor ?? "Primary"],
       )}
     >
       <div class="bg-gray-200">
