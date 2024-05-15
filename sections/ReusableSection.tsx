@@ -15,7 +15,7 @@ export default function ReusableSection(
   { title, descriptionTitle, description, linkText, linkUrl }: Props,
 ) {
   return (
-    <div className="header-section flex justify-between container py-12 items-center">
+    <div className="header-section flex justify-between container py-12 items-center divReusableSectionMobile">
       <div className="max-w-[365px] flex flex-col gap-4">
         <h1 className="font-berthold text-3xl font-bold">{title}</h1>
         <p className="max-w-[654px] font-berthold text-base font-normal leading-6 text-left">
