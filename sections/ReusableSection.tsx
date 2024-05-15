@@ -16,7 +16,7 @@ export default function ReusableSection(
 ) {
   return (
     <div className="header-section flex justify-between container py-12 items-center">
-      <div className="max-w-[350px]">
+      <div className="max-w-[365px]">
         <h1 className="font-berthold text-3xl font-bold pb-4">{title}</h1>
         <p className="max-w-[654px] font-berthold text-base font-normal leading-6 text-left">
           {descriptionTitle}
