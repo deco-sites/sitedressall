@@ -3,17 +3,26 @@ interface Tab {
   content: string;
 }
 
+interface Link {
+  text: string;
+  url: string;
+  color?: string;
+  backgroundColor?: string;
+}
+
 interface Props {
   title: string;
   descriptionTitle: string;
   description: string;
-  linkText?: string;
-  linkUrl?: string;
+  links?: Link[];
 }
 
-export default function ReusableSection(
-  { title, descriptionTitle, description, linkText, linkUrl }: Props,
-) {
+export default function ReusableSection({
+  title,
+  descriptionTitle,
+  description,
+  links,
+}: Props) {
   return (
     <div className="header-section flex justify-between container py-12 items-center divReusableSectionMobile">
       <div className="max-w-[365px] flex flex-col gap-4">
@@ -23,16 +32,27 @@ export default function ReusableSection(
         </p>
       </div>
       <div className="flex flex-col gap-4">
-        <p className=" max-w-[654px] font-berthold text-base font-normal leading-6 text-left">
+        <p className="max-w-[654px] font-berthold text-base font-normal leading-6 text-left">
           {description}
         </p>
-        {linkText && linkUrl && (
-          <a
-            href={linkUrl}
-            className="font-berthold font-bold text-2xl leading-6 text-center w-fit rounded-3xl bg-orange-600 h-12 text-white py-3 px-8"
-          >
-            {linkText}
-          </a>
+        {links && (
+          <div>
+            {links.map((link, index) => (
+              <a
+                key={index}
+                href={link.url}
+                className={`font-berthold font-bold text-2xl leading-6 text-center w-fit rounded-3xl py-3 px-8 ${
+                  link.color ? "text-" + link.color : "text-white"
+                } ${
+                  link.backgroundColor
+                    ? "bg-" + link.backgroundColor
+                    : "bg-orange-600"
+                }`}
+              >
+                {link.text}
+              </a>
+            ))}
+          </div>
         )}
       </div>
     </div>
