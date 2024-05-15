@@ -1,5 +1,5 @@
-import { h } from 'preact';
-import { useSignal } from '@preact/signals';
+import { h } from "preact";
+import { useSignal } from "@preact/signals";
 
 interface Tab {
   label: string;
@@ -14,7 +14,9 @@ interface Props {
   tabs?: Tab[];
 }
 
-export default function ReusableSection({ title, description, linkText, linkUrl, tabs }: Props) {
+export default function ReusableSection(
+  { title, description, linkText, linkUrl, tabs }: Props,
+) {
   const activeTab = useSignal(0);
 
   function handleTabClick(index: number) {
@@ -36,7 +38,9 @@ export default function ReusableSection({ title, description, linkText, linkUrl,
             {tabs.map((tab, index) => (
               <button
                 key={index}
-                className={`tab-button ${index === activeTab.value ? "active" : ""}`}
+                className={`tab-button ${
+                  index === activeTab.value ? "active" : ""
+                }`}
                 data-tab-index={index}
                 onClick={() => handleTabClick(index)}
               >
@@ -47,7 +51,9 @@ export default function ReusableSection({ title, description, linkText, linkUrl,
           {tabs.map((tab, index) => (
             <div
               key={index}
-              className={`tab-content ${index === activeTab.value ? "active" : ""}`}
+              className={`tab-content ${
+                index === activeTab.value ? "active" : ""
+              }`}
               data-tab-index={index}
             >
               {tab.content}
