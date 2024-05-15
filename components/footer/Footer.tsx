@@ -3,7 +3,7 @@ import Logo from "../../components/footer/Logo.tsx";
 import Newsletter from "../../islands/Newsletter.tsx";
 import { clx } from "../../sdk/clx.ts";
 import type { ImageWidget } from "apps/admin/widgets.ts";
-import SocialMedia from "./SocialMedia.tsx";
+import CustomSocialMedia, { ICustomSocialMedia } from "./CustomSocialMedia.tsx";
 
 export type Item = {
   label: string;
@@ -44,7 +44,6 @@ export interface Layout {
     logo?: boolean;
     newsletter?: boolean;
     sectionLinks?: boolean;
-    SocialMedia?: boolean;
   };
 }
 
@@ -60,14 +59,14 @@ export interface Props {
     form?: NewsletterForm;
   };
   sections?: Section[];
-  SocialMedia?: SVGSVGElement;
   layout?: Layout;
+  customSocialProps?: ICustomSocialMedia;
 }
 
 const LAYOUT = {
-  "Primary": "bg-primary text-primary-content",
-  "Secondary": "bg-secondary text-secondary-content",
-  "Accent": "bg-accent text-accent-content",
+  Primary: "bg-primary text-primary-content",
+  Secondary: "bg-secondary text-secondary-content",
+  Accent: "bg-accent text-accent-content",
   "Base 100": "bg-base-100 text-base-content",
   "Base 100 inverted": "bg-base-content text-base-100",
 };
@@ -79,39 +78,42 @@ function Footer({
     description: "",
     form: { placeholder: "", buttonText: "", helpText: "" },
   },
-  sections = [{
-    "label": "Sobre",
-    "items": [
-      {
-        "href": "/quem-somos",
-        "label": "Quem somos",
-      },
-      {
-        "href": "/termos-de-uso",
-        "label": "Termos de uso",
-      },
-      {
-        "href": "/trabalhe-conosco",
-        "label": "Trabalhe conosco",
-      },
-    ],
-  }, {
-    "label": "Atendimento",
-    "items": [
-      {
-        "href": "/centraldeatendimento",
-        "label": "Central de atendimento",
-      },
-      {
-        "href": "/whatsapp",
-        "label": "Fale conosco pelo WhatsApp",
-      },
-      {
-        "href": "/trocaedevolucao",
-        "label": "Troca e devolução",
-      },
-    ],
-  }],
+  sections = [
+    {
+      label: "Sobre",
+      items: [
+        {
+          href: "/quem-somos",
+          label: "Quem somos",
+        },
+        {
+          href: "/termos-de-uso",
+          label: "Termos de uso",
+        },
+        {
+          href: "/trabalhe-conosco",
+          label: "Trabalhe conosco",
+        },
+      ],
+    },
+    {
+      label: "Atendimento",
+      items: [
+        {
+          href: "/centraldeatendimento",
+          label: "Central de atendimento",
+        },
+        {
+          href: "/whatsapp",
+          label: "Fale conosco pelo WhatsApp",
+        },
+        {
+          href: "/trocaedevolucao",
+          label: "Troca e devolução",
+        },
+      ],
+    },
+  ],
 
   layout = {
     backgroundColor: "Primary",
@@ -120,11 +122,10 @@ function Footer({
       logo: false,
       newsletter: false,
       sectionLinks: false,
-      SocialMedia: false,
     },
   },
+  customSocialProps,
 }: Props) {
-  const _SocialMedia = layout?.hide?.SocialMedia ? <></> : <SocialMedia />;
   const _logo = layout?.hide?.logo ? <></> : <Logo logo={logo} />;
   const _newsletter = layout?.hide?.newsletter ? <></> : (
     <Newsletter
@@ -157,7 +158,9 @@ function Footer({
               {_logo}
               {_sectionLinks}
               {_newsletter}
-              {_SocialMedia}
+              {customSocialProps
+                ? <CustomSocialMedia props={customSocialProps} />
+                : <></>}
             </div>
           </div>
         )}
@@ -167,7 +170,9 @@ function Footer({
               <div class="flex flex-col gap-10 lg:gap-20 lg:w-1/2 lg:pr-10">
                 {_newsletter}
                 {_sectionLinks}
-                {_SocialMedia}
+                {customSocialProps
+                  ? <CustomSocialMedia props={customSocialProps} />
+                  : <></>}
               </div>
             </div>
           </div>
@@ -182,7 +187,9 @@ function Footer({
               <div class="flex flex-col gap-10 lg:gap-20 lg:w-3/5 lg:items-end">
                 <div class="flex flex-col md:flex-row gap-10">
                   {_sectionLinks}
-                  {_SocialMedia}
+                  {customSocialProps
+                    ? <CustomSocialMedia props={customSocialProps} />
+                    : <></>}
                 </div>
               </div>
             </div>
@@ -193,7 +200,9 @@ function Footer({
             {_newsletter}
             <div class="flex flex-col lg:flex-row gap-10 lg:gap-20 lg:justify-between px-12 container-newsletter relative sectionsocial pb-12">
               {_sectionLinks}
-              {_SocialMedia}
+              {customSocialProps
+                ? <CustomSocialMedia props={customSocialProps} />
+                : <></>}
             </div>
           </div>
         )}
@@ -203,7 +212,9 @@ function Footer({
             {_logo}
             <div class="flex flex-col md:flex-row gap-10 lg:gap-20 md:justify-between">
               {_sectionLinks}
-              {_SocialMedia}
+              {customSocialProps
+                ? <CustomSocialMedia props={customSocialProps} />
+                : <></>}
             </div>
           </div>
         )}
