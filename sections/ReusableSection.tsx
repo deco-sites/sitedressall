@@ -11,7 +11,9 @@ interface Props {
   tabs?: Tab[];
 }
 
-export default function ReusableSection({ title, description, linkText, linkUrl, tabs }: Props) {
+export default function ReusableSection(
+  { title, description, linkText, linkUrl, tabs }: Props,
+) {
   return (
     <div className="header-section">
       <h1>{title}</h1>
@@ -48,5 +50,3 @@ export default function ReusableSection({ title, description, linkText, linkUrl,
     </div>
   );
 }
-
-
