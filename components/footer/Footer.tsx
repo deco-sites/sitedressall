@@ -127,20 +127,26 @@ function Footer({
   customSocialProps,
 }: Props) {
   const _logo = layout?.hide?.logo ? <></> : <Logo logo={logo} />;
-  const _newsletter = layout?.hide?.newsletter ? <></> : (
+  const _newsletter = layout?.hide?.newsletter ? (
+    <></>
+  ) : (
     <Newsletter
       content={newsletter}
       layout={{
-        tiled: layout?.variation == "Variation 4" ||
+        tiled:
+          layout?.variation == "Variation 4" ||
           layout?.variation == "Variation 5",
       }}
     />
   );
-  const _sectionLinks = layout?.hide?.sectionLinks ? <></> : (
+  const _sectionLinks = layout?.hide?.sectionLinks ? (
+    <></>
+  ) : (
     <FooterItems
       sections={sections}
-      justify={layout?.variation == "Variation 2" ||
-        layout?.variation == "Variation 3"}
+      justify={
+        layout?.variation == "Variation 2" || layout?.variation == "Variation 3"
+      }
     />
   );
 
@@ -148,7 +154,7 @@ function Footer({
     <footer
       class={clx(
         "w-full flex flex-col pt-10 gap-10",
-        LAYOUT[layout?.backgroundColor ?? "Primary"],
+        LAYOUT[layout?.backgroundColor ?? "Primary"]
       )}
     >
       <div class="bg-gray-200">
@@ -158,9 +164,9 @@ function Footer({
               {_logo}
               {_sectionLinks}
               {_newsletter}
-              {customSocialProps
-                ? <CustomSocialMedia props={customSocialProps} />
-                : <></>}
+              {customSocialProps && (
+                <CustomSocialMedia {...customSocialProps} />
+              )}
             </div>
           </div>
         )}
@@ -170,9 +176,9 @@ function Footer({
               <div class="flex flex-col gap-10 lg:gap-20 lg:w-1/2 lg:pr-10">
                 {_newsletter}
                 {_sectionLinks}
-                {customSocialProps
-                  ? <CustomSocialMedia props={customSocialProps} />
-                  : <></>}
+                {customSocialProps && (
+                  <CustomSocialMedia {...customSocialProps} />
+                )}
               </div>
             </div>
           </div>
@@ -187,9 +193,9 @@ function Footer({
               <div class="flex flex-col gap-10 lg:gap-20 lg:w-3/5 lg:items-end">
                 <div class="flex flex-col md:flex-row gap-10">
                   {_sectionLinks}
-                  {customSocialProps
-                    ? <CustomSocialMedia props={customSocialProps} />
-                    : <></>}
+                  {customSocialProps && (
+                    <CustomSocialMedia {...customSocialProps} />
+                  )}
                 </div>
               </div>
             </div>
@@ -200,9 +206,9 @@ function Footer({
             {_newsletter}
             <div class="flex flex-col lg:flex-row gap-10 lg:gap-20 lg:justify-between px-12 container-newsletter relative sectionsocial pb-12">
               {_sectionLinks}
-              {customSocialProps
-                ? <CustomSocialMedia props={customSocialProps} />
-                : <></>}
+              {customSocialProps && (
+                <CustomSocialMedia {...customSocialProps} />
+              )}
             </div>
           </div>
         )}
@@ -212,9 +218,9 @@ function Footer({
             {_logo}
             <div class="flex flex-col md:flex-row gap-10 lg:gap-20 md:justify-between">
               {_sectionLinks}
-              {customSocialProps
-                ? <CustomSocialMedia props={customSocialProps} />
-                : <></>}
+              {customSocialProps && (
+                <CustomSocialMedia {...customSocialProps} />
+              )}
             </div>
           </div>
         )}
