@@ -32,7 +32,8 @@ export default function ReusableSection({
         </p>
       </div>
       <div className="flex flex-col gap-4">
-        {/* <div role="tablist" className="tabs tabs-bordered">
+        {
+          /* <div role="tablist" className="tabs tabs-bordered">
           <input
             checked
             type="radio"
@@ -65,7 +66,8 @@ export default function ReusableSection({
               </div>
             )}
           </div>
-        </div> */}
+        </div> */
+        }
         <div role="tablist" className="tabs tabs-bordered">
           <input
             type="radio"
