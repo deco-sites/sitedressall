@@ -32,28 +32,73 @@ export default function ReusableSection({
         </p>
       </div>
       <div className="flex flex-col gap-4">
-        <p className="max-w-[654px] font-berthold text-base font-normal leading-6 text-left">
-          {description}
-        </p>
-        {links && (
-          <div>
-            {links.map((link, index) => (
-              <a
-                key={index}
-                href={link.url}
-                className={`font-berthold font-bold text-2xl leading-6 text-center w-fit rounded-3xl py-3 px-8 ${
-                  link.color ? "text-" + link.color : "text-white"
-                } ${
-                  link.backgroundColor
-                    ? "bg-" + link.backgroundColor
-                    : "bg-orange-600"
-                }`}
-              >
-                {link.text}
-              </a>
-            ))}
+        {/* <div role="tablist" className="tabs tabs-bordered">
+          <input
+            checked
+            type="radio"
+            name="my_tabs_1"
+            role="tab"
+            className="tab"
+            aria-label="Tab 1"
+          />
+          <div role="tabpanel" className="tab-content p-10">
+            <p className="max-w-[654px] font-berthold text-base font-normal leading-6 text-left">
+              {description}
+            </p>
+            {links && (
+              <div>
+                {links.map((link, index) => (
+                  <a
+                    key={index}
+                    href={link.url}
+                    className={`font-berthold font-bold text-2xl leading-6 text-center w-fit rounded-3xl py-3 px-8 ${
+                      link.color ? "text-" + link.color : "text-white"
+                    } ${
+                      link.backgroundColor
+                        ? "bg-" + link.backgroundColor
+                        : "bg-orange-600"
+                    }`}
+                  >
+                    {link.text}
+                  </a>
+                ))}
+              </div>
+            )}
           </div>
-        )}
+        </div> */}
+        <div role="tablist" className="tabs tabs-bordered">
+          <input
+            type="radio"
+            name="my_tabs_1"
+            role="tab"
+            className="tab"
+            aria-label="Tab 1"
+          />
+          <div role="tabpanel" className="tab-content p-10">
+            Tab content 10
+          </div>
+          <input
+            type="radio"
+            name="my_tabs_1"
+            role="tab"
+            className="tab"
+            aria-label="Tab 2"
+            checked
+          />
+          <div role="tabpanel" className="tab-content p-10">
+            Tab content 2
+          </div>
+          <input
+            type="radio"
+            name="my_tabs_1"
+            role="tab"
+            className="tab"
+            aria-label="Tab 3"
+          />
+          <div role="tabpanel" className="tab-content p-10">
+            Tab content 3
+          </div>
+        </div>
       </div>
     </div>
   );
