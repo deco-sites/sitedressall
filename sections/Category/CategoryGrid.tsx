@@ -10,7 +10,8 @@ export interface CategoryGridProps {
   image?: ImageWidget;
   // /** @description Alternative text */
   label?: string;
-  text: string;
+  title?: string;
+  text?: string;
   buttonText?: string;
 }
 
@@ -40,6 +41,7 @@ const DEFAULT_LIST = [
     image:
       "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/2753/b2278d2d-2270-482b-98d4-f09d5f05ba97",
     label: "category",
+    title: "titulo",
     text: "teste",
     buttonText: "conheça o simulador",
   },
@@ -48,6 +50,7 @@ const DEFAULT_LIST = [
     image:
       "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/2753/b2278d2d-2270-482b-98d4-f09d5f05ba97",
     label: "category",
+    title: "titulo",
     text: "teste",
     buttonText: "conheça o simulador",
   },
@@ -56,6 +59,7 @@ const DEFAULT_LIST = [
     image:
       "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/2753/b2278d2d-2270-482b-98d4-f09d5f05ba97",
     label: "category",
+    title: "titulo",
     text: "teste",
     buttonText: "conheça o simulador",
   },
@@ -64,6 +68,7 @@ const DEFAULT_LIST = [
     image:
       "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/2753/b2278d2d-2270-482b-98d4-f09d5f05ba97",
     label: "category",
+    title: "titulo",
     text: "teste",
     buttonText: "conheça o simulador",
   },
@@ -87,20 +92,18 @@ function CategoryGrid(props: Props) {
   const listQTE = list?.length > 1;
   return (
     <div id={id} class="container mt-16">
-      {
-        /* <Header
+      {/* <Header
         title={header.title}
         description={header.description || ""}
         alignment={layout.headerAlignment || "center"}
-      /> */
-      }
+      /> */}
 
       <div
         class={`grid md:${
           listQTE ? "grid-cols-2" : "grid-cols-1"
         } grid-cols-1 mt-6 gap-x-8`}
       >
-        {list.map(({ href, image, label, text, buttonText }) => (
+        {list.map(({ href, image, label, title, text, buttonText }) => (
           <div class="relative">
             <div
               class="absolute bg-gradient-to-b from-transparent via-transparent to-black h-full w-full rounded-3xl"
@@ -134,11 +137,20 @@ function CategoryGrid(props: Props) {
                 </figure>
               )}
               <div class={`absolute ${listQTE ? "m-6" : "ml-6 mb-[105px]"}`}>
-                <RichText
-                  text={text}
-                  textStyle="text-white font-medium text-4xl"
-                  containerWidth={490}
-                />
+                {title && (
+                  <RichText
+                    text={title}
+                    textStyle="text-white font-medium text-4xl"
+                    containerWidth={490}
+                  />
+                )}
+                {text && (
+                  <RichText
+                    text={text}
+                    textStyle="text-white text-base"
+                    containerWidth={490}
+                  />
+                )}
                 <Button
                   class="font-bold text-xl text-orangePrimary bg-white py-3 px-8 leading-none rounded-full mt-2.5 hover:bg-orangePrimary hover:text-white hover:underline"
                   aria-label={label}
