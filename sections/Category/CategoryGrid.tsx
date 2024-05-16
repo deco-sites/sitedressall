@@ -92,13 +92,11 @@ function CategoryGrid(props: Props) {
   const listQTE = list?.length > 1;
   return (
     <div id={id} class="container mt-16">
-      {
-        /* <Header
+      {/* <Header
         title={header.title}
         description={header.description || ""}
         alignment={layout.headerAlignment || "center"}
-      /> */
-      }
+      /> */}
 
       <div
         class={`grid md:${
@@ -142,7 +140,11 @@ function CategoryGrid(props: Props) {
                 {title && (
                   <RichText
                     text={title}
-                    textStyle="text-white font-medium text-4xl"
+                    textStyle={`text-white ${
+                      listQTE
+                        ? "font-medium text-4xl"
+                        : "font-light text-[64px]"
+                    }`}
                     containerWidth={490}
                   />
                 )}
