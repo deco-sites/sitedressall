@@ -92,11 +92,13 @@ function CategoryGrid(props: Props) {
   const listQTE = list?.length > 1;
   return (
     <div id={id} class="container mt-16">
-      {/* <Header
+      {
+        /* <Header
         title={header.title}
         description={header.description || ""}
         alignment={layout.headerAlignment || "center"}
-      /> */}
+      /> */
+      }
 
       <div
         class={`grid md:${
