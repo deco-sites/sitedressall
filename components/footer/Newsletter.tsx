@@ -46,9 +46,9 @@ function Newsletter(
   return (
     <div
       class={clx(
-        "flex flex-col gap-4 p-12 border-t border-b border-gray-700 container-newsletter",
+        "flex flex-col gap-4 p-12 border-t border-b border-gray-700 max-1023:p-4",
         tiled &&
-          "lg:flex-col lg:w-full lg:justify-between p-12 border-t border-b border-gray-700 container-newsletter",
+          "lg:flex-col lg:w-full lg:justify-between p-12 border-t border-b border-gray-700 max-1023:p-4",
       )}
     >
       <div class="flex flex-col gap-4">
@@ -66,7 +66,7 @@ function Newsletter(
           class="form-control gap-4"
           onSubmit={handleSubmit}
         >
-          <div class="flex flex-wrap gap-4 flex-colunm">
+          <div class="flex flex-wrap gap-4 max-1023:flex max-1023:flex-col">
             <input
               name="email"
               class=" flex-auto input rounded-3xl border-slate-600"
@@ -79,7 +79,7 @@ function Newsletter(
             />
             <button
               type="submit"
-              class=" btn disabled:loading rounded-3xl bg-gray-300 text-white w-1/5 text-xl hover:bg-orange-500 max-width-100"
+              class=" btn disabled:loading rounded-3xl bg-gray-300 text-white w-1/5 text-xl hover:bg-orange-500 max-1023:w-full"
               disabled={loading}
             >
               {content?.form?.buttonText || "me inscrever"}
@@ -87,7 +87,7 @@ function Newsletter(
           </div>
           <div class="flex gap-2">
             <input type="checkbox" />
-            <span class="check-box-text text-base">
+            <span class="max-768:text-xs text-base">
               Preciso de ajuda para escolher e comprar
             </span>
           </div>

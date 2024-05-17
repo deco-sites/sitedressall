@@ -19,6 +19,16 @@ export default {
       colors: {
         orangePrimary: "#FE8330",
       },
+      inset: {
+        "78": "78%",
+        "76": "76%",
+      },
+      screens: {
+        "max-767": { "max": "767px" },
+        "max-768": { "max": "768px" },
+        "max-1023": { "max": "1023px" },
+        "max-1024": { "max": "1024px" },
+      },
     },
   },
 };

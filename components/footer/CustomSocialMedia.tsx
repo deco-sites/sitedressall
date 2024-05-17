@@ -13,7 +13,7 @@ export interface ICustomSocialMedia {
 
 export default function CustomSocialMedia(props: ICustomSocialMedia) {
   return (
-    <div class="flex flex-col gap-4 socialmedia">
+    <div class="flex flex-col gap-4 max-767:absolute max-767:left-78 max-767:top-76">
       {props?.socialIcons?.map((icon) => (
         <a href={icon.socialUrl}>
           <Image

@@ -24,7 +24,7 @@ export default function ReusableSection({
   links,
 }: Props) {
   return (
-    <div className="header-section flex justify-between container py-12 items-center divReusableSectionMobile">
+    <div className="flex justify-between container py-12 items-center max-1024:flex-col max-1024:p-10 max-1024:items-start">
       <div className="max-w-[365px] flex flex-col gap-4">
         <h1 className="font-berthold text-3xl font-bold">{title}</h1>
         <p className="max-w-[654px] font-berthold text-base font-normal leading-6 text-left">
@@ -36,7 +36,7 @@ export default function ReusableSection({
           {description}
         </p>
         {links && (
-          <div>
+          <div className="flex flex-col gap-4">
             {links.map((link, index) => (
               <a
                 key={index}
@@ -45,7 +45,11 @@ export default function ReusableSection({
                   link.color ? "text-" + link.color : "text-white"
                 } ${
                   link.backgroundColor
-                    ? "bg-" + link.backgroundColor
+                    ? `bg-${link.backgroundColor} ${
+                      link.backgroundColor === "white"
+                        ? "border border-[#B4B4B4]"
+                        : ""
+                    }`
                     : "bg-orange-600"
                 }`}
               >

@@ -57,49 +57,6 @@
 .collapse-arrow > .collapse-title:after{
   display: none;
 }
-@media(max-width:1024px){
-  .divReusableSectionMobile{
-    flex-direction: column;
-    padding: 40px;
-    align-items: flex-start;
-  }
-}
-
-@media(max-width:1023px) {
-  
-  
-  .max-width-100{
-    width: 100%;
-  }
-  .container-newsletter{
-    padding: 16px;
-  }
-  .flex-colunm{
-    display: flex;
-    flex-direction: column;
-  }
-  
-}
-
-@media(max-width:767px){
-  .socialmedia{
-    position: absolute;
-    left: 78%;
-    top: 76%;
-  }
-}
-@media(max-width:768px){
-  .sectionsocial{
-    flex-direction: row;
-  }
-}
-@media(min-width:375px) {
-  .check-box-text{
-    font-size: 12px;
-
-  }
-  
-}
 
 .collapse-arrow .collapse-title:after {
   top: 1rem;

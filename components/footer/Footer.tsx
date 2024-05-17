@@ -198,7 +198,7 @@ function Footer({
         {layout?.variation == "Variation 4" && (
           <div class="flex flex-col gap-10">
             {_newsletter}
-            <div class="flex flex-col lg:flex-row gap-10 lg:gap-20 lg:justify-between px-12 container-newsletter relative sectionsocial pb-12">
+            <div class="flex flex-col lg:flex-row gap-10 lg:gap-20 lg:justify-between px-12 max-1023:p-4 relative max-768:flex-row pb-12">
               {_sectionLinks}
               {customSocialProps && (
                 <CustomSocialMedia {...customSocialProps} />
