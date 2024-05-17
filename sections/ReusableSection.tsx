@@ -6,8 +6,7 @@ interface Tab {
 interface Link {
   text: string;
   url: string;
-  color?: string;
-  backgroundColor?: string;
+  isWhite?: boolean; // Indicador para o fundo branco
 }
 
 interface Props {
@@ -36,22 +35,13 @@ export default function ReusableSection({
           {description}
         </p>
         {links && (
-          <div className="flex flex-col gap-4">
+          <div className="flex flex-row gap-4">
             {links.map((link, index) => (
               <a
                 key={index}
                 href={link.url}
-                className={`font-berthold font-bold text-2xl leading-6 text-center w-fit rounded-3xl py-3 px-8 ${
-                  link.color ? "text-" + link.color : "text-white"
-                } ${
-                  link.backgroundColor
-                    ? `bg-${link.backgroundColor} ${
-                      link.backgroundColor === "white"
-                        ? "border border-[#B4B4B4]"
-                        : ""
-                    }`
-                    : "bg-orange-600"
-                }`}
+                className={`font-berthold font-bold text-2xl leading-6 text-center w-fit rounded-3xl py-3 px-8
+                  ${link.isWhite ? 'text-black bg-white border border-[#B4B4B4]' : 'text-white bg-orange-600'}`}
               >
                 {link.text}
               </a>
