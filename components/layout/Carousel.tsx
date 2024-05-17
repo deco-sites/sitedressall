@@ -5,6 +5,7 @@ import Icon from "../../components/ui/Icon.tsx";
 import Slider from "../../components/ui/Slider.tsx";
 import { buttonClasses, ButtonColor, grid } from "../../constants.tsx";
 import { clx } from "../../sdk/clx.ts";
+import { calculate } from "std/http/etag.ts";
 
 interface Layout {
   /** @description For desktop in px. */
@@ -35,6 +36,10 @@ export interface Props {
   };
 }
 
+const percentage = 50;
+const offset = 44;
+const topValue = `calc(${percentage}% - ${offset}px)`;
+
 function Section({ interval = 0, layout, style, children }: Props) {
   const id = useId();
   const items = toChildArray(children);
@@ -50,18 +55,10 @@ function Section({ interval = 0, layout, style, children }: Props) {
 
   return (
     <>
-      <div
-        id={id}
-        class={clx(
-          "grid grid-rows-[1fr_48px_1fr_40px]",
-          !layout?.hide?.controls
-            ? "grid-cols-[48px_1fr_48px] sm:grid-cols-[48px_1fr_48px]"
-            : "grid-cols-[0_1fr_0]",
-        )}
-      >
+      <div id={id} class="relative max-w-deskContainer m-auto">
         <Slider
           class={clx(
-            "relative carousel carousel-center col-start-2 col-end-2 row-start-1 row-end-4",
+            "relative carousel carousel-center",
             layout?.gap?.mobile
               ? grid.gap.mobile[layout.gap.mobile]
               : grid.gap.mobile[2],
@@ -71,11 +68,7 @@ function Section({ interval = 0, layout, style, children }: Props) {
           )}
         >
           {items?.map((item, index) => (
-            <Slider.Item
-              index={index}
-              class="carousel-item"
-              style={{ width: layout?.itemWidth || "auto" }}
-            >
+            <Slider.Item index={index} class="carousel-item">
               {item}
             </Slider.Item>
           ))}
@@ -83,30 +76,33 @@ function Section({ interval = 0, layout, style, children }: Props) {
 
         {!layout?.hide?.controls && (
           <>
-            <div class="flex items-center justify-start z-10 col-start-1 row-start-2">
-              <Slider.PrevButton
-                class={clx(controlClx, "btn btn-circle btn-sm")}
-              >
-                <Icon
-                  class="text-base-content"
-                  size={24}
-                  id="ChevronLeft"
-                  strokeWidth={3}
-                />
-              </Slider.PrevButton>
-            </div>
-            <div class="flex items-center justify-end z-10 col-start-3 row-start-2">
-              <Slider.NextButton
-                class={clx(controlClx, "btn btn-circle btn-sm")}
-              >
-                <Icon
-                  class="text-base-content"
-                  size={24}
-                  id="ChevronRight"
-                  strokeWidth={3}
-                />
-              </Slider.NextButton>
-            </div>
+            <Slider.PrevButton
+              class={clx(
+                "absolute left-0 w-11 h-11 text-blackPrimary border-blackPrimary border rounded-full flex items-center justify-center bg-white top-[slideArrow]",
+              )}
+              style={{ top: topValue }}
+            >
+              <Icon
+                class="text-blackPrimary"
+                size={12}
+                id="ChevronLeft"
+                strokeWidth={2}
+              />
+            </Slider.PrevButton>
+
+            <Slider.NextButton
+              class={clx(
+                "absolute right-0 w-11 h-11 text-blackPrimary border-blackPrimary border rounded-full flex items-center justify-center bg-white top-[slideArrow]",
+              )}
+              style={{ top: topValue }}
+            >
+              <Icon
+                class="rotate-180 text-blackPrimary"
+                size={12}
+                id="ChevronLeft"
+                strokeWidth={2}
+              />
+            </Slider.NextButton>
           </>
         )}
 
