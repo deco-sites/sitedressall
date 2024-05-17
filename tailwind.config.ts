@@ -18,6 +18,10 @@ export default {
       },
       colors: {
         orangePrimary: "#FE8330",
+        blackPrimary: "#3C3C3B",
+      },
+      maxWidth: {
+        deskContainer: "1440px",
       },
     },
   },
