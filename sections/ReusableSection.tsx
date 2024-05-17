@@ -41,7 +41,11 @@ export default function ReusableSection({
                 key={index}
                 href={link.url}
                 className={`font-berthold font-bold text-2xl leading-6 text-center w-fit rounded-3xl py-3 px-8
-                  ${link.isWhite ? 'text-black bg-white border border-[#B4B4B4]' : 'text-white bg-orange-600'}`}
+                  ${
+                  link.isWhite
+                    ? "text-black bg-white border border-[#B4B4B4]"
+                    : "text-white bg-orange-600"
+                }`}
               >
                 {link.text}
               </a>
