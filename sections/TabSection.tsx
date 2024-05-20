@@ -28,4 +28,4 @@ export default function TabSection({ activeIndex }: Props) {
       ))}
     </div>
   );
-};
+}
