@@ -6,7 +6,7 @@ interface Tab {
 interface Link {
   text: string;
   url: string;
-  isWhite?: boolean; // Indicador para o fundo branco
+  isWhite?: boolean;
 }
 
 interface Props {
