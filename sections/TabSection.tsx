@@ -1,31 +1,64 @@
 import { usePartialSection } from "deco/hooks/usePartialSection.ts";
 
-interface Props {
-  activeIndex: number;
+export interface Props {
+  items?: Item[];
+  
+  /*
+  *@hide
+  *@readonly
+  **/
+  indexActive: number;
 }
 
-export default function TabSection({ activeIndex }: Props) {
-  const tabsData = [
-    { label: "Aba 1", index: 0 },
-    { label: "Aba 2", index: 1 },
-    { label: "Aba 3", index: 2 },
-    { label: "Aba 4", index: 3 },
-    { label: "Aba 5", index: 4 },
-  ];
+/**
+* @titleBy title
+*/
+interface Item {
+  title: string;
+  /**
+  * @format textarea
+  */
+  info: string;
+}
+
+export default function PartialExemple({
+  items,
+  indexActive
+}: Props) {
+  const titles: string[] = [];
+  const infos: string[] = [];
+
+  function getTitles() {
+    items?.map((element) => {
+      titles.push(element.title);
+    });
+  }
+
+  function getInfos() {
+    items?.map((element) => {
+      infos.push(element.info);
+    });
+  }
+
+  getTitles();
+  getInfos();
+
+  
+  const infoRender = infos[indexActive];
 
   return (
-    <div>
-      {tabsData.map((tab) => (
-        <button
-          key={tab.index}
-          className={activeIndex === tab.index ? "active" : ""}
-          {...usePartialSection<typeof TabSection>({
-            props: { activeIndex: tab.index },
-          })}
-        >
-          {tab.label}
-        </button>
-      ))}
+    <div class="w-full">
+      <ul>
+        {titles.map((title, index) => (
+          <button
+            class={"tab tab-lg"}
+            {...usePartialSection({ props: { indexActive: index } })}
+          >
+            {title}
+          </button>
+        ))}
+      </ul>
+      {infoRender}
     </div>
   );
 }
