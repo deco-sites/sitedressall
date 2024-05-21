@@ -3,7 +3,6 @@ import { usePartialSection } from "deco/hooks/usePartialSection.ts";
 export interface Props {
   items?: Item[];
 
-  
   /** @hide */
   /** @readonly */
   indexActive: number;
