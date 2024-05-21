@@ -40,7 +40,7 @@ export default function Section({
               {sliderReadMore.text}
             </a>
             {sliderReadMore?.icon && (
-              <Image src={sliderReadMore.icon} width={12} height={7} />
+              <Image src={sliderReadMore.icon} width={12} height={7} alt="icone ver mais" />
             )}
           </div>
         )}
