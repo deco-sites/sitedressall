@@ -41,7 +41,7 @@ export default function TabSection({
   const infoRender = infos[indexActive];
 
   return (
-    <div class="w-full">
+    <div>
       <ul>
         {titles.map((title, index) => (
           <button

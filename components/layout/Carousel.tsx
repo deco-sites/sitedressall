@@ -37,7 +37,7 @@ export interface Props {
 }
 
 const percentage = 50;
-const offset = 44;
+const offset = 42;
 const topValue = `calc(${percentage}% - ${offset}px)`;
 
 function Section({ interval = 0, layout, style, children }: Props) {
