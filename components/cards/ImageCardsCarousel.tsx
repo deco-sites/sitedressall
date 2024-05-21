@@ -40,7 +40,7 @@ export default function Section({
               {sliderReadMore.text}
             </a>
             {sliderReadMore?.icon && (
-              <Image src={sliderReadMore.icon} width={12} />
+              <Image src={sliderReadMore.icon} width={12} height={7} />
             )}
           </div>
         )}
@@ -48,7 +48,9 @@ export default function Section({
       <Carousel
         layout={{ itemWidth: 200 }}
         {...slider}
-        children={allItems.map((item) => <Card {...item} />)}
+        children={allItems.map((item) => (
+          <Card {...item} />
+        ))}
       />
     </div>
   );
