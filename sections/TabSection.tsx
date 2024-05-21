@@ -2,28 +2,28 @@ import { usePartialSection } from "deco/hooks/usePartialSection.ts";
 
 export interface Props {
   items?: Item[];
-  
+
   /*
-  *@hide
-  *@readonly
-  **/
+   * @hide
+   * @readonly
+   */
   indexActive: number;
 }
 
 /**
-* @titleBy title
-*/
+ * @titleBy title
+ */
 interface Item {
   title: string;
   /**
-  * @format textarea
-  */
+   * @format textarea
+   */
   info: string;
 }
 
 export default function PartialExemple({
   items,
-  indexActive
+  indexActive,
 }: Props) {
   const titles: string[] = [];
   const infos: string[] = [];
@@ -43,7 +43,6 @@ export default function PartialExemple({
   getTitles();
   getInfos();
 
-  
   const infoRender = infos[indexActive];
 
   return (
