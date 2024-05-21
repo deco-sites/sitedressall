@@ -1,5 +1,7 @@
+import { ImageWidget } from "apps/admin/widgets.ts";
 import Card, { Props as CardProps } from "../../components/cards/ImageCard.tsx";
 import Carousel, { Props as CarouselProps } from "../layout/Carousel.tsx";
+import Image from "apps/website/components/Image.tsx";
 
 export interface Props {
   placeholderItems?: number;
@@ -9,6 +11,7 @@ export interface Props {
   sliderReadMore?: {
     url?: string;
     text?: string;
+    icon?: ImageWidget;
   };
 }
 
@@ -29,12 +32,17 @@ export default function Section({
           <h2 class="font-bold text-[32px] text-blackPrimary">{sliderTitle}</h2>
         )}
         {sliderReadMore?.text && (
-          <a
-            href={sliderReadMore.url || "#"}
-            class="text-blackPrimary text-base underline after:content-[' ▶'] after:no-underline"
-          >
-            {sliderReadMore.text}
-          </a>
+          <div class="flex items-center justify-end gap-2">
+            <a
+              href={sliderReadMore.url || "#"}
+              class="text-blackPrimary text-base underline"
+            >
+              {sliderReadMore.text}
+            </a>
+            {sliderReadMore?.icon && (
+              <Image src={sliderReadMore.icon} width={12} />
+            )}
+          </div>
         )}
       </div>
       <Carousel
