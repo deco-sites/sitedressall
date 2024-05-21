@@ -11,29 +11,26 @@ interface Props {
 }
 
 export default function TabSection({ tabs, tabIndex }: Props) {
-  const ti = typeof tabIndex === "number"
-    ? Math.min(Math.max(tabIndex, 0), tabs.length)
-    : 0;
+  const ti =
+    typeof tabIndex === "number" && tabs
+      ? Math.min(Math.max(tabIndex, 0), tabs.length)
+      : 0;
 
   return (
     <div>
       <div>
-        {tabs.map((tab, index) => (
+        {tabs?.map((tab, index) => (
           <button
             class={`tab tab-lg ${index === ti ? "tab-active" : ""}`}
             {...usePartialSection({ props: { tabIndex: index } })}
           >
             {tab.label}
-          </button>))
-        }
+          </button>
+        ))}
       </div>
       <div>
-        {tabs?.map((tab, index) => (
-          <div
-            index={index}
-          >
-            {tab.content}
-          </div>
+        {tabs?.map((tab) => (
+          <div>{tab.content}</div>
         ))}
       </div>
     </div>

@@ -6,12 +6,17 @@ export interface Props {
   items?: CardProps[];
   slider?: CarouselProps;
   sliderTitle?: string;
+  sliderReadMore?: {
+    text?: string;
+    url?: string;
+  };
 }
 
 export default function Section({
   placeholderItems,
   items,
   sliderTitle,
+  sliderReadMore,
   slider,
 }: Props) {
   const ITEMS: CardProps[] = new Array(placeholderItems || 10).fill({});
@@ -19,7 +24,17 @@ export default function Section({
 
   return (
     <div class="py-6">
-      {sliderTitle && <h2>{sliderTitle}</h2>}
+      <div class="max-w-deskContainer m-auto flex items-center justify-between">
+        {sliderTitle && (
+          <h2 class="font-bold text-[32px] text-blackPrimary">{sliderTitle}</h2>
+        )}
+        {sliderReadMore?.url ||
+          (sliderReadMore?.text && (
+            <a href={sliderReadMore.url} class="text-blackPrimary text-base">
+              {sliderReadMore.text}
+            </a>
+          ))}
+      </div>
       <Carousel
         layout={{ itemWidth: 200 }}
         {...slider}
