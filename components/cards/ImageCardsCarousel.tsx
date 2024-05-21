@@ -28,17 +28,21 @@ export default function Section({
         {sliderTitle && (
           <h2 class="font-bold text-[32px] text-blackPrimary">{sliderTitle}</h2>
         )}
-        {sliderReadMore?.url ||
-          (sliderReadMore?.text && (
-            <a href={sliderReadMore.url} class="text-blackPrimary text-base">
-              {sliderReadMore.text}
-            </a>
-          ))}
+        {sliderReadMore?.text && (
+          <a
+            href={sliderReadMore.url || "#"}
+            class="text-blackPrimary text-base underline after:content-[' ▶'] after:no-underline"
+          >
+            {sliderReadMore.text}
+          </a>
+        )}
       </div>
       <Carousel
         layout={{ itemWidth: 200 }}
         {...slider}
-        children={allItems.map((item) => <Card {...item} />)}
+        children={allItems.map((item) => (
+          <Card {...item} />
+        ))}
       />
     </div>
   );
