@@ -1,3 +1,4 @@
+import { ImageWidget } from "apps/admin/widgets.ts";
 import Card, { Props as CardProps } from "../../components/cards/ImageCard.tsx";
 import Carousel, { Props as CarouselProps } from "../layout/Carousel.tsx";
 
@@ -9,6 +10,7 @@ export interface Props {
   sliderReadMore?: {
     url?: string;
     text?: string;
+    icon?: ImageWidget;
   };
 }
 
@@ -31,7 +33,7 @@ export default function Section({
         {sliderReadMore?.url ||
           (sliderReadMore?.text && (
             <a href={sliderReadMore.url} class="text-blackPrimary text-base">
-              {sliderReadMore.text}
+              {sliderReadMore.text} {sliderReadMore.icon}
             </a>
           ))}
       </div>
