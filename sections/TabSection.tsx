@@ -11,10 +11,9 @@ interface Props {
 }
 
 export default function TabSection({ tabs, tabIndex }: Props) {
-  const ti =
-    typeof tabIndex === "number" && tabs
-      ? Math.min(Math.max(tabIndex, 0), tabs.length)
-      : 0;
+  const ti = typeof tabIndex === "number" && tabs
+    ? Math.min(Math.max(tabIndex, 0), tabs.length)
+    : 0;
 
   return (
     <div>
@@ -29,9 +28,7 @@ export default function TabSection({ tabs, tabIndex }: Props) {
         ))}
       </div>
       <div>
-        {tabs?.map((tab) => (
-          <div>{tab.content}</div>
-        ))}
+        {tabs?.map((tab) => <div>{tab.content}</div>)}
       </div>
     </div>
   );
