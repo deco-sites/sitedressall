@@ -50,7 +50,7 @@ function Section({ interval = 0, layout, style, children }: Props) {
 
   const controlClx = clx(
     buttonClasses[style?.controlsColor || "Default"],
-    style?.controlsOutline && "btn-outline"
+    style?.controlsOutline && "btn-outline",
   );
 
   return (
@@ -64,7 +64,7 @@ function Section({ interval = 0, layout, style, children }: Props) {
               : grid.gap.mobile[2],
             layout?.gap?.desktop
               ? grid.gap.desktop[layout.gap.desktop]
-              : grid.gap.mobile[4]
+              : grid.gap.mobile[4],
           )}
         >
           {items?.map((item, index) => (
@@ -78,7 +78,7 @@ function Section({ interval = 0, layout, style, children }: Props) {
           <>
             <Slider.PrevButton
               class={clx(
-                "absolute left-0 w-11 h-11 text-blackPrimary border-blackPrimary border rounded-full flex items-center justify-center bg-white top-[slideArrow]"
+                "absolute left-0 w-11 h-11 text-blackPrimary border-blackPrimary border rounded-full flex items-center justify-center bg-white top-[slideArrow]",
               )}
               style={{ top: topValue }}
             >
@@ -92,7 +92,7 @@ function Section({ interval = 0, layout, style, children }: Props) {
 
             <Slider.NextButton
               class={clx(
-                "absolute right-0 w-11 h-11 text-blackPrimary border-blackPrimary border rounded-full flex items-center justify-center bg-white top-[slideArrow]"
+                "absolute right-0 w-11 h-11 text-blackPrimary border-blackPrimary border rounded-full flex items-center justify-center bg-white top-[slideArrow]",
               )}
               style={{ top: topValue }}
             >
