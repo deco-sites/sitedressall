@@ -4,7 +4,6 @@ export interface Props {
   items?: Item[];
 
   /** @hide */
-  /** @readonly */
   indexActive: number;
 }
 
