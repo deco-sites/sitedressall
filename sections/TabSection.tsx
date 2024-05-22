@@ -52,7 +52,7 @@ export default function TabSection({
       <ul>
         {titles.map((title, index) => (
           <button
-            class={`tab tab-lg`}
+            class={`tab tab-lg ${index === indexToRender ? "tab-active" : ""}`}
             {...usePartialSection({ props: { indexActive: index } })}
           >
             {title}
