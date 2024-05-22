@@ -17,7 +17,7 @@ interface Item {
 
 export default function TabSection({
   items,
-  indexActive,
+  indexActive = 0,
 }: Props) {
   const titles: string[] = [];
   const infos: string[] = [];
@@ -38,7 +38,7 @@ export default function TabSection({
   getInfos();
 
   const infoRender = infos[indexActive];
-
+ 
   return (
     <div>
       <ul>
