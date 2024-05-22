@@ -2,22 +2,27 @@ import { usePartialSection } from "deco/hooks/usePartialSection.ts";
 
 export interface Props {
   items?: Item[];
-
-  /** @hide */
-  indexActive: number;
+  /**
+   * @hide
+   * @readonly
+   */
+  indexActive?: number;
 }
 
-/** @titleBy title */
+/**
+ * @titleBy title
+ */
 interface Item {
   title: string;
-
-  /** @format textarea */
+  /**
+   * @format textarea
+   */
   info: string;
 }
 
 export default function TabSection({
   items,
-  indexActive = 0,
+  indexActive,
 }: Props) {
   const titles: string[] = [];
   const infos: string[] = [];
@@ -37,20 +42,24 @@ export default function TabSection({
   getTitles();
   getInfos();
 
-  const infoRender = infos[indexActive];
- 
+  const indexToRender = typeof indexActive === "number"
+  ? Math.min(Math.max(indexActive, 0), titles.length)
+  : 0;
+  const infoRender = infos[indexToRender];
+
   return (
-    <div>
+    <div class="w-full">
       <ul>
         {titles.map((title, index) => (
           <button
-            class={`tab tab-lg ${index === indexActive ? "tab-active" : ""}`}
+            class={`tab tab-lg`}
             {...usePartialSection({ props: { indexActive: index } })}
           >
             {title}
           </button>
         ))}
       </ul>
+
       {infoRender}
     </div>
   );
