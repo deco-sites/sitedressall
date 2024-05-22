@@ -8,6 +8,7 @@ export interface Props {
   items?: CardProps[];
   slider?: CarouselProps;
   sliderTitle?: string;
+
   sliderReadMore?: {
     url?: string;
     text?: string;
@@ -53,7 +54,9 @@ export default function Section({
       <Carousel
         layout={{ itemWidth: 200 }}
         {...slider}
-        children={allItems.map((item) => <Card {...item} />)}
+        children={allItems.map((item) => (
+          <Card {...item} />
+        ))}
       />
     </div>
   );
