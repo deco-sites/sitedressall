@@ -5,7 +5,6 @@ import Icon from "../../components/ui/Icon.tsx";
 import Slider from "../../components/ui/Slider.tsx";
 import { buttonClasses, ButtonColor, grid } from "../../constants.tsx";
 import { clx } from "../../sdk/clx.ts";
-import { calculate } from "std/http/etag.ts";
 
 interface Layout {
   /** @description For desktop in px. */
@@ -13,8 +12,12 @@ interface Layout {
   gap?: {
     /** @default 2 */
     mobile?: "1" | "2" | "4" | "8" | "12" | "16";
-    /** @default 4 */
+    /** @default auto */
     desktop?: "1" | "2" | "4" | "8" | "12" | "16";
+  };
+  numberOfSliders?: {
+    mobile?: "auto" | "1" | "2" | "3" | "4" | "5";
+    desktop?: "auto" | "1" | "2" | "3" | "4" | "5";
   };
   hide?: {
     controls?: boolean;
@@ -36,22 +39,33 @@ export interface Props {
   };
 }
 
+const slideDesktop = {
+  "1": "md:w-full",
+  "2": "md:w-1/2",
+  "3": "md:w-1/3",
+  "4": "md:w-1/4",
+  "5": "md:w-1/5",
+  auto: "w-auto",
+};
+const slideMobile = {
+  "1": "w-full",
+  "2": "w-1/2",
+  "3": "w-1/3",
+  "4": "w-1/4",
+  "5": "w-1/5",
+  auto: "w-auto",
+};
 const percentage = 50;
 const offset = 42;
 const topValue = `calc(${percentage}% - ${offset}px)`;
 
-function Section({ interval = 0, layout, style, children }: Props) {
+function Section({ interval = 0, layout, children }: Props) {
   const id = useId();
   const items = toChildArray(children);
 
   if (!items.length) {
     return null;
   }
-
-  const controlClx = clx(
-    buttonClasses[style?.controlsColor || "Default"],
-    style?.controlsOutline && "btn-outline",
-  );
 
   return (
     <>
@@ -68,7 +82,14 @@ function Section({ interval = 0, layout, style, children }: Props) {
           )}
         >
           {items?.map((item, index) => (
-            <Slider.Item index={index} class="carousel-item">
+            <Slider.Item
+              index={index}
+              class={clx(
+                "carousel-item",
+                slideDesktop[layout?.numberOfSliders?.desktop ?? "auto"],
+                slideMobile[layout?.numberOfSliders?.mobile ?? "2"],
+              )}
+            >
               {item}
             </Slider.Item>
           ))}

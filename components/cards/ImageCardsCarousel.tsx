@@ -8,6 +8,7 @@ export interface Props {
   items?: CardProps[];
   slider?: CarouselProps;
   sliderTitle?: string;
+
   sliderReadMore?: {
     url?: string;
     text?: string;
