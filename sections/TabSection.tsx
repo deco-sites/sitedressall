@@ -43,8 +43,8 @@ export default function TabSection({
   getInfos();
 
   const indexToRender = typeof indexActive === "number"
-  ? Math.min(Math.max(indexActive, 0), titles.length)
-  : 0;
+    ? Math.min(Math.max(indexActive, 0), titles.length)
+    : 0;
   const infoRender = infos[indexToRender];
 
   return (
