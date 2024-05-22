@@ -78,7 +78,7 @@ function Section({ interval = 0, layout, children }: Props) {
               : grid.gap.mobile[2],
             layout?.gap?.desktop
               ? grid.gap.desktop[layout.gap.desktop]
-              : grid.gap.mobile[4]
+              : grid.gap.mobile[4],
           )}
         >
           {items?.map((item, index) => (
@@ -87,7 +87,7 @@ function Section({ interval = 0, layout, children }: Props) {
               class={clx(
                 "carousel-item",
                 slideDesktop[layout?.numberOfSliders?.desktop ?? "auto"],
-                slideMobile[layout?.numberOfSliders?.mobile ?? "2"]
+                slideMobile[layout?.numberOfSliders?.mobile ?? "2"],
               )}
             >
               {item}
@@ -99,7 +99,7 @@ function Section({ interval = 0, layout, children }: Props) {
           <>
             <Slider.PrevButton
               class={clx(
-                "absolute left-0 w-11 h-11 text-blackPrimary border-blackPrimary border rounded-full flex items-center justify-center bg-white top-[slideArrow]"
+                "absolute left-0 w-11 h-11 text-blackPrimary border-blackPrimary border rounded-full flex items-center justify-center bg-white top-[slideArrow]",
               )}
               style={{ top: topValue }}
             >
@@ -113,7 +113,7 @@ function Section({ interval = 0, layout, children }: Props) {
 
             <Slider.NextButton
               class={clx(
-                "absolute right-0 w-11 h-11 text-blackPrimary border-blackPrimary border rounded-full flex items-center justify-center bg-white top-[slideArrow]"
+                "absolute right-0 w-11 h-11 text-blackPrimary border-blackPrimary border rounded-full flex items-center justify-center bg-white top-[slideArrow]",
               )}
               style={{ top: topValue }}
             >
