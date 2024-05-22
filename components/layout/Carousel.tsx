@@ -3,7 +3,7 @@ import { ComponentChildren, toChildArray } from "preact";
 import { useId } from "preact/hooks";
 import Icon from "../../components/ui/Icon.tsx";
 import Slider from "../../components/ui/Slider.tsx";
-import { buttonClasses, ButtonColor, grid } from "../../constants.tsx";
+import { ButtonColor, grid } from "../../constants.tsx";
 import { clx } from "../../sdk/clx.ts";
 
 interface Layout {
@@ -14,10 +14,6 @@ interface Layout {
     mobile?: "1" | "2" | "4" | "8" | "12" | "16";
     /** @default auto */
     desktop?: "1" | "2" | "4" | "8" | "12" | "16";
-  };
-  numberOfSliders?: {
-    mobile?: "auto" | "1" | "2" | "3" | "4" | "5";
-    desktop?: "auto" | "1" | "2" | "3" | "4" | "5";
   };
   hide?: {
     controls?: boolean;
@@ -39,22 +35,6 @@ export interface Props {
   };
 }
 
-const slideDesktop = {
-  "1": "md:w-full",
-  "2": "md:w-1/2",
-  "3": "md:w-1/3",
-  "4": "md:w-1/4",
-  "5": "md:w-1/5",
-  auto: "w-auto",
-};
-const slideMobile = {
-  "1": "w-full",
-  "2": "w-1/2",
-  "3": "w-1/3",
-  "4": "w-1/4",
-  "5": "w-1/5",
-  auto: "w-auto",
-};
 const percentage = 50;
 const offset = 42;
 const topValue = `calc(${percentage}% - ${offset}px)`;
@@ -78,18 +58,11 @@ function Section({ interval = 0, layout, children }: Props) {
               : grid.gap.mobile[2],
             layout?.gap?.desktop
               ? grid.gap.desktop[layout.gap.desktop]
-              : grid.gap.mobile[4],
+              : grid.gap.mobile[4]
           )}
         >
           {items?.map((item, index) => (
-            <Slider.Item
-              index={index}
-              class={clx(
-                "carousel-item",
-                slideDesktop[layout?.numberOfSliders?.desktop ?? "auto"],
-                slideMobile[layout?.numberOfSliders?.mobile ?? "2"],
-              )}
-            >
+            <Slider.Item index={index} class={clx("carousel-item")}>
               {item}
             </Slider.Item>
           ))}
@@ -99,7 +72,7 @@ function Section({ interval = 0, layout, children }: Props) {
           <>
             <Slider.PrevButton
               class={clx(
-                "absolute left-0 w-11 h-11 text-blackPrimary border-blackPrimary border rounded-full flex items-center justify-center bg-white top-[slideArrow]",
+                "absolute left-0 w-11 h-11 text-blackPrimary border-blackPrimary border rounded-full flex items-center justify-center bg-white top-[slideArrow]"
               )}
               style={{ top: topValue }}
             >
@@ -113,7 +86,7 @@ function Section({ interval = 0, layout, children }: Props) {
 
             <Slider.NextButton
               class={clx(
-                "absolute right-0 w-11 h-11 text-blackPrimary border-blackPrimary border rounded-full flex items-center justify-center bg-white top-[slideArrow]",
+                "absolute right-0 w-11 h-11 text-blackPrimary border-blackPrimary border rounded-full flex items-center justify-center bg-white top-[slideArrow]"
               )}
               style={{ top: topValue }}
             >
