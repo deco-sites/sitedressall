@@ -30,7 +30,7 @@ export default function Section({
     <div class="py-6">
       <div class="max-w-deskContainer m-auto flex items-center justify-between">
         {sliderTitle && (
-          <h2 class="font-bold text-[32px] text-blackPrimary">{sliderTitle}</h2>
+          <h2 class="font-bold text-sectionTitle text-blackPrimary">{sliderTitle}</h2>
         )}
         {sliderReadMore?.text && (
           <div class="flex items-center justify-end gap-2">

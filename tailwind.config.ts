@@ -16,6 +16,9 @@ export default {
           "100%": { transform: "translateX(-50%)" },
         },
       },
+      fontSize: {
+        sectionTitle: "2rem"
+      },
       colors: {
         orangePrimary: "#FE8330",
         blackPrimary: "#3C3C3B",

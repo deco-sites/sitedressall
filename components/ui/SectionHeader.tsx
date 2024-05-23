@@ -19,7 +19,7 @@ function Header(props: Props) {
             {props.title && (
               <h1
                 class={clx(
-                  "text-[32px] font-bold text-blackPrimary leading-8 lg:leading-10",
+                  "text-sectionTitle font-bold text-blackPrimary leading-8 lg:leading-10",
                 )}
               >
                 {props.title}
