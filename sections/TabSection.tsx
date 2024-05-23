@@ -13,11 +13,12 @@ export interface Props {
  * @titleBy title
  */
 interface Item {
-  title: string;
+  title?: string;
+  titleTab?: string;
   /**
    * @format textarea
    */
-  info: string;
+  info?: string;
 }
 
 export default function TabSection({
@@ -29,7 +30,7 @@ export default function TabSection({
 
   function getTitles() {
     items?.map((element) => {
-      titles.push(element.title);
+      titles.push(element.titleTab);
     });
   }
 
@@ -48,22 +49,25 @@ export default function TabSection({
   const infoRender = infos[indexToRender];
 
   return (
-    <div class="w-full">
-      <ul>
-        {titles.map((title, index) => (
+    <div className="w-full flex">
+      <div className="font-berthold text-3xl font-bold">
+        {title}
+      </div>
+      <ul className="flex gap-4 pb-4">
+        {titles.map((titleTab, index) => (
           <button
-            class={`tab tab-lg ${index === indexToRender ? "tab-active" : ""}`}
+            className={`tab tab-lg text-base font-medium text-center p-0 ${index === indexToRender ? "tab-active" : ""}`}
             {...usePartialSection({ props: { indexActive: index } })}
           >
-            {title}
+            {titleTab}
           </button>
         ))}
       </ul>
-      <div>
-        <p>
+      <li>
+        <p className="text-base text-left font-normal">
           {infoRender}
         </p>
-      </div>
+      </li>
     </div>
   );
 }
