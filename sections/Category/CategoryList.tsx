@@ -3,8 +3,6 @@ import Image from "apps/website/components/Image.tsx";
 import Header from "../../components/ui/SectionHeader.tsx";
 import Slider from "../../components/ui/Slider.tsx";
 import { useId } from "../../sdk/useId.ts";
-import Icon from "../../components/ui/Icon.tsx";
-import { clx } from "../../sdk/clx.ts";
 
 export interface Category {
   tag?: string;
@@ -26,9 +24,6 @@ export interface Props {
     categoryCard?: {
       textPosition?: "top" | "bottom";
       textAlignment?: "center" | "left";
-    };
-    hide?: {
-      controls?: boolean;
     };
   };
 }
@@ -52,8 +47,9 @@ function CardText({
     >
       {tag && <div class="text-sm text-blackPrimary">{tag}</div>}
       {label && <h3 class="text-lg text-blackPrimary">{label}</h3>}
-      {description && <div class="text-sm text-blackPrimary">{description}
-      </div>}
+      {description && (
+        <div class="text-sm text-blackPrimary">{description}</div>
+      )}
     </div>
   );
 }
@@ -123,9 +119,6 @@ function CategoryList(props: Props) {
         textPosition: "top",
         textAlignment: "center",
       },
-      hide: {
-        controls: true,
-      },
     },
   } = props;
 
@@ -186,40 +179,9 @@ function CategoryList(props: Props) {
                 </a>
               )}
             </Slider.Item>
-          ),
+          )
         )}
       </Slider>
-      {!layout?.hide?.controls && (
-        <>
-          <Slider.PrevButton
-            class={clx(
-              "absolute left-0 w-11 h-11 text-blackPrimary border-blackPrimary border rounded-full flex items-center justify-center bg-white top-[slideArrow]",
-            )}
-            style={{ top: topValue }}
-          >
-            <Icon
-              class="text-blackPrimary"
-              size={12}
-              id="ChevronLeft"
-              strokeWidth={2}
-            />
-          </Slider.PrevButton>
-
-          <Slider.NextButton
-            class={clx(
-              "absolute right-0 w-11 h-11 text-blackPrimary border-blackPrimary border rounded-full flex items-center justify-center bg-white top-[slideArrow]",
-            )}
-            style={{ top: topValue }}
-          >
-            <Icon
-              class="rotate-180 text-blackPrimary"
-              size={12}
-              id="ChevronLeft"
-              strokeWidth={2}
-            />
-          </Slider.NextButton>
-        </>
-      )}
 
       <Slider.JS rootId={id} />
     </div>
