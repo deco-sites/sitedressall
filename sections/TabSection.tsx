@@ -14,7 +14,6 @@ export interface Props {
  * @titleBy title
  */
 interface Item {
-  
   title?: string;
   /**
    * @format textarea
@@ -25,7 +24,7 @@ interface Item {
 export default function TabSection({
   items,
   indexActive,
-  titleDiv
+  titleDiv,
 }: Props) {
   const titles: string[] = [];
   const infos: string[] = [];
@@ -72,11 +71,7 @@ export default function TabSection({
         <p className="text-base text-left font-normal">
           {infoRender}
         </p>
-        
       </div>
-      
     </div>
-      
-    
   );
 }
