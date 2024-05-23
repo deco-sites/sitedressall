@@ -27,8 +27,8 @@ export interface Props {
       textPosition?: "top" | "bottom";
       textAlignment?: "center" | "left";
     };
-    hide: {
-      controls: boolean;
+    hide?: {
+      controls?: boolean;
     };
   };
 }
@@ -52,8 +52,9 @@ function CardText({
     >
       {tag && <div class="text-sm text-blackPrimary">{tag}</div>}
       {label && <h3 class="text-lg text-blackPrimary">{label}</h3>}
-      {description && <div class="text-sm text-blackPrimary">{description}
-      </div>}
+      {description && (
+        <div class="text-sm text-blackPrimary">{description}</div>
+      )}
     </div>
   );
 }
@@ -132,15 +133,15 @@ function CategoryList(props: Props) {
   return (
     <div
       id={id}
-      class="container py-8 flex flex-col gap-8 lg:gap-10 text-base-content  lg:py-10"
+      class="py-8 flex flex-col gap-8 lg:gap-10 text-base-content lg:py-10 max-w-deskContainer m-auto"
     >
       <Header
         title={header.title}
         description={header.description || ""}
         alignment={layout.headerAlignment || "center"}
       />
-      <div id={id} class="relative max-w-deskContainer m-auto">
-        <Slider class="carousel carousel-start gap-4 lg:gap-8 row-start-2 row-end-5">
+      <div class="relative">
+        <Slider class="relative carousel carousel-start gap-4 lg:gap-8 max-w-deskContainer">
           {list.map(
             ({ tag, label, description, href, image, buttonText }, index) => (
               <Slider.Item
@@ -186,15 +187,15 @@ function CategoryList(props: Props) {
                   </a>
                 )}
               </Slider.Item>
-            ),
+            )
           )}
         </Slider>
 
-        {layout?.hide?.controls && (
+        {!layout?.hide?.controls && (
           <>
             <Slider.PrevButton
               class={clx(
-                "absolute left-0 w-11 h-11 text-blackPrimary border-blackPrimary border rounded-full flex items-center justify-center bg-white",
+                "absolute left-0 w-11 h-11 text-blackPrimary border-blackPrimary border rounded-full flex items-center justify-center bg-white"
               )}
               style={{ top: topValue }}
             >
@@ -208,7 +209,7 @@ function CategoryList(props: Props) {
 
             <Slider.NextButton
               class={clx(
-                "absolute right-0 w-11 h-11 text-blackPrimary border-blackPrimary border rounded-full flex items-center justify-center bg-white",
+                "absolute right-0 w-11 h-11 text-blackPrimary border-blackPrimary border rounded-full flex items-center justify-center bg-white"
               )}
               style={{ top: topValue }}
             >
