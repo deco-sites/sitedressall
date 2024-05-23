@@ -56,7 +56,9 @@ export default function TabSection({
       <ul className="flex gap-4 pb-4">
         {titles.map((titleTab, index) => (
           <button
-            className={`tab tab-lg text-base font-medium text-center p-0 ${index === indexToRender ? "tab-active" : ""}`}
+            className={`tab tab-lg text-base font-medium text-center p-0 ${
+              index === indexToRender ? "tab-active" : ""
+            }`}
             {...usePartialSection({ props: { indexActive: index } })}
           >
             {titleTab}
