@@ -24,10 +24,9 @@ export interface Props {
   layout?: {
     headerAlignment?: "center" | "left";
     categoryCard?: {
-      textPosition?: "top" | "bottom";
+      textPosition?: "inside" | "bottom";
       textAlignment?: "center" | "left";
     };
-
     arrows?: boolean;
   };
 }
@@ -37,11 +36,13 @@ function CardText({
   label,
   description,
   alignment,
+  textPosition,
 }: {
   tag?: string;
   label?: string;
   description?: string;
   alignment?: "center" | "left";
+  textPosition?: "inside" | "bottom";
 }) {
   return (
     <div
@@ -50,9 +51,20 @@ function CardText({
       }`}
     >
       {tag && <div class="text-sm text-blackPrimary">{tag}</div>}
-      {label && <h3 class="text-lg text-blackPrimary">{label}</h3>}
-      {description && <div class="text-sm text-blackPrimary">{description}
-      </div>}
+      {label && (
+        <h3
+          class={`${
+            textPosition === "inside"
+              ? "text-white font-bold text-sectionTitle"
+              : "text-blackPrimary font-medium text-sectionTitle"
+          }`}
+        >
+          {label}
+        </h3>
+      )}
+      {description && (
+        <div class="text-base text-blackPrimary ">{description}</div>
+      )}
     </div>
   );
 }
@@ -119,7 +131,7 @@ function CategoryList(props: Props) {
     layout = {
       headerAlignment: "center",
       categoryCard: {
-        textPosition: "top",
+        textPosition: "inside",
         textAlignment: "center",
       },
       arrows: true,
@@ -137,7 +149,7 @@ function CategoryList(props: Props) {
         alignment={layout.headerAlignment || "center"}
       />
       <div class="relative">
-        <Slider class="relative carousel carousel-start gap-4 lg:gap-8 max-w-deskContainer">
+        <Slider class="relative carousel carousel-start gap-4 lg:gap-8 max-w-deskContainer w-full">
           {list.map(
             ({ tag, label, description, href, image, buttonText }, index) => (
               <Slider.Item
@@ -148,42 +160,61 @@ function CategoryList(props: Props) {
                   href={href}
                   class="flex flex-col gap-4 lg:w-[280px] w-40 lg:h-auto"
                 >
-                  {layout.categoryCard?.textPosition === "top" && (
-                    <CardText
-                      tag={tag}
-                      label={label}
-                      description={description}
-                      alignment={layout?.categoryCard?.textAlignment}
-                    />
-                  )}
                   {image && (
-                    <figure>
-                      <Image
-                        class="card w-full"
-                        src={image}
-                        alt={description || label || tag}
-                        width={160}
-                        height={195}
-                        loading="lazy"
-                      />
-                    </figure>
+                    <div class="relative">
+                      <figure>
+                        <Image
+                          class="card w-full"
+                          src={image}
+                          alt={description || label || tag}
+                          width={160}
+                          height={195}
+                          loading="lazy"
+                        />
+                      </figure>
+                      {layout.categoryCard?.textPosition === "inside" && (
+                        <div class="absolute bottom-8 left-3">
+                          <CardText
+                            tag={tag}
+                            label={label}
+                            description={description}
+                            alignment={layout?.categoryCard?.textAlignment}
+                            textPosition={layout?.categoryCard?.textPosition}
+                          />
+                          {buttonText && (
+                            <a
+                              href={href}
+                              class="w-fit text-[15px] font-bold bg-white text-orangePrimary rounded-full py-2 px-4 flex items-center justify-center"
+                            >
+                              {buttonText}
+                            </a>
+                          )}
+                        </div>
+                      )}
+                    </div>
                   )}
                   {layout.categoryCard?.textPosition === "bottom" && (
-                    <CardText
-                      tag={tag}
-                      label={label}
-                      description={description}
-                      alignment={layout?.categoryCard?.textAlignment}
-                    />
+                    <>
+                      <CardText
+                        tag={tag}
+                        label={label}
+                        description={description}
+                        alignment={layout?.categoryCard?.textAlignment}
+                        textPosition={layout?.categoryCard?.textPosition}
+                      />
+                      {buttonText && (
+                        <a
+                          href={href}
+                          class="w-fit bg-transparent border border-[##B4B4B4] rounded-full py-2 px-4 text-blackPrimary flex items-center justify-center"
+                        >
+                          {buttonText}
+                        </a>
+                      )}
+                    </>
                   )}
                 </a>
-                {buttonText && (
-                  <a href={href} class="btn">
-                    {buttonText}
-                  </a>
-                )}
               </Slider.Item>
-            ),
+            )
           )}
         </Slider>
 
@@ -191,7 +222,7 @@ function CategoryList(props: Props) {
           <>
             <Slider.PrevButton
               class={clx(
-                "absolute left-0 w-11 h-11 text-blackPrimary border-blackPrimary border rounded-full flex items-center justify-center bg-white",
+                "absolute left-0 w-11 h-11 text-blackPrimary border-blackPrimary border rounded-full flex items-center justify-center bg-white"
               )}
               style={{ top: topValue }}
             >
@@ -205,7 +236,7 @@ function CategoryList(props: Props) {
 
             <Slider.NextButton
               class={clx(
-                "absolute right-0 w-11 h-11 text-blackPrimary border-blackPrimary border rounded-full flex items-center justify-center bg-white",
+                "absolute right-0 w-11 h-11 text-blackPrimary border-blackPrimary border rounded-full flex items-center justify-center bg-white"
               )}
               style={{ top: topValue }}
             >
