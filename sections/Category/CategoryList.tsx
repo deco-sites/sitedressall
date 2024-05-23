@@ -139,7 +139,7 @@ function CategoryList(props: Props) {
         description={header.description || ""}
         alignment={layout.headerAlignment || "center"}
       />
-      <div class="relative max-w-deskContainer m-auto">
+      <div id={id} class="relative max-w-deskContainer m-auto">
         <Slider class="carousel carousel-start gap-4 lg:gap-8 row-start-2 row-end-5">
           {list.map(
             ({ tag, label, description, href, image, buttonText }, index) => (
