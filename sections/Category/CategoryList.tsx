@@ -183,7 +183,7 @@ function CategoryList(props: Props) {
                           {buttonText && (
                             <a
                               href={href}
-                              class="w-fit text-[15px] font-bold bg-white text-orangePrimary rounded-full py-2 px-4 flex items-center justify-center"
+                              class="w-fit text-buttonText font-bold bg-white text-orangePrimary rounded-full py-2 px-4 flex items-center justify-center mt-2.5"
                             >
                               {buttonText}
                             </a>
@@ -204,7 +204,7 @@ function CategoryList(props: Props) {
                       {buttonText && (
                         <a
                           href={href}
-                          class="w-fit bg-transparent border border-[##B4B4B4] rounded-full py-2 px-4 text-blackPrimary flex items-center justify-center"
+                          class="w-fit bg-transparent border border-[#B4B4B4] rounded-full py-2 px-4 text-blackPrimary font-bold text-buttonText flex items-center justify-center"
                         >
                           {buttonText}
                         </a>
@@ -213,7 +213,7 @@ function CategoryList(props: Props) {
                   )}
                 </div>
               </Slider.Item>
-            ),
+            )
           )}
         </Slider>
 
@@ -221,7 +221,7 @@ function CategoryList(props: Props) {
           <>
             <Slider.PrevButton
               class={clx(
-                "absolute left-0 w-11 h-11 text-blackPrimary border-blackPrimary border rounded-full flex items-center justify-center bg-white",
+                "absolute left-0 w-11 h-11 text-blackPrimary border-blackPrimary border rounded-full flex items-center justify-center bg-white"
               )}
               style={{ top: topValue }}
             >
@@ -235,7 +235,7 @@ function CategoryList(props: Props) {
 
             <Slider.NextButton
               class={clx(
-                "absolute right-0 w-11 h-11 text-blackPrimary border-blackPrimary border rounded-full flex items-center justify-center bg-white",
+                "absolute right-0 w-11 h-11 text-blackPrimary border-blackPrimary border rounded-full flex items-center justify-center bg-white"
               )}
               style={{ top: topValue }}
             >

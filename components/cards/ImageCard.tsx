@@ -71,7 +71,7 @@ function Card({
           {buttonText && (
             <a
               href={href}
-              class="absolute px-4 py-2 rounded-full font-bold bg-white text-orangePrimary text-[15px] bottom-5"
+              class="absolute px-4 py-2 rounded-full font-bold bg-white text-orangePrimary text-buttonText bottom-5"
             >
               {buttonText}
             </a>
