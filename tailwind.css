@@ -62,3 +62,11 @@
   top: 1rem;
 }
 
+.tab-active{
+  border-bottom: 3px solid #3C3C3B;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 18.83px;
+  text-align: center;
+  text-transform: uppercase;
+}
