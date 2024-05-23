@@ -50,7 +50,7 @@ export default function TabSection({
   const infoRender = infos[indexToRender];
 
   return (
-    <div className="w-full flex container my-0 mx-auto">
+    <div className="w-full flex container my-0 mx-auto justify-between">
       <div className="font-berthold text-3xl font-bold">
         {titleDiv}
       </div>
