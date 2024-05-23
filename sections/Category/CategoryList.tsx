@@ -19,6 +19,7 @@ export interface Props {
   header?: {
     title?: string;
     description?: string;
+    readMore?: { text: string; icon: ImageWidget; url: string };
   };
   list?: Category[];
   layout?: {
@@ -143,11 +144,31 @@ function CategoryList(props: Props) {
       id={id}
       class="py-8 flex flex-col gap-8 lg:gap-10 text-base-content lg:py-10 max-w-deskContainer m-auto"
     >
-      <Header
-        title={header.title}
-        description={header.description || ""}
-        alignment={layout.headerAlignment || "center"}
-      />
+      <div class="flex items-center justify-between">
+        <Header
+          title={header.title}
+          description={header.description || ""}
+          alignment={layout.headerAlignment || "center"}
+        />
+        {header.readMore?.text && (
+          <div class="flex items-center justify-end gap-2">
+            <a
+              href={header.readMore?.url || "#"}
+              class="text-blackPrimary text-base underline"
+            >
+              {header.readMore?.text}
+            </a>
+            {header.readMore?.icon && (
+              <Image
+                src={header.readMore?.icon}
+                width={12}
+                height={7}
+                alt="icone ver mais"
+              />
+            )}
+          </div>
+        )}
+      </div>
       <div class="relative">
         <Slider class="relative carousel carousel-start gap-4 lg:gap-8 max-w-deskContainer w-full">
           {list.map(
@@ -213,7 +234,7 @@ function CategoryList(props: Props) {
                   )}
                 </div>
               </Slider.Item>
-            ),
+            )
           )}
         </Slider>
 
@@ -221,7 +242,7 @@ function CategoryList(props: Props) {
           <>
             <Slider.PrevButton
               class={clx(
-                "absolute left-0 w-11 h-11 text-blackPrimary border-blackPrimary border rounded-full flex items-center justify-center bg-white",
+                "absolute left-0 w-11 h-11 text-blackPrimary border-blackPrimary border rounded-full flex items-center justify-center bg-white"
               )}
               style={{ top: topValue }}
             >
@@ -235,7 +256,7 @@ function CategoryList(props: Props) {
 
             <Slider.NextButton
               class={clx(
-                "absolute right-0 w-11 h-11 text-blackPrimary border-blackPrimary border rounded-full flex items-center justify-center bg-white",
+                "absolute right-0 w-11 h-11 text-blackPrimary border-blackPrimary border rounded-full flex items-center justify-center bg-white"
               )}
               style={{ top: topValue }}
             >
