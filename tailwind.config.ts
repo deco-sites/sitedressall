@@ -17,7 +17,7 @@ export default {
         },
       },
       fontSize: {
-        sectionTitle: "2rem"
+        sectionTitle: "2rem",
       },
       colors: {
         orangePrimary: "#FE8330",
