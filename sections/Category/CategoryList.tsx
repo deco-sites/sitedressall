@@ -47,9 +47,8 @@ function CardText({
     >
       {tag && <div class="text-sm text-blackPrimary">{tag}</div>}
       {label && <h3 class="text-lg text-blackPrimary">{label}</h3>}
-      {description && (
-        <div class="text-sm text-blackPrimary">{description}</div>
-      )}
+      {description && <div class="text-sm text-blackPrimary">{description}
+      </div>}
     </div>
   );
 }
@@ -179,7 +178,7 @@ function CategoryList(props: Props) {
                 </a>
               )}
             </Slider.Item>
-          )
+          ),
         )}
       </Slider>
 
