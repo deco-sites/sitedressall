@@ -124,7 +124,7 @@ function CategoryList(props: Props) {
         textAlignment: "center",
       },
       hide: {
-        controls: false,
+        controls: true,
       },
     },
   } = props;
