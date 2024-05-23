@@ -7,14 +7,15 @@ export interface Props {
    * @readonly
    */
   indexActive?: number;
+  titleDiv?: string;
 }
 
 /**
  * @titleBy title
  */
 interface Item {
+  
   title?: string;
-  titleTab?: string;
   /**
    * @format textarea
    */
@@ -24,13 +25,14 @@ interface Item {
 export default function TabSection({
   items,
   indexActive,
+  titleDiv
 }: Props) {
   const titles: string[] = [];
   const infos: string[] = [];
 
   function getTitles() {
     items?.map((element) => {
-      titles.push(element.titleTab);
+      titles.push(element.title);
     });
   }
 
@@ -51,25 +53,30 @@ export default function TabSection({
   return (
     <div className="w-full flex">
       <div className="font-berthold text-3xl font-bold">
-        {title}
+        {titleDiv}
       </div>
-      <ul className="flex gap-4 pb-4">
-        {titles.map((titleTab, index) => (
-          <button
-            className={`tab tab-lg text-base font-medium text-center p-0 ${
-              index === indexToRender ? "tab-active" : ""
-            }`}
-            {...usePartialSection({ props: { indexActive: index } })}
-          >
-            {titleTab}
-          </button>
-        ))}
-      </ul>
-      <li>
+      <div className="flex flex-col">
+        <ul className="flex gap-4 pb-4">
+          {titles.map((title, index) => (
+            <button
+              className={`tab tab-lg text-base font-medium text-center p-0 uppercase ${
+                index === indexToRender ? "tab-active" : ""
+              }`}
+              {...usePartialSection({ props: { indexActive: index } })}
+            >
+              {title}
+            </button>
+          ))}
+        </ul>
+
         <p className="text-base text-left font-normal">
           {infoRender}
         </p>
-      </li>
+        
+      </div>
+      
     </div>
+      
+    
   );
 }
