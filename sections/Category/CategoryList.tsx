@@ -154,24 +154,23 @@ function CategoryList(props: Props) {
             ({ tag, label, description, href, image, buttonText }, index) => (
               <Slider.Item
                 index={index}
-                class="flex flex-col gap-4 carousel-item first:pl-6 sm:first:pl-0 last:pr-6 sm:last:pr-0"
+                class="flex flex-col gap-4 carousel-item first:pl-6 sm:first:pl-0 last:pr-6 sm:last:pr-0 w-1/4"
               >
-                <a
-                  href={href}
-                  class="flex flex-col gap-4 lg:w-[280px] w-40 lg:h-auto"
-                >
+                <div href={href} class="flex flex-col gap-4 w-full lg:h-auto">
                   {image && (
                     <div class="relative">
-                      <figure>
-                        <Image
-                          class="card w-full"
-                          src={image}
-                          alt={description || label || tag}
-                          width={160}
-                          height={195}
-                          loading="lazy"
-                        />
-                      </figure>
+                      <a href={href}>
+                        <figure>
+                          <Image
+                            class="card w-full"
+                            src={image}
+                            alt={description || label || tag}
+                            width={160}
+                            height={195}
+                            loading="lazy"
+                          />
+                        </figure>
+                      </a>
                       {layout.categoryCard?.textPosition === "inside" && (
                         <div class="absolute bottom-8 left-3">
                           <CardText
@@ -212,9 +211,9 @@ function CategoryList(props: Props) {
                       )}
                     </>
                   )}
-                </a>
+                </div>
               </Slider.Item>
-            ),
+            )
           )}
         </Slider>
 
@@ -222,7 +221,7 @@ function CategoryList(props: Props) {
           <>
             <Slider.PrevButton
               class={clx(
-                "absolute left-0 w-11 h-11 text-blackPrimary border-blackPrimary border rounded-full flex items-center justify-center bg-white",
+                "absolute left-0 w-11 h-11 text-blackPrimary border-blackPrimary border rounded-full flex items-center justify-center bg-white"
               )}
               style={{ top: topValue }}
             >
@@ -236,7 +235,7 @@ function CategoryList(props: Props) {
 
             <Slider.NextButton
               class={clx(
-                "absolute right-0 w-11 h-11 text-blackPrimary border-blackPrimary border rounded-full flex items-center justify-center bg-white",
+                "absolute right-0 w-11 h-11 text-blackPrimary border-blackPrimary border rounded-full flex items-center justify-center bg-white"
               )}
               style={{ top: topValue }}
             >
