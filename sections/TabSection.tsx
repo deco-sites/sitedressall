@@ -51,16 +51,15 @@ export default function TabSection({
 
   return (
     <div className="w-full flex container my-0 mx-auto justify-between">
-      <div className="font-berthold text-3xl font-bold">
+      <div className="font-berthold text-3xl font-bold max-w-[355px]">
         {titleDiv}
       </div>
       <div className="flex flex-col">
         <ul className="flex gap-4 pb-4">
           {titles.map((title, index) => (
             <button
-              className={`tab tab-lg text-base font-medium text-center p-0 uppercase ${
-                index === indexToRender ? "tab-active" : ""
-              }`}
+              className={`tab tab-lg text-base font-medium text-center p-0 uppercase ${index === indexToRender ? "tab-active" : ""
+                }`}
               {...usePartialSection({ props: { indexActive: index } })}
             >
               {title}
@@ -68,7 +67,7 @@ export default function TabSection({
           ))}
         </ul>
 
-        <p className="text-base text-left font-normal">
+        <p className="text-base text-left font-normal max-w-[680px]">
           {infoRender}
         </p>
       </div>
