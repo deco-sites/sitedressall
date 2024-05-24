@@ -275,6 +275,21 @@
       "linkUrl": "/parceria"
     },
     {
+      "__resolveType": "site/sections/TabSectionSlider.tsx",
+      "items": [
+        {
+          "slider": "sa",
+          "title": "facilidades 23"
+        },
+        {},
+        {
+          "title": "sdadsa",
+          "slider": "dsadsads"
+        }
+      ],
+      "titleDiv": "sasaas"
+    },
+    {
       "__resolveType": "site/sections/Footer/Footer.tsx",
       "layout": {
         "hide": {

@@ -107,6 +107,12 @@
         },
         "buttonText": "urbano",
         "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/8911/2d064777-7dd3-4352-b833-123f2f9bcf57"
+      },
+      {
+        "style": {
+          "textPosition": "Top",
+          "textAlignment": "Center"
+        }
       }
     ],
     "slider": {
