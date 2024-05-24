@@ -1,7 +1,7 @@
 import { usePartialSection } from "deco/hooks/usePartialSection.ts";
 import ImageCardsCarousel, {
-    Props as CarouselProps,
-  } from "./Cards/ImageCardsCarousel.tsx";
+  Props as CarouselProps,
+} from "./Cards/ImageCardsCarousel.tsx";
 
 export interface Props {
   items?: Item[];
@@ -29,7 +29,7 @@ export default function TabSectionSlider({
   items,
   indexActive,
   titleDiv,
-  carousel
+  carousel,
 }: Props) {
   const titles: string[] = [];
   const sliders: string[] = [];
@@ -74,9 +74,8 @@ export default function TabSectionSlider({
         </ul>
 
         <p className="text-base text-left font-normal max-w-[680px]">
-            {sliderRender && 
-                <ImageCardsCarousel {...carousel} />
-            }
+          {sliderRender &&
+            <ImageCardsCarousel {...carousel} />}
         </p>
       </div>
     </div>
