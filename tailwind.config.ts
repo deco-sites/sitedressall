@@ -38,8 +38,8 @@ export default {
         "max-1024": { max: "1024px" },
       },
       aspectRatio: {
-        mobile: "9/16"
-      }
+        mobile: "9/16",
+      },
     },
   },
 };
