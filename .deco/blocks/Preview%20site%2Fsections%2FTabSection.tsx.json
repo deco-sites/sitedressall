@@ -1,1 +1,43 @@
-{"__resolveType":"site/sections/TabSection.tsx","items":[{"title":"facilidades","info":"Nascemos para conectar artistas independentes ao cliente que valoriza expor sua personalidade nas paredes de forma autêntica, sem necessariamente já ter experiência com o mundo da arte."},{"info":"Nascemos para conectar artistas independentes ao cliente que valoriza expor sua personalidade nas paredes de forma autêntica, sem necessariamente já ter experiência com o mundo da arte.","title":"frete rápido"},{"info":"Nascemos para conectar artistas independentes ao cliente que valoriza expor sua personalidade nas paredes de forma autêntica, sem necessariamente já ter experiência com o mundo da arte.","title":"preço justo"},{"info":"Nascemos para conectar artistas independentes ao cliente que valoriza expor sua personalidade nas paredes de forma autêntica, sem necessariamente já ter experiência com o mundo da arte.","title":"personalização"},{"title":"retorno social","info":"Nascemos para conectar artistas independentes ao cliente que valoriza expor sua personalidade nas paredes de forma autêntica, sem necessariamente já ter experiência com o mundo da arte."}],"tabs":[{"label":"2121","content":"description 1 "},{"label":"4444","content":"desription 2 "},{"label":"tab 3","content":"texto exemplo3 3"},{},{}],"tabIndex":2,"titleDiv":"Resolvemos as dores de comprar arte online"}
+{
+  "__resolveType": "site/sections/TabSection.tsx",
+  "items": [
+    {
+      "title": "facilidades",
+      "info": "Nascemos para conectar artistas independentes ao cliente que valoriza expor sua personalidade nas paredes de forma autêntica, sem necessariamente já ter experiência com o mundo da arte."
+    },
+    {
+      "info": "Nascemos para conectar artistas independentes ao cliente que valoriza expor sua personalidade nas paredes de forma autêntica, sem necessariamente já ter experiência com o mundo da arte.",
+      "title": "frete rápido"
+    },
+    {
+      "info": "Nascemos para conectar artistas independentes ao cliente que valoriza expor sua personalidade nas paredes de forma autêntica, sem necessariamente já ter experiência com o mundo da arte.",
+      "title": "preço justo"
+    },
+    {
+      "info": "Nascemos para conectar artistas independentes ao cliente que valoriza expor sua personalidade nas paredes de forma autêntica, sem necessariamente já ter experiência com o mundo da arte.",
+      "title": "personalização"
+    },
+    {
+      "title": "retorno social",
+      "info": "Nascemos para conectar artistas independentes ao cliente que valoriza expor sua personalidade nas paredes de forma autêntica, sem necessariamente já ter experiência com o mundo da arte."
+    }
+  ],
+  "tabs": [
+    {
+      "label": "2121",
+      "content": "description 1 "
+    },
+    {
+      "label": "4444",
+      "content": "desription 2 "
+    },
+    {
+      "label": "tab 3",
+      "content": "texto exemplo3 3"
+    },
+    {},
+    {}
+  ],
+  "tabIndex": 2,
+  "titleDiv": "Resolvemos as dores de comprar arte online"
+}
