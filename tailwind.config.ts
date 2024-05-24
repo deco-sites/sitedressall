@@ -37,6 +37,9 @@ export default {
         "max-1023": { max: "1023px" },
         "max-1024": { max: "1024px" },
       },
+      aspectRatio: {
+        mobile: "9/16"
+      }
     },
   },
 };

@@ -1,4 +1,3 @@
-import Header from "../../components/ui/SectionHeader.tsx";
 import { useId } from "../../sdk/useId.ts";
 import Image from "apps/website/components/Image.tsx";
 import type { ImageWidget } from "apps/admin/widgets.ts";
@@ -92,21 +91,13 @@ function CategoryGrid(props: Props) {
   const listQTE = list?.length > 1;
   return (
     <div id={id} class="container mt-16">
-      {
-        /* <Header
-        title={header.title}
-        description={header.description || ""}
-        alignment={layout.headerAlignment || "center"}
-      /> */
-      }
-
       <div
-        class={`grid md:${
+        class={`grid px-4 md:px-0 md:${
           listQTE ? "grid-cols-2" : "grid-cols-1"
-        } grid-cols-1 mt-6 gap-x-8`}
+        } grid-cols-1 mt-6 gap-x-8 md:gap-y-0 gap-y-8`}
       >
         {list.map(({ href, image, label, title, text, buttonText }) => (
-          <div class="relative">
+          <div class="relative rounded-3xl">
             <div
               class="absolute bg-gradient-to-b from-transparent via-transparent to-black h-full w-full rounded-3xl"
               style={{
@@ -129,7 +120,9 @@ function CategoryGrid(props: Props) {
               {image && (
                 <figure>
                   <Image
-                    class="w-full rounded-3xl"
+                    class={`w-full rounded-3xl object-cover md:aspect-auto ${
+                      listQTE ? "aspect-auto" : "aspect-mobile"
+                    }`}
                     src={image}
                     alt={label}
                     width={720}
@@ -138,14 +131,18 @@ function CategoryGrid(props: Props) {
                   />
                 </figure>
               )}
-              <div class={`absolute ${listQTE ? "m-6" : "ml-6 mb-[105px]"}`}>
+              <div
+                class={`absolute ${
+                  listQTE ? "m-6" : "mx-6 md:mb-[105px] mb-[39px]"
+                }`}
+              >
                 {title && (
                   <RichText
                     text={title}
                     textStyle={`text-white ${
                       listQTE
                         ? "font-medium text-4xl"
-                        : "font-light text-[64px]"
+                        : "md:font-light font-normal md:text-[64px] leading-[74px] text-4xl"
                     }`}
                     containerWidth={490}
                   />
