@@ -1,7 +1,7 @@
 import { usePartialSection } from "deco/hooks/usePartialSection.ts";
 import ImageCardsCarousel, {
   Props as CarouselProps,
-} from "./Cards/IconCardsCarouselWithImage.tsx";
+} from "../components/cards/ImageCardsCarousel.tsx";
 
 export interface Props {
   items?: Item[];
@@ -19,9 +19,6 @@ export interface Props {
  */
 interface Item {
   title?: string;
-  /**
-   * @format textarea
-   */
 }
 
 export default function TabSectionSlider({
@@ -42,8 +39,9 @@ export default function TabSectionSlider({
   getTitles();
 
   const indexToRender = typeof indexActive === "number"
-    ? Math.min(Math.max(indexActive, 0), titles.length)
-    : 0;
+  ? Math.min(Math.max(indexActive, 0), titles.length)
+  : 0;
+
   const sliderRender = sliders[indexToRender];
 
   return (
@@ -64,7 +62,9 @@ export default function TabSectionSlider({
             </button>
           ))}
         </ul>
-        {sliderRender}
+        <div>
+          {sliderRender}
+        </div>
       </div>
     </div>
   );
