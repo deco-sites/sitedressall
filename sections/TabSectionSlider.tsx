@@ -30,17 +30,14 @@ export default function TabSectionSlider({
   titleDiv,
   carousel,
 }: Props) {
-
   const titles: string[] = [];
-  const sliders = <ImageCardsCarousel {...carousel} />
+  const sliders = <ImageCardsCarousel {...carousel} />;
 
   function getTitles() {
     items?.map((element) => {
       titles.push(element.title);
     });
   }
-
-
 
   getTitles();
 
