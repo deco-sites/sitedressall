@@ -278,13 +278,33 @@
       "__resolveType": "site/sections/TabSectionSlider.tsx",
       "items": [
         {
-          "slider": "sa",
+          "slider": {
+            "0": "s",
+            "1": "a",
+            "label": "dsadsa",
+            "icon": "ChevronRight"
+          },
           "title": "facilidades 23"
         },
-        {},
+        {
+          "title": "dsadas"
+        },
         {
           "title": "sdadsa",
-          "slider": "dsadsads"
+          "slider": {
+            "0": "d",
+            "1": "s",
+            "2": "a",
+            "3": "d",
+            "4": "s",
+            "5": "a",
+            "6": "d",
+            "7": "s",
+            "label": "dsadas"
+          }
+        },
+        {
+          "title": "title"
         }
       ],
       "titleDiv": "sasaas"
@@ -457,9 +477,6 @@
           }
         ]
       }
-    },
-    {
-      "__resolveType": "site/sections/TabSection.tsx"
     }
   ],
   "__resolveType": "website/pages/Page.tsx",

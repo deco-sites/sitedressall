@@ -42,20 +42,7 @@ export default function TabSectionSlider({
   },
 }: Props) {
   const titles: string[] = [];
-  const sliders = items.map((item) => (
-    <div
-      key={item.title}
-      className={clx(
-        "flex flex-col lg:flex-row items-center gap-8",
-        image?.position ? flex.position[image.position] : flex.position["Left"],
-      )}
-    >
-      <SimpleImage width={image.width || "30%"} {...image} />
-      <div className="flex-auto">
-        <ImageCardsCarousel {...carousel} />
-      </div>
-    </div>
-  ));
+  const sliders: string[] = [];
 
   function getTitles() {
     items?.map((element) => {
@@ -95,7 +82,22 @@ export default function TabSectionSlider({
             </button>
           ))}
         </ul>
-        {sliderRender}
+        {sliderRender &&
+          (
+            <div
+              class={clx(
+                "flex flex-col lg:flex-row items-center gap-8",
+                image.position
+                  ? flex.position[image.position]
+                  : flex.position["Left"],
+              )}
+            >
+              <SimpleImage width={image.width || "30%"} {...image} />
+              <div class="flex-auto">
+                <ImageCardsCarousel {...carousel} />
+              </div>
+            </div>
+          )}
       </div>
     </div>
   );
