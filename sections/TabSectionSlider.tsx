@@ -39,7 +39,7 @@ export default function TabSectionSlider({
       </div>
       <div className="flex flex-col">
         <ul className="flex gap-4 pb-4 flex-wrap">
-          {titles.map((el, index:number) => (
+          {titles.map((el, index: number) => (
             <li key={index}>
               <button
                 className={`tab tab-lg text-base font-medium text-center p-0 uppercase ${
