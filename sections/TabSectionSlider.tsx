@@ -2,11 +2,6 @@ import { usePartialSection } from "deco/hooks/usePartialSection.ts";
 import ImageCardsCarousel, {
   Props as CarouselProps,
 } from "./Cards/IconCardsCarouselWithImage.tsx";
-import SimpleImage, {
-  Props as SimpleImageProps,
-} from "../components/ui/ImageGallery.tsx";
-import { clx } from "../sdk/clx.ts";
-import { flex } from "../constants.tsx";
 import { SlideProps } from "./Miscellaneous/Slide.tsx";
 
 export interface Props {
@@ -18,7 +13,6 @@ export interface Props {
   indexActive?: number;
   titleDiv?: string;
   carousel?: CarouselProps;
-  image?: SimpleImageProps;
 }
 
 /**
@@ -45,12 +39,7 @@ export default function TabSectionSlider({
   const sliders = items.map((item) => (
     <div
       key={item.title}
-      className={clx(
-        "flex flex-col lg:flex-row items-center gap-8",
-        image?.position ? flex.position[image.position] : flex.position["Left"],
-      )}
     >
-      <SimpleImage width={image.width || "30%"} {...image} />
       <div className="flex-auto">
         <ImageCardsCarousel {...carousel} />
       </div>
