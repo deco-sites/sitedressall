@@ -48,7 +48,6 @@ export default function TabSectionSlider({
       <div className="flex flex-col">
         <ul className="flex gap-4 pb-4 flex-wrap">
           {titles.map((el, index) => (
-            
             <button
               className={`tab tab-lg text-base font-medium text-center p-0 uppercase ${
                 index === indexToRender ? "tab-active" : ""
@@ -63,7 +62,7 @@ export default function TabSectionSlider({
           {titles[indexToRender]?.carousel && (
             <ImageCardsCarousel {...titles[indexToRender].carousel} />
           )}
-        </li>  
+        </li>
       </div>
     </div>
   );
