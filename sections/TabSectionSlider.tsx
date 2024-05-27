@@ -26,18 +26,10 @@ export default function TabSectionSlider({
   indexActive,
   titleDiv,
 }: Props) {
-  const titles: Item[] = [];
-
-  function getTitles() {
-    items?.map((element: Item) => {
-      titles.push(element);
-    });
-  }
-
-  getTitles();
+  const titles: Item[] = items || [];
 
   const indexToRender = typeof indexActive === "number"
-    ? Math.min(Math.max(indexActive, 0), titles.length)
+    ? Math.min(Math.max(indexActive, 0), titles.length - 1)
     : 0;
 
   return (
@@ -47,15 +39,17 @@ export default function TabSectionSlider({
       </div>
       <div className="flex flex-col">
         <ul className="flex gap-4 pb-4 flex-wrap">
-          {titles.map((el, index) => (
-            <button
-              className={`tab tab-lg text-base font-medium text-center p-0 uppercase ${
-                index === indexToRender ? "tab-active" : ""
-              }`}
-              {...usePartialSection({ props: { indexActive: index } })}
-            >
-              {el.title}
-            </button>
+          {titles.map((el, index:number) => (
+            <li key={index}>
+              <button
+                className={`tab tab-lg text-base font-medium text-center p-0 uppercase ${
+                  index === indexToRender ? "tab-active" : ""
+                }`}
+                {...usePartialSection({ props: { indexActive: index } })}
+              >
+                {el.title}
+              </button>
+            </li>
           ))}
         </ul>
         <div>
