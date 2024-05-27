@@ -1,7 +1,7 @@
 import { usePartialSection } from "deco/hooks/usePartialSection.ts";
 import ImageCardsCarousel, {
   Props as CarouselProps,
-} from "./Cards/IconCardsCarouselWithImage.tsx";
+} from "../components/cards/ImageCardsCarousel.tsx";
 
 export interface Props {
   items?: Item[];
@@ -11,7 +11,6 @@ export interface Props {
    */
   indexActive?: number;
   titleDiv?: string;
-  carousel?: CarouselProps;
 }
 
 /**
@@ -19,32 +18,19 @@ export interface Props {
  */
 interface Item {
   title?: string;
-  /**
-   * @format textarea
-   */
+  carousel?: CarouselProps;
 }
 
 export default function TabSectionSlider({
   items,
   indexActive,
   titleDiv,
-  carousel,
 }: Props) {
-  const titles: string[] = [];
-  const sliders = <ImageCardsCarousel {...carousel} />;
-
-  function getTitles() {
-    items?.map((element) => {
-      titles.push(element.title);
-    });
-  }
-
-  getTitles();
+  const titles: Item[] = items || [];
 
   const indexToRender = typeof indexActive === "number"
-    ? Math.min(Math.max(indexActive, 0), titles.length)
+    ? Math.min(Math.max(indexActive, 0), titles.length - 1)
     : 0;
-  const sliderRender = sliders[indexToRender];
 
   return (
     <div className="w-full flex flex-col container my-0 mx-auto justify-between items-center max-1024:flex-col max-1024:items-start max-1024:p-4">
@@ -53,18 +39,24 @@ export default function TabSectionSlider({
       </div>
       <div className="flex flex-col">
         <ul className="flex gap-4 pb-4 flex-wrap">
-          {titles.map((title, index) => (
-            <button
-              className={`tab tab-lg text-base font-medium text-center p-0 uppercase ${
-                index === indexToRender ? "tab-active" : ""
-              }`}
-              {...usePartialSection({ props: { indexActive: index } })}
-            >
-              {title}
-            </button>
+          {titles.map((el, index: number) => (
+            <li key={index}>
+              <button
+                className={`tab tab-lg text-base font-medium text-center p-0 uppercase ${
+                  index === indexToRender ? "tab-active" : ""
+                }`}
+                {...usePartialSection({ props: { indexActive: index } })}
+              >
+                {el.title}
+              </button>
+            </li>
           ))}
         </ul>
-        {sliderRender}
+        <div>
+          {titles[indexToRender]?.carousel && (
+            <ImageCardsCarousel {...titles[indexToRender].carousel} />
+          )}
+        </div>
       </div>
     </div>
   );

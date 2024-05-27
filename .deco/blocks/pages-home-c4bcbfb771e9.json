@@ -13,9 +13,9 @@
           "alt": "Feminino",
           "action": {
             "href": "/feminino",
-            "label": "explore o acervo",
-            "title": "CAIXA COLECIONÁVEL",
-            "subTitle": "Somente durante a promo: edição limitada e colecionável da nossa caixa livro decorativa, produzida pela nossa artista Mariana San Martin."
+            "label": "Explore collection",
+            "title": "Shopify Store",
+            "subTitle": "Visit our site and start building now:"
           },
           "mobile": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/2291/c007e481-b1c6-4122-9761-5c3e554512c1",
           "desktop": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/8911/a7576e82-0a20-4718-9af0-6d0c5403955f"
@@ -275,6 +275,150 @@
       "linkUrl": "/parceria"
     },
     {
+      "__resolveType": "site/sections/TabSectionSlider.tsx",
+      "titleDiv": "Title",
+      "carousel": {
+        "image": {
+          "altText": "Image",
+          "position": "Right",
+          "width": "30%",
+          "mobile": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/8911/91c3f2d4-f3b3-44f9-9f80-9f28ee8f5ee9",
+          "desktop": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/8911/91c3f2d4-f3b3-44f9-9f80-9f28ee8f5ee9"
+        },
+        "carousel": {
+          "placeholderItems": 1,
+          "items": [
+            {
+              "icon": "ArrowsPointingOut",
+              "layout": {
+                "iconPosition": "Top"
+              },
+              "style": {
+                "background": {
+                  "bgColor": "Transparent",
+                  "bgImage": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/8911/91c3f2d4-f3b3-44f9-9f80-9f28ee8f5ee9"
+                },
+                "border": {
+                  "width": "1",
+                  "color": "Primary",
+                  "radius": "Normal"
+                }
+              },
+              "label": "image 1",
+              "description": "image 1 "
+            },
+            {
+              "icon": "ArrowsPointingOut",
+              "layout": {
+                "iconPosition": "Top"
+              },
+              "style": {
+                "background": {
+                  "bgColor": "Transparent"
+                },
+                "border": {
+                  "width": "None",
+                  "color": "Transparent",
+                  "radius": "None"
+                }
+              },
+              "label": "img 3",
+              "description": "img 3"
+            },
+            {
+              "icon": "ArrowsPointingOut",
+              "layout": {
+                "iconPosition": "Top"
+              },
+              "style": {
+                "background": {
+                  "bgColor": "Transparent"
+                },
+                "border": {
+                  "width": "None",
+                  "color": "Transparent",
+                  "radius": "None"
+                }
+              },
+              "label": "image 3",
+              "description": "desc"
+            }
+          ],
+          "slider": {
+            "layout": {
+              "gap": {
+                "mobile": "8",
+                "desktop": "16"
+              }
+            }
+          }
+        }
+      },
+      "items": [
+        {
+          "title": "facilidades 23"
+        },
+        {
+          "title": "tilte 3"
+        },
+        {
+          "carousel": {
+            "items": [
+              {
+                "style": {
+                  "textPosition": "Top",
+                  "textAlignment": "Center"
+                },
+                "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/8911/b5d30868-11a8-410b-9fbc-010ecebea773"
+              },
+              {
+                "style": {
+                  "textPosition": "Top",
+                  "textAlignment": "Center"
+                },
+                "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/8911/9d486cdc-b8da-4d1a-8ffb-880f37a3b5c7"
+              },
+              {
+                "style": {
+                  "textPosition": "Top",
+                  "textAlignment": "Center"
+                },
+                "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/8911/91c3f2d4-f3b3-44f9-9f80-9f28ee8f5ee9"
+              }
+            ],
+            "slider": {
+              "layout": {
+                "gap": {
+                  "mobile": "1",
+                  "desktop": "1"
+                }
+              },
+              "style": {
+                "controlsColor": "Default"
+              }
+            }
+          },
+          "title": "novo"
+        },
+        {
+          "carousel": {
+            "items": [],
+            "slider": {
+              "layout": {
+                "gap": {
+                  "mobile": "1",
+                  "desktop": "1"
+                }
+              },
+              "style": {
+                "controlsColor": "Default"
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
       "__resolveType": "site/sections/Footer/Footer.tsx",
       "layout": {
         "hide": {
@@ -442,9 +586,6 @@
           }
         ]
       }
-    },
-    {
-      "__resolveType": "Preview site/sections/TabSectionSlider.tsx"
     }
   ],
   "__resolveType": "website/pages/Page.tsx",
