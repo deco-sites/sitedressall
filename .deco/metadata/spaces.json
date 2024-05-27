@@ -541,7 +541,7 @@
             "content": [
               {
                 "type": "stack",
-                "width": 21.329987452948558,
+                "width": 50,
                 "isClosable": true,
                 "reorderEnabled": true,
                 "title": "",
@@ -562,7 +562,7 @@
               },
               {
                 "type": "stack",
-                "width": 78.67001254705144,
+                "width": 50,
                 "isClosable": true,
                 "reorderEnabled": true,
                 "title": "",
@@ -3293,7 +3293,7 @@
             "content": [
               {
                 "type": "stack",
-                "width": 22.208281053952323,
+                "width": 24.78042659974906,
                 "isClosable": true,
                 "reorderEnabled": true,
                 "title": "",
@@ -3314,7 +3314,7 @@
               },
               {
                 "type": "stack",
-                "width": 77.79171894604768,
+                "width": 75.21957340025094,
                 "isClosable": true,
                 "reorderEnabled": true,
                 "title": "",
@@ -3537,7 +3537,7 @@
             "content": [
               {
                 "type": "stack",
-                "width": 50,
+                "width": 35.570890840652446,
                 "isClosable": true,
                 "reorderEnabled": true,
                 "title": "",
@@ -3558,7 +3558,7 @@
               },
               {
                 "type": "stack",
-                "width": 50.00000000000001,
+                "width": 64.42910915934755,
                 "isClosable": true,
                 "reorderEnabled": true,
                 "title": "",
@@ -3947,28 +3947,7 @@
             "content": [
               {
                 "type": "stack",
-                "width": 29.611041405269756,
-                "isClosable": true,
-                "reorderEnabled": true,
-                "title": "",
-                "activeItemIndex": 0,
-                "content": [
-                  {
-                    "id": "%2F.deco%2Fblocks%2FPreview%2520site%252Fsections%252FTabSectionSlider.tsx.json::Properties::list::Properties::%7B%7D",
-                    "title": "<div class=\"contents text-base-700\" id=\"header-%2F.deco%2Fblocks%2FPreview%2520site%252Fsections%252FTabSectionSlider.tsx.json::Properties::list::Properties::%7B%7D\" />",
-                    "type": "component",
-                    "componentName": "component",
-                    "componentState": {
-                      "id": "%2F.deco%2Fblocks%2FPreview%2520site%252Fsections%252FTabSectionSlider.tsx.json::Properties::list::Properties::%7B%7D"
-                    },
-                    "isClosable": true,
-                    "reorderEnabled": true
-                  }
-                ]
-              },
-              {
-                "type": "stack",
-                "width": 70.38895859473024,
+                "width": 45.26143790849673,
                 "isClosable": true,
                 "reorderEnabled": true,
                 "title": "",
@@ -3986,6 +3965,27 @@
                     "reorderEnabled": true
                   }
                 ]
+              },
+              {
+                "type": "stack",
+                "width": 54.738562091503276,
+                "isClosable": true,
+                "reorderEnabled": true,
+                "title": "",
+                "activeItemIndex": 0,
+                "content": [
+                  {
+                    "id": "%2F.deco%2Fblocks%2FPreview%2520site%252Fsections%252FTabSectionSlider.tsx.json::Code::code::Code::%7B%7D",
+                    "title": "<div class=\"contents text-base-700\" id=\"header-%2F.deco%2Fblocks%2FPreview%2520site%252Fsections%252FTabSectionSlider.tsx.json::Code::code::Code::%7B%7D\" />",
+                    "type": "component",
+                    "componentName": "component",
+                    "componentState": {
+                      "id": "%2F.deco%2Fblocks%2FPreview%2520site%252Fsections%252FTabSectionSlider.tsx.json::Code::code::Code::%7B%7D"
+                    },
+                    "isClosable": true,
+                    "reorderEnabled": true
+                  }
+                ]
               }
             ]
           }
@@ -3997,17 +3997,6 @@
         "maximisedItemId": null
       },
       "tabs": {
-        "%2F.deco%2Fblocks%2FPreview%2520site%252Fsections%252FTabSectionSlider.tsx.json::Properties::list::Properties::%7B%7D": {
-          "name": "Properties",
-          "icon": "list",
-          "accepts": "function",
-          "render": "function",
-          "viewId": "Properties",
-          "id": "%2F.deco%2Fblocks%2FPreview%2520site%252Fsections%252FTabSectionSlider.tsx.json::Properties::list::Properties::%7B%7D",
-          "state": {
-            "__signal": null
-          }
-        },
         "%2F.deco%2Fblocks%2FPreview%2520site%252Fsections%252FTabSectionSlider.tsx.json::Preview::world::Preview::%7B%7D": {
           "name": "Preview",
           "icon": "world",
@@ -4017,6 +4006,17 @@
           "id": "%2F.deco%2Fblocks%2FPreview%2520site%252Fsections%252FTabSectionSlider.tsx.json::Preview::world::Preview::%7B%7D",
           "state": {
             "__signal": null
+          }
+        },
+        "%2F.deco%2Fblocks%2FPreview%2520site%252Fsections%252FTabSectionSlider.tsx.json::Code::code::Code::%7B%7D": {
+          "name": "Code",
+          "icon": "code",
+          "accepts": "function",
+          "render": "function",
+          "viewId": "Code",
+          "id": "%2F.deco%2Fblocks%2FPreview%2520site%252Fsections%252FTabSectionSlider.tsx.json::Code::code::Code::%7B%7D",
+          "state": {
+            "__signal": "error"
           }
         }
       }

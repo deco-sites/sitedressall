@@ -2,12 +2,32 @@
   "__resolveType": "site/sections/TabSectionSlider.tsx",
   "items": [
     {
-      "slider": "sdadsadas",
+      "slider": {
+        "0": "s",
+        "1": "d",
+        "2": "a",
+        "3": "d",
+        "4": "s",
+        "5": "a",
+        "6": "d",
+        "7": "a",
+        "8": "s",
+        "icon": "ChevronLeft",
+        "label": "Title",
+        "repeat": 2
+      },
       "title": "tab 1"
     },
     {
       "title": "tab 2 ",
-      "slider": "dsa"
+      "slider": {
+        "0": "d",
+        "1": "s",
+        "2": "a",
+        "icon": "ChevronLeft",
+        "label": "21212",
+        "repeat": 212121
+      }
     }
   ],
   "carousel": {
@@ -25,7 +45,24 @@
         }
       },
       "sliderReadMore": {}
+    },
+    "image": {
+      "position": "Left",
+      "width": "30%",
+      "altText": "dsa",
+      "mobile": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/8911/4d19f36d-326a-4c8c-b730-97ad991be74d",
+      "desktop": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/8911/38548760-3f81-4f80-b11b-c335d4baead6"
     }
   },
-  "titleDiv": "Resolvemos as dores de comprar arte online"
+  "titleDiv": "Resolvemos as dores de comprar arte online",
+  "image": {
+    "width": "50",
+    "title": "title",
+    "description": "description",
+    "imageOne": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/8911/ddcb4aa0-f4d7-4a83-b391-aa7843c94ee8",
+    "alt": "dsadsadsa",
+    "imageFour": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/8911/cda65e90-8b04-428e-9f4a-a45b03855aa0",
+    "imageThree": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/8911/2eef54e6-ab8c-432a-a047-b3ce56f75a35",
+    "imageTwo": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/8911/0ef45495-7c70-4ce7-b99e-1fa3fd204235"
+  }
 }
