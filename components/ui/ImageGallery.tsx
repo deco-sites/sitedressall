@@ -5,6 +5,7 @@ import Image from "apps/website/components/Image.tsx";
  * @titleBy title
  */
 export interface Props {
+  width: string;
   /** @description Title */
   title: string;
 
