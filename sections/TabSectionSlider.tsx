@@ -39,8 +39,8 @@ export default function TabSectionSlider({
   getTitles();
 
   const indexToRender = typeof indexActive === "number"
-  ? Math.min(Math.max(indexActive, 0), titles.length)
-  : 0;
+    ? Math.min(Math.max(indexActive, 0), titles.length)
+    : 0;
 
   const sliderRender = sliders[indexToRender];
 
