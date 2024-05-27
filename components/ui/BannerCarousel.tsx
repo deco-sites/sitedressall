@@ -117,15 +117,15 @@ function BannerItem(
       class="relative overflow-y-hidden w-full"
     >
       {action && (
-        <div class="absolute top-0 md:bottom-0 bottom-1/2 left-0 right-0 sm:right-auto max-w-[407px] flex flex-col justify-end gap-4 px-8 py-12">
-          <span class="text-2xl font-light text-base-100">
+        <div class="absolute top-0 md:bottom-0 bottom-[95px] left-0 right-0 sm:right-auto flex flex-col justify-end gap-4 px-8 py-12">
+          <h1 class="md:font-light font-normal text-white text-[40px] md:text-[96px]">
             {action.title}
-          </span>
-          <span class="font-normal text-4xl text-base-100">
+          </h1>
+          <span class="md:font-normal text-sm font-medium md:text-base text-white">
             {action.subTitle}
           </span>
           <Button
-            class="bg-base-100 text-sm font-light py-4 px-6 w-fit"
+            class="bg-white text-orangePrimary font-bold text-buttonText rounded-full px-4 py-2 md:px-8 md:py-3 w-fit"
             aria-label={action.label}
           >
             {action.label}
