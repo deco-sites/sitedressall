@@ -2,7 +2,6 @@ import { usePartialSection } from "deco/hooks/usePartialSection.ts";
 import ImageCardsCarousel, {
   Props as CarouselProps,
 } from "./Cards/IconCardsCarouselWithImage.tsx";
-import { SlideProps } from "./Miscellaneous/Slide.tsx";
 
 export interface Props {
   items?: Item[];
@@ -23,7 +22,6 @@ interface Item {
   /**
    * @format textarea
    */
-  slider?: InnerHTML;
 }
 
 export default function TabSectionSlider({
@@ -31,20 +29,10 @@ export default function TabSectionSlider({
   indexActive,
   titleDiv,
   carousel,
-  image = {
-    width: "30%",
-  },
 }: Props) {
+
   const titles: string[] = [];
-  const sliders = items.map((item) => (
-    <div
-      key={item.title}
-    >
-      <div className="flex-auto">
-        <ImageCardsCarousel {...carousel} />
-      </div>
-    </div>
-  ));
+  const sliders = <ImageCardsCarousel {...carousel} />
 
   function getTitles() {
     items?.map((element) => {
@@ -52,14 +40,9 @@ export default function TabSectionSlider({
     });
   }
 
-  function getsliders() {
-    items?.map((element) => {
-      sliders.push(element.slider);
-    });
-  }
+
 
   getTitles();
-  getsliders();
 
   const indexToRender = typeof indexActive === "number"
     ? Math.min(Math.max(indexActive, 0), titles.length)
