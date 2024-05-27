@@ -28,20 +28,51 @@
         "label": "21212",
         "repeat": 212121
       }
+    },
+    {
+      "title": "Tab 3"
+    },
+    {
+      "title": "personalização"
     }
   ],
   "carousel": {
     "carousel": {
-      "items": [],
+      "items": [
+        {
+          "icon": "ArrowsPointingOut",
+          "layout": {
+            "iconPosition": "Top"
+          },
+          "style": {
+            "background": {
+              "bgColor": "Secondary",
+              "bgImage": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/8911/b5d30868-11a8-410b-9fbc-010ecebea773"
+            },
+            "border": {
+              "width": "4",
+              "color": "Primary",
+              "radius": "Normal"
+            }
+          },
+          "label": "tv",
+          "description": "tv2"
+        }
+      ],
       "slider": {
         "layout": {
           "gap": {
             "mobile": "1",
             "desktop": "1"
+          },
+          "hide": {
+            "controls": false,
+            "indicators": false
           }
         },
         "style": {
-          "controlsColor": "Default"
+          "controlsColor": "Default",
+          "controlsOutline": false
         }
       },
       "sliderReadMore": {}
