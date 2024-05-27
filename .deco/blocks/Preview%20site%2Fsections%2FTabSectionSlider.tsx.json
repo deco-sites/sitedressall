@@ -57,6 +57,25 @@
           },
           "label": "tv",
           "description": "tv2"
+        },
+        {
+          "icon": "ArrowsPointingOut",
+          "layout": {
+            "iconPosition": "Top"
+          },
+          "style": {
+            "background": {
+              "bgColor": "Transparent",
+              "bgImage": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/8911/91c3f2d4-f3b3-44f9-9f80-9f28ee8f5ee9"
+            },
+            "border": {
+              "width": "None",
+              "color": "Transparent",
+              "radius": "None"
+            }
+          },
+          "label": "abstrat",
+          "description": "abstrat"
         }
       ],
       "slider": {
@@ -68,20 +87,23 @@
           "hide": {
             "controls": false,
             "indicators": false
-          }
+          },
+          "itemWidth": 30
         },
         "style": {
           "controlsColor": "Default",
           "controlsOutline": false
-        }
+        },
+        "interval": 1
       },
-      "sliderReadMore": {}
+      "sliderReadMore": {},
+      "placeholderItems": 1
     },
     "image": {
       "position": "Left",
       "width": "30%",
       "altText": "dsa",
-      "mobile": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/8911/4d19f36d-326a-4c8c-b730-97ad991be74d",
+      "mobile": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/8911/847da5e4-7d7b-4377-ab08-779fa32279ca",
       "desktop": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/8911/38548760-3f81-4f80-b11b-c335d4baead6"
     }
   },
