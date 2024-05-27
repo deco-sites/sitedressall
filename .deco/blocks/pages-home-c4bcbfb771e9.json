@@ -360,6 +360,61 @@
         },
         {
           "title": "tilte 3"
+        },
+        {
+          "carousel": {
+            "items": [
+              {
+                "style": {
+                  "textPosition": "Top",
+                  "textAlignment": "Center"
+                },
+                "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/8911/b5d30868-11a8-410b-9fbc-010ecebea773"
+              },
+              {
+                "style": {
+                  "textPosition": "Top",
+                  "textAlignment": "Center"
+                },
+                "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/8911/9d486cdc-b8da-4d1a-8ffb-880f37a3b5c7"
+              },
+              {
+                "style": {
+                  "textPosition": "Top",
+                  "textAlignment": "Center"
+                },
+                "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/8911/91c3f2d4-f3b3-44f9-9f80-9f28ee8f5ee9"
+              }
+            ],
+            "slider": {
+              "layout": {
+                "gap": {
+                  "mobile": "1",
+                  "desktop": "1"
+                }
+              },
+              "style": {
+                "controlsColor": "Default"
+              }
+            }
+          },
+          "title": "novo"
+        },
+        {
+          "carousel": {
+            "items": [],
+            "slider": {
+              "layout": {
+                "gap": {
+                  "mobile": "1",
+                  "desktop": "1"
+                }
+              },
+              "style": {
+                "controlsColor": "Default"
+              }
+            }
+          }
         }
       ]
     },
