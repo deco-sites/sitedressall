@@ -58,11 +58,11 @@ export default function TabSectionSlider({
             </button>
           ))}
         </ul>
-        <li>
+        <div>
           {titles[indexToRender]?.carousel && (
             <ImageCardsCarousel {...titles[indexToRender].carousel} />
           )}
-        </li>
+        </div>
       </div>
     </div>
   );
