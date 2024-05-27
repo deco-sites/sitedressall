@@ -105,7 +105,47 @@
       "altText": "dsa",
       "mobile": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/8911/847da5e4-7d7b-4377-ab08-779fa32279ca",
       "desktop": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/8911/38548760-3f81-4f80-b11b-c335d4baead6"
-    }
+    },
+    "items": [
+      {
+        "style": {
+          "textPosition": "Top",
+          "textAlignment": "Center"
+        },
+        "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/8911/91c3f2d4-f3b3-44f9-9f80-9f28ee8f5ee9",
+        "href": "#",
+        "label": "image 1 "
+      },
+      {
+        "style": {
+          "textPosition": "Top",
+          "textAlignment": "Center"
+        },
+        "label": "image 2 ",
+        "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/8911/12baf1a8-3d76-444d-9994-cb80568d156f",
+        "href": "#"
+      },
+      {
+        "style": {
+          "textPosition": "Top",
+          "textAlignment": "Center"
+        },
+        "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/8911/915593f4-e22f-47b5-8c5c-cb01c92848ae",
+        "label": "image 3 "
+      }
+    ],
+    "slider": {
+      "layout": {
+        "gap": {
+          "mobile": "1",
+          "desktop": "1"
+        }
+      },
+      "style": {
+        "controlsColor": "Default"
+      }
+    },
+    "placeholderItems": 137
   },
   "titleDiv": "Resolvemos as dores de comprar arte online",
   "image": {
