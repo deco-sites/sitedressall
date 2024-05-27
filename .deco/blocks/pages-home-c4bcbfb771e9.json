@@ -275,6 +275,9 @@
       "linkUrl": "/parceria"
     },
     {
+      "__resolveType": "Preview site/sections/TabSectionSlider.tsx"
+    },
+    {
       "__resolveType": "site/sections/Footer/Footer.tsx",
       "layout": {
         "hide": {
@@ -442,9 +445,6 @@
           }
         ]
       }
-    },
-    {
-      "__resolveType": "Preview site/sections/TabSectionSlider.tsx"
     }
   ],
   "__resolveType": "website/pages/Page.tsx",
