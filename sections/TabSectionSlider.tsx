@@ -27,7 +27,6 @@ export default function TabSectionSlider({
   titleDiv,
 }: Props) {
   const titles: Item[] = [];
-  /* const sliders: CarouselProps[] = []; */
 
   function getTitles() {
     items?.map((element: Item) => {
