@@ -40,8 +40,6 @@ export default function TabSectionSlider({
     ? Math.min(Math.max(indexActive, 0), titles.length)
     : 0;
 
-  /*  const sliderRender = sliders[indexToRender]; */
-
   return (
     <div className="w-full flex flex-col container my-0 mx-auto justify-between items-center max-1024:flex-col max-1024:items-start max-1024:p-4">
       <div className="font-berthold text-3xl font-bold max-w-[355px] max-1024:mb-4">
@@ -49,20 +47,23 @@ export default function TabSectionSlider({
       </div>
       <div className="flex flex-col">
         <ul className="flex gap-4 pb-4 flex-wrap">
-          {titles.map((title, index) => (
-            <>
-              <button
-                className={`tab tab-lg text-base font-medium text-center p-0 uppercase ${
-                  index === indexToRender ? "tab-active" : ""
-                }`}
-                {...usePartialSection({ props: { indexActive: index } })}
-              >
-                {title}
-              </button>
-              <ImageCardsCarousel {...title.carousel} />
-            </>
+          {titles.map((el, index) => (
+            
+            <button
+              className={`tab tab-lg text-base font-medium text-center p-0 uppercase ${
+                index === indexToRender ? "tab-active" : ""
+              }`}
+              {...usePartialSection({ props: { indexActive: index } })}
+            >
+              {el.title}
+            </button>
           ))}
         </ul>
+        <li>
+          {titles[indexToRender]?.carousel && (
+            <ImageCardsCarousel {...titles[indexToRender].carousel} />
+          )}
+        </li>  
       </div>
     </div>
   );
