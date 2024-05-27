@@ -3,7 +3,7 @@ import ImageCardsCarousel, {
   Props as CarouselProps,
 } from "./Cards/IconCardsCarouselWithImage.tsx";
 import SimpleImage, {
-    Props as SimpleImageProps,
+  Props as SimpleImageProps,
 } from "../components/ui/ImageGallery.tsx";
 import { clx } from "../sdk/clx.ts";
 import { flex } from "../constants.tsx";
@@ -69,33 +69,36 @@ export default function TabSectionSlider({
       <div className="font-berthold text-3xl font-bold max-w-[355px] max-1024:mb-4">
         {titleDiv}
       </div>
-        <div className="flex flex-col">
-            <ul className="flex gap-4 pb-4 flex-wrap">
-                {titles.map((title, index) => (
-                    <button
-                    className={`tab tab-lg text-base font-medium text-center p-0 uppercase ${
-                        index === indexToRender ? "tab-active" : ""
-                    }`}
-                    {...usePartialSection({ props: { indexActive: index } })}
-                    >
-                    {title}
-                    </button>
-                ))}
-            </ul>
-            {sliderRender &&
-                <div
-                    class={clx(
-                        "flex flex-col lg:flex-row items-center gap-8",
-                        image.position ? flex.position[image.position] : flex.position["Left"],
-                    )}
-                >
-                <SimpleImage width={image.width || "30%"} {...image} />
-                <div class="flex-auto">
-                  <ImageCardsCarousel {...carousel} />
-                </div>
+      <div className="flex flex-col">
+        <ul className="flex gap-4 pb-4 flex-wrap">
+          {titles.map((title, index) => (
+            <button
+              className={`tab tab-lg text-base font-medium text-center p-0 uppercase ${
+                index === indexToRender ? "tab-active" : ""
+              }`}
+              {...usePartialSection({ props: { indexActive: index } })}
+            >
+              {title}
+            </button>
+          ))}
+        </ul>
+        {sliderRender &&
+          (
+            <div
+              class={clx(
+                "flex flex-col lg:flex-row items-center gap-8",
+                image.position
+                  ? flex.position[image.position]
+                  : flex.position["Left"],
+              )}
+            >
+              <SimpleImage width={image.width || "30%"} {...image} />
+              <div class="flex-auto">
+                <ImageCardsCarousel {...carousel} />
               </div>
-            }
-        </div>
+            </div>
+          )}
+      </div>
     </div>
   );
 }
