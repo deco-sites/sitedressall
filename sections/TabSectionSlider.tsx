@@ -30,7 +30,6 @@ export default function TabSectionSlider({
   titleDiv,
   carousel,
 }: Props) {
-
   const titles: string[] = [];
   const sliders = <ImageCardsCarousel {...carousel} />;
 
@@ -39,8 +38,6 @@ export default function TabSectionSlider({
       titles.push(element.title);
     });
   }
-
-
 
   getTitles();
 
