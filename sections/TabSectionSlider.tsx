@@ -47,7 +47,7 @@ export default function TabSectionSlider({
       key={item.title}
       className={clx(
         "flex flex-col lg:flex-row items-center gap-8",
-        image?.position ? flex.position[image.position] : flex.position["Left"]
+        image?.position ? flex.position[image.position] : flex.position["Left"],
       )}
     >
       <SimpleImage width={image.width || "30%"} {...image} />
