@@ -1,0 +1,31 @@
+{
+  "__resolveType": "site/sections/TabSectionSlider.tsx",
+  "items": [
+    {
+      "slider": "sdadsadas",
+      "title": "tab 1"
+    },
+    {
+      "title": "tab 2 ",
+      "slider": "dsa"
+    }
+  ],
+  "carousel": {
+    "carousel": {
+      "items": [],
+      "slider": {
+        "layout": {
+          "gap": {
+            "mobile": "1",
+            "desktop": "1"
+          }
+        },
+        "style": {
+          "controlsColor": "Default"
+        }
+      },
+      "sliderReadMore": {}
+    }
+  },
+  "titleDiv": "Resolvemos as dores de comprar arte online"
+}
