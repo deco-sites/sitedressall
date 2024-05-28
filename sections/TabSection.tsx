@@ -55,7 +55,7 @@ export default function TabSection({
         {titleDiv}
       </div>
       <div className="flex flex-col">
-        <ul className="flex gap-4 pb-4 flex-wrap">
+        <ul className="flex gap-4 pb-4 max-425:overflow-y-auto max-425:max-w-[340px]">
           {titles.map((title, index) => (
             <button
               className={`tab tab-lg text-base font-medium text-center p-0 uppercase ${

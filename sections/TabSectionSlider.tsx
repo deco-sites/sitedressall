@@ -33,12 +33,12 @@ export default function TabSectionSlider({
     : 0;
 
   return (
-    <div className="w-full flex flex-col items-start container my-0 mx-auto justify-between items-center max-1024:flex-col max-1024:items-start max-1024:p-4">
-      <div className="font-berthold text-3xl font-bold max-w-[355px] max-1024:mb-4">
+    <div className="w-full flex flex-col items-start container my-0 mx-auto justify-between max-1024:flex-col max-1024:items-start max-1024:p-4">
+      <div className="font-berthold text-3xl font-bold pb-4 max-w-[390px] max-1024:text-2xl">
         {titleDiv}
       </div>
       <div className="flex flex-col ">
-        <ul className="flex gap-4 pb-4 flex-wrap">
+        <ul className="flex gap-4 pb-4 max-425:overflow-y-auto max-425:max-w-[340px]">
           {titles.map((el, index: number) => (
             <li key={index}>
               <button
@@ -52,11 +52,11 @@ export default function TabSectionSlider({
             </li>
           ))}
         </ul>
-        <div>
-          {titles[indexToRender]?.carousel && (
-            <ImageCardsCarousel {...titles[indexToRender].carousel} />
-          )}
-        </div>
+        
+        {titles[indexToRender]?.carousel && (
+          <ImageCardsCarousel {...titles[indexToRender].carousel} />
+        )}
+        
       </div>
     </div>
   );
