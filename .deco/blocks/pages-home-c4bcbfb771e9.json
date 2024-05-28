@@ -358,10 +358,7 @@
         {
           "title": "Categorias",
           "carousel": {
-            "sliderReadMore": {
-              "text": "ver todas as categorias",
-              "icon": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/8911/7fe8b624-ed1b-4193-abb9-c23e44a9cd73"
-            },
+            "sliderReadMore": {},
             "items": [
               {
                 "style": {
@@ -425,10 +422,7 @@
         {
           "title": "Composições",
           "carousel": {
-            "sliderReadMore": {
-              "text": "ver todas as categorias",
-              "icon": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/8911/2bcec458-b8a5-48a3-884a-9cd8d4a5d046"
-            },
+            "sliderReadMore": {},
             "items": [
               {
                 "style": {
@@ -533,10 +527,7 @@
                 "controlsColor": "Default"
               }
             },
-            "sliderReadMore": {
-              "icon": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/8911/11a42628-50ee-436f-9a10-dac114b5a162",
-              "text": "ver todas as categorias"
-            }
+            "sliderReadMore": {}
           },
           "title": "Acabamentos"
         },
@@ -594,6 +585,9 @@
               "style": {
                 "controlsColor": "Default"
               }
+            },
+            "sliderReadMore": {
+              "url": "#"
             }
           },
           "title": "Cores"
