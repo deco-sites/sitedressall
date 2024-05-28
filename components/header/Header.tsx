@@ -1,5 +1,6 @@
 import { AppContext } from "../../apps/site.ts";
 import type { Props as SearchbarProps } from "../../components/search/Searchbar.tsx";
+import CartButtonShopify from "../../islands/Header/Cart/shopify.tsx";
 import Drawers from "../../islands/Header/Drawers.tsx";
 import { usePlatform } from "../../sdk/usePlatform.tsx";
 import type { ImageWidget } from "apps/admin/widgets.ts";
@@ -8,6 +9,7 @@ import type { SectionProps } from "deco/types.ts";
 import Alert from "./Alert.tsx";
 import Navbar from "./Navbar.tsx";
 import { headerHeight } from "./constants.ts";
+import Icon from "../ui/Icon.tsx";
 
 export interface Logo {
   src: ImageWidget;
@@ -68,8 +70,7 @@ function Header({
     },
   ],
   logo = {
-    src:
-      "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/2291/986b61d4-3847-4867-93c8-b550cb459cc7",
+    src: "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/2291/986b61d4-3847-4867-93c8-b550cb459cc7",
     width: 100,
     height: 16,
     alt: "Logo",
@@ -84,13 +85,49 @@ function Header({
   return (
     <>
       <header style={{ height: headerHeight }}>
-        <Drawers
-          menu={{ items }}
-          searchbar={searchbar}
-          platform={platform}
-        >
-          <div class="bg-base-100 fixed w-full z-50">
+        <Drawers menu={{ items }} searchbar={searchbar} platform={platform}>
+          <div class="bg-white fixed w-full z-50">
             {alerts && alerts.length > 0 && <Alert alerts={alerts} />}
+            {device !== "mobile" && (
+              <section class="flex items-center justify-end px-6 py-3 ">
+                <ul class="flex items-center justify-end border-b w-full">
+                  <li>
+                    <a
+                      href="#"
+                      class="flex items-center text-xs text-blackPrimary"
+                    >
+                      <Icon id="Myarts" strokeWidth={1} size={44} />
+                      EXPONHA SUA ARTE
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      class="flex items-center text-xs text-blackPrimary ml-[67px]"
+                      href="/account"
+                      aria-label="Account"
+                    >
+                      <Icon id="Myaccount" strokeWidth={1} size={44} />
+                      MINHA CONTA
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      class="flex items-center text-xs text-blackPrimary ml-[67px]"
+                      href="/wishlist"
+                      aria-label="Wishlist"
+                    >
+                      <button
+                        class="flex items-center justify-center"
+                        aria-label="Wishlist"
+                      >
+                        <Icon id="Wishlist" strokeWidth={1} size={44} />
+                      </button>
+                    </a>
+                  </li>
+                  <li>{platform === "shopify" && <CartButtonShopify />}</li>
+                </ul>
+              </section>
+            )}
             <Navbar
               device={device}
               items={items}
