@@ -16,7 +16,21 @@
         "label": "Title",
         "repeat": 2
       },
-      "title": "tab 1"
+      "title": "tab 1",
+      "carousel": {
+        "items": [],
+        "slider": {
+          "layout": {
+            "gap": {
+              "mobile": "1",
+              "desktop": "1"
+            }
+          },
+          "style": {
+            "controlsColor": "Default"
+          }
+        }
+      }
     },
     {
       "title": "tab 2 ",
@@ -27,13 +41,55 @@
         "icon": "ChevronLeft",
         "label": "21212",
         "repeat": 212121
+      },
+      "carousel": {
+        "items": [],
+        "slider": {
+          "layout": {
+            "gap": {
+              "mobile": "1",
+              "desktop": "1"
+            }
+          },
+          "style": {
+            "controlsColor": "Default"
+          }
+        }
       }
     },
     {
-      "title": "Tab 3"
+      "title": "Tab 3",
+      "carousel": {
+        "items": [],
+        "slider": {
+          "layout": {
+            "gap": {
+              "mobile": "1",
+              "desktop": "1"
+            }
+          },
+          "style": {
+            "controlsColor": "Default"
+          }
+        }
+      }
     },
     {
-      "title": "personalização"
+      "title": "personalização",
+      "carousel": {
+        "items": [],
+        "slider": {
+          "layout": {
+            "gap": {
+              "mobile": "1",
+              "desktop": "1"
+            }
+          },
+          "style": {
+            "controlsColor": "Default"
+          }
+        }
+      }
     }
   ],
   "carousel": {
