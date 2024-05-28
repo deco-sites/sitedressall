@@ -32,6 +32,7 @@ export default {
         "76": "76%",
       },
       screens: {
+        "max-425": { max: "425px" },
         "max-767": { max: "767px" },
         "max-768": { max: "768px" },
         "max-1023": { max: "1023px" },

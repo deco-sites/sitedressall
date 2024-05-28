@@ -384,6 +384,43 @@
                   "textPosition": "Top",
                   "textAlignment": "Center"
                 },
+                "label": "img Categorias 2",
+                "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/8911/b5d30868-11a8-410b-9fbc-010ecebea773",
+                "href": "#"
+              },
+              {
+                "style": {
+                  "textPosition": "Top",
+                  "textAlignment": "Center"
+                },
+                "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/8911/b5d30868-11a8-410b-9fbc-010ecebea773",
+                "label": "img Categorias 2",
+                "href": "#"
+              },
+              {
+                "style": {
+                  "textPosition": "Top",
+                  "textAlignment": "Center"
+                },
+                "label": "img Categorias 2",
+                "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/8911/b5d30868-11a8-410b-9fbc-010ecebea773",
+                "href": "#"
+              },
+              {
+                "style": {
+                  "textPosition": "Top",
+                  "textAlignment": "Center"
+                },
+                "label": "img Categorias ",
+                "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/8911/2d064777-7dd3-4352-b833-123f2f9bcf57",
+                "href": "#",
+                "buttonText": "Categorias"
+              },
+              {
+                "style": {
+                  "textPosition": "Top",
+                  "textAlignment": "Center"
+                },
                 "label": "img Categorias 3",
                 "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/8911/896aaf18-6687-42da-a64e-ced12aa7eb0d",
                 "href": "#"
@@ -393,17 +430,47 @@
                   "textPosition": "Top",
                   "textAlignment": "Center"
                 },
-                "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/8911/ba24adbb-8cde-4b61-b4b5-ef4494413742",
-                "label": "img Categorias 4"
+                "label": "img Categorias ",
+                "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/8911/2d064777-7dd3-4352-b833-123f2f9bcf57",
+                "href": "#",
+                "buttonText": "Categorias"
               },
               {
                 "style": {
                   "textPosition": "Top",
                   "textAlignment": "Center"
                 },
-                "label": "img Categorias 5 ",
+                "label": "img Categorias 4",
+                "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/8911/ba24adbb-8cde-4b61-b4b5-ef4494413742"
+              },
+              {
+                "style": {
+                  "textPosition": "Top",
+                  "textAlignment": "Center"
+                },
+                "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/8911/2d064777-7dd3-4352-b833-123f2f9bcf57",
+                "label": "img Categorias ",
+                "href": "#",
+                "buttonText": "Categorias"
+              },
+              {
+                "style": {
+                  "textPosition": "Top",
+                  "textAlignment": "Center"
+                },
                 "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/8911/e8c741e7-6616-4f57-9554-9643508703b7",
+                "label": "img Categorias 5 ",
                 "href": "#"
+              },
+              {
+                "style": {
+                  "textPosition": "Top",
+                  "textAlignment": "Center"
+                },
+                "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/8911/2d064777-7dd3-4352-b833-123f2f9bcf57",
+                "label": "img Categorias ",
+                "href": "#",
+                "buttonText": "Categorias"
               }
             ],
             "slider": {
@@ -414,7 +481,11 @@
                 "hide": {
                   "indicators": true
                 },
-                "itemWidth": 137
+                "itemWidth": 137,
+                "gap": {
+                  "mobile": "1",
+                  "desktop": "1"
+                }
               }
             }
           }
@@ -471,6 +542,10 @@
               "layout": {
                 "hide": {
                   "indicators": true
+                },
+                "gap": {
+                  "mobile": "1",
+                  "desktop": "1"
                 }
               }
             }
@@ -548,6 +623,42 @@
                   "textPosition": "Top",
                   "textAlignment": "Center"
                 },
+                "label": "img cores",
+                "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/8911/b5d30868-11a8-410b-9fbc-010ecebea773",
+                "href": "#"
+              },
+              {
+                "style": {
+                  "textPosition": "Top",
+                  "textAlignment": "Center"
+                },
+                "label": "img cores",
+                "href": "#",
+                "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/8911/b5d30868-11a8-410b-9fbc-010ecebea773"
+              },
+              {
+                "style": {
+                  "textPosition": "Top",
+                  "textAlignment": "Center"
+                },
+                "label": "img cores",
+                "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/8911/b5d30868-11a8-410b-9fbc-010ecebea773",
+                "href": "#"
+              },
+              {
+                "style": {
+                  "textPosition": "Top",
+                  "textAlignment": "Center"
+                },
+                "label": "img cores 2",
+                "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/8911/2d064777-7dd3-4352-b833-123f2f9bcf57",
+                "href": "#"
+              },
+              {
+                "style": {
+                  "textPosition": "Top",
+                  "textAlignment": "Center"
+                },
                 "label": "img cores 2",
                 "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/8911/2d064777-7dd3-4352-b833-123f2f9bcf57",
                 "href": "#"
@@ -558,8 +669,44 @@
                   "textAlignment": "Center"
                 },
                 "label": "img cores 3",
-                "href": "#",
-                "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/8911/896aaf18-6687-42da-a64e-ced12aa7eb0d"
+                "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/8911/896aaf18-6687-42da-a64e-ced12aa7eb0d",
+                "href": "#"
+              },
+              {
+                "style": {
+                  "textPosition": "Top",
+                  "textAlignment": "Center"
+                },
+                "label": "img cores 3",
+                "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/8911/896aaf18-6687-42da-a64e-ced12aa7eb0d",
+                "href": "#"
+              },
+              {
+                "style": {
+                  "textPosition": "Top",
+                  "textAlignment": "Center"
+                },
+                "label": "img cores 4 ",
+                "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/8911/ba24adbb-8cde-4b61-b4b5-ef4494413742",
+                "href": "#"
+              },
+              {
+                "style": {
+                  "textPosition": "Top",
+                  "textAlignment": "Center"
+                },
+                "label": "img cores 4 ",
+                "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/8911/ba24adbb-8cde-4b61-b4b5-ef4494413742",
+                "href": "#"
+              },
+              {
+                "style": {
+                  "textPosition": "Top",
+                  "textAlignment": "Center"
+                },
+                "label": "img cores 4 ",
+                "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/8911/ba24adbb-8cde-4b61-b4b5-ef4494413742",
+                "href": "#"
               },
               {
                 "style": {

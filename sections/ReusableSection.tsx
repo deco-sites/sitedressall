@@ -23,9 +23,11 @@ export default function ReusableSection({
   links,
 }: Props) {
   return (
-    <div className="flex justify-between container py-12 items-center max-1024:flex-col max-1024:p-10 max-1024:items-start">
+    <div className="flex justify-between container py-12 items-center max-1024:flex-col max-1024:p-6 max-1024:items-start">
       <div className="max-w-[365px] flex flex-col gap-4">
-        <h1 className="font-berthold text-3xl font-bold">{title}</h1>
+        <h1 className="font-berthold text-3xl font-bold max-1024:text-2xl">
+          {title}
+        </h1>
         <p className="max-w-[654px] font-berthold text-base font-normal leading-6 text-left">
           {descriptionTitle}
         </p>
@@ -40,7 +42,7 @@ export default function ReusableSection({
               <a
                 key={index}
                 href={link.url}
-                className={`font-berthold font-bold text-2xl leading-6 text-center w-fit rounded-3xl py-3 px-8
+                className={`font-berthold font-bold text-2xl leading-6 text-center w-fit rounded-3xl py-3 px-8 max-767:text-sm
                   ${
                   link.isWhite
                     ? "text-black bg-white border border-[#B4B4B4]"
