@@ -776,7 +776,6 @@
         }
       ],
       "title": "Não sabe por onde começar?",
-      "descriptionTitle": "opcional",
       "description": "Depois de ajudar mais de 30 mil clientes, desenvolvemos um quiz para você descobrir a sua composição ideal em 2min. Ou você pode falar direto com nossos consultores especialistas.",
       "linkText": "Quero ser parceiro",
       "linkUrl": "/parceria"
@@ -813,8 +812,7 @@
       "title": "Você é um profissional da área de decoração?",
       "description": "Curadoria, qualidade, atendimento personalizado e programa de incentivos. Conheça essas e outras vantagens de ser um especificador parceiro da DressFRAME.",
       "linkText": "Quero ser parceiro",
-      "linkUrl": "/parceria",
-      "descriptionTitle": "description"
+      "linkUrl": "/parceria"
     },
     {
       "__resolveType": "site/sections/Footer/Footer.tsx",
