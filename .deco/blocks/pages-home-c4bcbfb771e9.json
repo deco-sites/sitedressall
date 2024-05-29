@@ -594,11 +594,11 @@
           "textPosition": "bottom",
           "textAlignment": "left"
         },
+        "arrows": true,
         "headerAlignment": "left",
         "hide": {
           "controls": false
-        },
-        "arrows": true
+        }
       },
       "list": [
         {
@@ -609,38 +609,38 @@
           "description": "Obras versáteis e atemporais e vivas. Com texturas que conferem cor e sofisticação a qualquer ambiente."
         },
         {
-          "label": "Abstrato Clássico",
-          "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/8911/82a3abf5-c435-4abd-9504-af151a5d62b4",
           "buttonText": "explore a curadoria",
+          "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/8911/82a3abf5-c435-4abd-9504-af151a5d62b4",
+          "label": "Abstrato Clássico",
           "href": "#",
           "description": "Obras versáteis e atemporais e vivas. Com texturas que conferem cor e sofisticação a qualquer ambiente."
         },
         {
           "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/8911/915593f4-e22f-47b5-8c5c-cb01c92848ae",
-          "href": "#",
-          "description": "Obras versáteis e atemporais e vivas. Com texturas que conferem cor e sofisticação a qualquer ambiente.",
-          "label": "Abstrato Clássico",
-          "buttonText": "explore a curadoria"
-        },
-        {
-          "label": "Abstrato Clássico",
-          "description": "Obras versáteis e atemporais e vivas. Com texturas que conferem cor e sofisticação a qualquer ambiente.",
           "buttonText": "explore a curadoria",
-          "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/8911/2f8b93b4-a3a1-4fcd-9cc9-d06e3725c688"
+          "href": "#",
+          "label": "Abstrato Clássico",
+          "description": "Obras versáteis e atemporais e vivas. Com texturas que conferem cor e sofisticação a qualquer ambiente."
         },
         {
+          "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/8911/2f8b93b4-a3a1-4fcd-9cc9-d06e3725c688",
+          "buttonText": "explore a curadoria",
           "label": "Abstrato Clássico",
-          "description": "Obras versáteis e atemporais e vivas. Com texturas que conferem cor e sofisticação a qualquer ambiente.",
+          "description": "Obras versáteis e atemporais e vivas. Com texturas que conferem cor e sofisticação a qualquer ambiente."
+        },
+        {
           "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/8911/12baf1a8-3d76-444d-9994-cb80568d156f",
+          "buttonText": "explore a curadoria",
           "href": "#",
-          "buttonText": "explore a curadoria"
+          "label": "Abstrato Clássico",
+          "description": "Obras versáteis e atemporais e vivas. Com texturas que conferem cor e sofisticação a qualquer ambiente."
         },
         {
+          "buttonText": "explore a curadoria",
+          "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/8911/91c3f2d4-f3b3-44f9-9f80-9f28ee8f5ee9",
           "label": "Abstrato Clássico",
           "href": "#",
-          "description": "Obras versáteis e atemporais e vivas. Com texturas que conferem cor e sofisticação a qualquer ambiente.",
-          "buttonText": "explore a curadoria",
-          "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/8911/91c3f2d4-f3b3-44f9-9f80-9f28ee8f5ee9"
+          "description": "Obras versáteis e atemporais e vivas. Com texturas que conferem cor e sofisticação a qualquer ambiente."
         }
       ],
       "header": {
