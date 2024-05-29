@@ -51,7 +51,7 @@ export default function TabSection({
 
   return (
     <div className="w-full flex container my-0 mx-auto justify-between items-center max-1024:flex-col max-1024:items-start max-1024:p-4">
-      <div className="font-berthold text-3xl font-bold max-w-[355px] max-1024:mb-4">
+      <div className="font-berthold text-3xl font-bold max-w-[355px] max-1024:mb-4 max-1024:text-2xl">
         {titleDiv}
       </div>
       <div className="flex flex-col">
