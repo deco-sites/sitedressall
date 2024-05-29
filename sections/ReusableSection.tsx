@@ -11,7 +11,7 @@ interface Link {
 
 interface Props {
   title: string;
-  descriptionTitle: string;
+  descriptionTitle?: string;
   description: string;
   links?: Link[];
 }
@@ -28,9 +28,11 @@ export default function ReusableSection({
         <h1 className="font-berthold text-3xl font-bold max-1024:text-2xl">
           {title}
         </h1>
-        <p className="max-w-[654px] font-berthold text-base font-normal leading-6 text-left">
-          {descriptionTitle}
-        </p>
+        {descriptionTitle && (
+          <p className="max-w-[654px] font-berthold text-base font-normal leading-6 text-left">
+            {descriptionTitle}
+          </p>
+        )}
       </div>
       <div className="flex flex-col gap-4">
         <p className="max-w-[654px] font-berthold text-base font-normal leading-6 text-left">
