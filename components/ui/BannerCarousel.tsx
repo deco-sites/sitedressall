@@ -125,7 +125,7 @@ function BannerItem(
             {action.subTitle}
           </span>
           <Button
-            class="bg-white text-orangePrimary font-bold text-buttonText rounded-full px-4 py-2 md:px-8 md:py-3 w-fit"
+            class="bg-white text-orangePrimary font-bold text-buttonText md:text-xl rounded-full px-4 py-2 md:px-8 md:py-3 w-fit"
             aria-label={action.label}
           >
             {action.label}
