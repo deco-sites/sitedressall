@@ -620,25 +620,6 @@
       }
     },
     {
-      "__resolveType": "site/sections/ReusableSection.tsx",
-      "links": [
-        {
-          "text": "Promoção",
-          "url": "/teste",
-          "color": "white"
-        },
-        {
-          "text": "dsaadsa",
-          "url": "dsa"
-        }
-      ],
-      "title": "Você é um profissional da área de decoração 1",
-      "descriptionTitle": "opcional",
-      "description": "Curadoria, qualidade, atendimento personalizado e programa de incentivos. Conheça essas e outras vantagens de ser um especificador parceiro da DressFRAME.",
-      "linkText": "Quero ser parceiro",
-      "linkUrl": "/parceria"
-    },
-    {
       "__resolveType": "site/sections/Category/CategoryGrid.tsx",
       "layout": {
         "categoryCard": {
@@ -678,16 +659,16 @@
       },
       "list": [
         {
-          "href": "#",
           "buttonText": "explore a curadoria",
-          "label": "Abstrato Clássico",
           "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/8911/5c8d60ef-67d0-40e8-81d3-bc290169dc00",
+          "href": "#",
+          "label": "Abstrato Clássico",
           "description": "Obras versáteis e atemporais e vivas. Com texturas que conferem cor e sofisticação a qualquer ambiente."
         },
         {
-          "buttonText": "explore a curadoria",
-          "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/8911/82a3abf5-c435-4abd-9504-af151a5d62b4",
           "label": "Abstrato Clássico",
+          "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/8911/82a3abf5-c435-4abd-9504-af151a5d62b4",
+          "buttonText": "explore a curadoria",
           "href": "#",
           "description": "Obras versáteis e atemporais e vivas. Com texturas que conferem cor e sofisticação a qualquer ambiente."
         },
@@ -781,6 +762,26 @@
       }
     },
     {
+      "__resolveType": "site/sections/ReusableSection.tsx",
+      "links": [
+        {
+          "text": "escolha com um consultor",
+          "url": "/teste",
+          "color": "white"
+        },
+        {
+          "text": "quiz composições",
+          "url": "/exemplo",
+          "isWhite": true
+        }
+      ],
+      "title": "Não sabe por onde começar?",
+      "descriptionTitle": "opcional",
+      "description": "Depois de ajudar mais de 30 mil clientes, desenvolvemos um quiz para você descobrir a sua composição ideal em 2min. Ou você pode falar direto com nossos consultores especialistas.",
+      "linkText": "Quero ser parceiro",
+      "linkUrl": "/parceria"
+    },
+    {
       "__resolveType": "site/sections/Category/CategoryGrid.tsx",
       "layout": {
         "categoryCard": {
@@ -803,22 +804,17 @@
       "__resolveType": "site/sections/ReusableSection.tsx",
       "links": [
         {
-          "text": "Promoção",
+          "text": "quero ser parceiro",
           "url": "/teste",
-          "color": "white"
-        },
-        {
-          "text": "Promo 2 ",
-          "url": "/banana",
-          "backgroundColor": "white",
-          "color": "black"
+          "color": "white",
+          "isWhite": false
         }
       ],
-      "title": "Você é um profissional da área de decoração 2",
-      "descriptionTitle": "opcional",
+      "title": "Você é um profissional da área de decoração?",
       "description": "Curadoria, qualidade, atendimento personalizado e programa de incentivos. Conheça essas e outras vantagens de ser um especificador parceiro da DressFRAME.",
       "linkText": "Quero ser parceiro",
-      "linkUrl": "/parceria"
+      "linkUrl": "/parceria",
+      "descriptionTitle": "description"
     },
     {
       "__resolveType": "site/sections/Footer/Footer.tsx",
