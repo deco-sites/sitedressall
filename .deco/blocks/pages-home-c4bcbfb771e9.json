@@ -334,203 +334,9 @@
       },
       "items": [
         {
-          "title": "Categorias",
+          "title": "Acabamentos",
           "carousel": {
             "sliderReadMore": {},
-            "items": [
-              {
-                "style": {
-                  "textPosition": "Top",
-                  "textAlignment": "Center"
-                },
-                "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/8911/2d064777-7dd3-4352-b833-123f2f9bcf57",
-                "label": "img Categorias ",
-                "href": "#",
-                "buttonText": "Categorias"
-              },
-              {
-                "style": {
-                  "textPosition": "Top",
-                  "textAlignment": "Center"
-                },
-                "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/8911/b5d30868-11a8-410b-9fbc-010ecebea773",
-                "label": "img Categorias 2",
-                "href": "#"
-              },
-              {
-                "style": {
-                  "textPosition": "Top",
-                  "textAlignment": "Center"
-                },
-                "label": "img Categorias 2",
-                "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/8911/b5d30868-11a8-410b-9fbc-010ecebea773",
-                "href": "#"
-              },
-              {
-                "style": {
-                  "textPosition": "Top",
-                  "textAlignment": "Center"
-                },
-                "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/8911/b5d30868-11a8-410b-9fbc-010ecebea773",
-                "label": "img Categorias 2",
-                "href": "#"
-              },
-              {
-                "style": {
-                  "textPosition": "Top",
-                  "textAlignment": "Center"
-                },
-                "label": "img Categorias 2",
-                "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/8911/b5d30868-11a8-410b-9fbc-010ecebea773",
-                "href": "#"
-              },
-              {
-                "style": {
-                  "textPosition": "Top",
-                  "textAlignment": "Center"
-                },
-                "label": "img Categorias ",
-                "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/8911/2d064777-7dd3-4352-b833-123f2f9bcf57",
-                "href": "#",
-                "buttonText": "Categorias"
-              },
-              {
-                "style": {
-                  "textPosition": "Top",
-                  "textAlignment": "Center"
-                },
-                "label": "img Categorias 3",
-                "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/8911/896aaf18-6687-42da-a64e-ced12aa7eb0d",
-                "href": "#"
-              },
-              {
-                "style": {
-                  "textPosition": "Top",
-                  "textAlignment": "Center"
-                },
-                "label": "img Categorias ",
-                "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/8911/2d064777-7dd3-4352-b833-123f2f9bcf57",
-                "href": "#",
-                "buttonText": "Categorias"
-              },
-              {
-                "style": {
-                  "textPosition": "Top",
-                  "textAlignment": "Center"
-                },
-                "label": "img Categorias 4",
-                "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/8911/ba24adbb-8cde-4b61-b4b5-ef4494413742"
-              },
-              {
-                "style": {
-                  "textPosition": "Top",
-                  "textAlignment": "Center"
-                },
-                "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/8911/2d064777-7dd3-4352-b833-123f2f9bcf57",
-                "label": "img Categorias ",
-                "href": "#",
-                "buttonText": "Categorias"
-              },
-              {
-                "style": {
-                  "textPosition": "Top",
-                  "textAlignment": "Center"
-                },
-                "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/8911/e8c741e7-6616-4f57-9554-9643508703b7",
-                "label": "img Categorias 5 ",
-                "href": "#"
-              },
-              {
-                "style": {
-                  "textPosition": "Top",
-                  "textAlignment": "Center"
-                },
-                "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/8911/2d064777-7dd3-4352-b833-123f2f9bcf57",
-                "label": "img Categorias ",
-                "href": "#",
-                "buttonText": "Categorias"
-              }
-            ],
-            "slider": {
-              "style": {
-                "controlsOutline": false
-              },
-              "layout": {
-                "hide": {
-                  "indicators": true
-                },
-                "itemWidth": 137,
-                "gap": {
-                  "mobile": "1",
-                  "desktop": "1"
-                }
-              }
-            }
-          }
-        },
-        {
-          "title": "Composições",
-          "carousel": {
-            "sliderReadMore": {},
-            "items": [
-              {
-                "style": {
-                  "textPosition": "Top",
-                  "textAlignment": "Center"
-                },
-                "label": "img composições",
-                "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/8911/87b6e7d4-a617-4fbe-90a8-55bf7bbc8a38",
-                "href": "#"
-              },
-              {
-                "style": {
-                  "textPosition": "Top",
-                  "textAlignment": "Center"
-                },
-                "label": "img composições 2",
-                "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/8911/87b6e7d4-a617-4fbe-90a8-55bf7bbc8a38",
-                "href": "#"
-              },
-              {
-                "style": {
-                  "textPosition": "Top",
-                  "textAlignment": "Center"
-                },
-                "label": "img composições 3",
-                "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/8911/b5d30868-11a8-410b-9fbc-010ecebea773",
-                "href": "#"
-              },
-              {
-                "style": {
-                  "textPosition": "Top",
-                  "textAlignment": "Center"
-                },
-                "label": "img composições 4",
-                "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/8911/2d064777-7dd3-4352-b833-123f2f9bcf57",
-                "href": "#"
-              },
-              {
-                "style": {
-                  "textPosition": "Top",
-                  "textAlignment": "Center"
-                }
-              }
-            ],
-            "slider": {
-              "layout": {
-                "hide": {
-                  "indicators": true
-                },
-                "gap": {
-                  "mobile": "1",
-                  "desktop": "1"
-                }
-              }
-            }
-          }
-        },
-        {
-          "carousel": {
             "items": [
               {
                 "style": {
@@ -555,6 +361,15 @@
                   "textPosition": "Top",
                   "textAlignment": "Center"
                 },
+                "label": "img acabamentos",
+                "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/8911/b5d30868-11a8-410b-9fbc-010ecebea773",
+                "href": "#"
+              },
+              {
+                "style": {
+                  "textPosition": "Top",
+                  "textAlignment": "Center"
+                },
                 "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/8911/91c3f2d4-f3b3-44f9-9f80-9f28ee8f5ee9",
                 "label": "img acabamentos 3",
                 "href": "#"
@@ -563,7 +378,296 @@
                 "style": {
                   "textPosition": "Top",
                   "textAlignment": "Center"
+                },
+                "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/8911/b5d30868-11a8-410b-9fbc-010ecebea773",
+                "label": "img acabamentos",
+                "href": "#"
+              },
+              {
+                "style": {
+                  "textPosition": "Top",
+                  "textAlignment": "Center"
+                },
+                "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/8911/9d486cdc-b8da-4d1a-8ffb-880f37a3b5c7",
+                "label": "img acabamentos 2",
+                "href": "#"
+              },
+              {
+                "style": {
+                  "textPosition": "Top",
+                  "textAlignment": "Center"
+                },
+                "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/8911/915593f4-e22f-47b5-8c5c-cb01c92848ae"
+              },
+              {
+                "style": {
+                  "textPosition": "Top",
+                  "textAlignment": "Center"
+                },
+                "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/8911/91c3f2d4-f3b3-44f9-9f80-9f28ee8f5ee9",
+                "label": "img acabamentos 3",
+                "href": "#"
+              },
+              {
+                "style": {
+                  "textPosition": "Top",
+                  "textAlignment": "Center"
+                },
+                "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/8911/82a3abf5-c435-4abd-9504-af151a5d62b4"
+              },
+              {
+                "style": {
+                  "textPosition": "Top",
+                  "textAlignment": "Center"
+                },
+                "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/8911/b5d30868-11a8-410b-9fbc-010ecebea773",
+                "label": "img acabamentos",
+                "href": "#"
+              }
+            ],
+            "slider": {
+              "layout": {
+                "hide": {
+                  "indicators": true
+                },
+                "gap": {
+                  "mobile": "1",
+                  "desktop": "1"
                 }
+              },
+              "style": {
+                "controlsColor": "Default"
+              }
+            }
+          }
+        },
+        {
+          "title": "Acabamentos 2",
+          "carousel": {
+            "sliderReadMore": {},
+            "items": [
+              {
+                "style": {
+                  "textPosition": "Top",
+                  "textAlignment": "Center"
+                },
+                "label": "img acabamentos",
+                "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/8911/b5d30868-11a8-410b-9fbc-010ecebea773",
+                "href": "#"
+              },
+              {
+                "style": {
+                  "textPosition": "Top",
+                  "textAlignment": "Center"
+                },
+                "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/8911/82a3abf5-c435-4abd-9504-af151a5d62b4"
+              },
+              {
+                "style": {
+                  "textPosition": "Top",
+                  "textAlignment": "Center"
+                },
+                "label": "img acabamentos",
+                "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/8911/b5d30868-11a8-410b-9fbc-010ecebea773",
+                "href": "#"
+              },
+              {
+                "style": {
+                  "textPosition": "Top",
+                  "textAlignment": "Center"
+                },
+                "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/8911/82a3abf5-c435-4abd-9504-af151a5d62b4"
+              },
+              {
+                "style": {
+                  "textPosition": "Top",
+                  "textAlignment": "Center"
+                },
+                "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/8911/9d486cdc-b8da-4d1a-8ffb-880f37a3b5c7",
+                "label": "img acabamentos 2",
+                "href": "#"
+              },
+              {
+                "style": {
+                  "textPosition": "Top",
+                  "textAlignment": "Center"
+                },
+                "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/8911/82a3abf5-c435-4abd-9504-af151a5d62b4"
+              },
+              {
+                "style": {
+                  "textPosition": "Top",
+                  "textAlignment": "Center"
+                },
+                "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/8911/b5d30868-11a8-410b-9fbc-010ecebea773",
+                "label": "img acabamentos",
+                "href": "#"
+              },
+              {
+                "style": {
+                  "textPosition": "Top",
+                  "textAlignment": "Center"
+                },
+                "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/8911/82a3abf5-c435-4abd-9504-af151a5d62b4"
+              },
+              {
+                "style": {
+                  "textPosition": "Top",
+                  "textAlignment": "Center"
+                },
+                "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/8911/9d486cdc-b8da-4d1a-8ffb-880f37a3b5c7",
+                "label": "img acabamentos 2",
+                "href": "#"
+              },
+              {
+                "style": {
+                  "textPosition": "Top",
+                  "textAlignment": "Center"
+                },
+                "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/8911/91c3f2d4-f3b3-44f9-9f80-9f28ee8f5ee9",
+                "label": "img acabamentos 3",
+                "href": "#"
+              },
+              {
+                "style": {
+                  "textPosition": "Top",
+                  "textAlignment": "Center"
+                },
+                "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/8911/b5d30868-11a8-410b-9fbc-010ecebea773",
+                "label": "img acabamentos",
+                "href": "#"
+              },
+              {
+                "style": {
+                  "textPosition": "Top",
+                  "textAlignment": "Center"
+                },
+                "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/8911/9d486cdc-b8da-4d1a-8ffb-880f37a3b5c7",
+                "label": "img acabamentos 2",
+                "href": "#"
+              },
+              {
+                "style": {
+                  "textPosition": "Top",
+                  "textAlignment": "Center"
+                },
+                "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/8911/82a3abf5-c435-4abd-9504-af151a5d62b4"
+              }
+            ],
+            "slider": {
+              "layout": {
+                "hide": {
+                  "indicators": true
+                },
+                "gap": {
+                  "mobile": "1",
+                  "desktop": "1"
+                }
+              },
+              "style": {
+                "controlsColor": "Default"
+              }
+            }
+          }
+        },
+        {
+          "carousel": {
+            "items": [
+              {
+                "style": {
+                  "textPosition": "Top",
+                  "textAlignment": "Center"
+                },
+                "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/8911/2f8b93b4-a3a1-4fcd-9cc9-d06e3725c688"
+              },
+              {
+                "style": {
+                  "textPosition": "Top",
+                  "textAlignment": "Center"
+                },
+                "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/8911/b5d30868-11a8-410b-9fbc-010ecebea773",
+                "label": "img acabamentos",
+                "href": "#"
+              },
+              {
+                "style": {
+                  "textPosition": "Top",
+                  "textAlignment": "Center"
+                },
+                "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/8911/e8c741e7-6616-4f57-9554-9643508703b7"
+              },
+              {
+                "style": {
+                  "textPosition": "Top",
+                  "textAlignment": "Center"
+                },
+                "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/8911/b5d30868-11a8-410b-9fbc-010ecebea773",
+                "label": "img acabamentos",
+                "href": "#"
+              },
+              {
+                "style": {
+                  "textPosition": "Top",
+                  "textAlignment": "Center"
+                },
+                "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/8911/896aaf18-6687-42da-a64e-ced12aa7eb0d"
+              },
+              {
+                "style": {
+                  "textPosition": "Top",
+                  "textAlignment": "Center"
+                },
+                "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/8911/b5d30868-11a8-410b-9fbc-010ecebea773",
+                "label": "img acabamentos",
+                "href": "#"
+              },
+              {
+                "style": {
+                  "textPosition": "Top",
+                  "textAlignment": "Center"
+                },
+                "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/8911/9d486cdc-b8da-4d1a-8ffb-880f37a3b5c7",
+                "label": "img acabamentos 2",
+                "href": "#"
+              },
+              {
+                "style": {
+                  "textPosition": "Top",
+                  "textAlignment": "Center"
+                },
+                "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/8911/87b6e7d4-a617-4fbe-90a8-55bf7bbc8a38"
+              },
+              {
+                "style": {
+                  "textPosition": "Top",
+                  "textAlignment": "Center"
+                },
+                "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/8911/b5d30868-11a8-410b-9fbc-010ecebea773",
+                "label": "img acabamentos",
+                "href": "#"
+              },
+              {
+                "style": {
+                  "textPosition": "Top",
+                  "textAlignment": "Center"
+                },
+                "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/8911/91c3f2d4-f3b3-44f9-9f80-9f28ee8f5ee9",
+                "label": "img acabamentos 3",
+                "href": "#"
+              },
+              {
+                "style": {
+                  "textPosition": "Top",
+                  "textAlignment": "Center"
+                },
+                "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/8911/9d486cdc-b8da-4d1a-8ffb-880f37a3b5c7"
+              },
+              {
+                "style": {
+                  "textPosition": "Top",
+                  "textAlignment": "Center"
+                },
+                "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/8911/a2499e10-76a6-460f-bc9a-938970006344"
               }
             ],
             "slider": {
@@ -582,7 +686,7 @@
             },
             "sliderReadMore": {}
           },
-          "title": "Acabamentos"
+          "title": "Acabamentos 3"
         },
         {
           "carousel": {
@@ -592,7 +696,16 @@
                   "textPosition": "Top",
                   "textAlignment": "Center"
                 },
-                "label": "img cores",
+                "label": "img acabamentos 2",
+                "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/8911/9d486cdc-b8da-4d1a-8ffb-880f37a3b5c7",
+                "href": "#"
+              },
+              {
+                "style": {
+                  "textPosition": "Top",
+                  "textAlignment": "Center"
+                },
+                "label": "img acabamentos",
                 "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/8911/b5d30868-11a8-410b-9fbc-010ecebea773",
                 "href": "#"
               },
@@ -601,98 +714,32 @@
                   "textPosition": "Top",
                   "textAlignment": "Center"
                 },
-                "label": "img cores",
-                "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/8911/b5d30868-11a8-410b-9fbc-010ecebea773",
-                "href": "#"
-              },
-              {
-                "style": {
-                  "textPosition": "Top",
-                  "textAlignment": "Center"
-                },
-                "label": "img cores",
+                "label": "img acabamentos 2",
                 "href": "#",
-                "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/8911/b5d30868-11a8-410b-9fbc-010ecebea773"
+                "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/8911/9d486cdc-b8da-4d1a-8ffb-880f37a3b5c7"
               },
               {
                 "style": {
                   "textPosition": "Top",
                   "textAlignment": "Center"
                 },
-                "label": "img cores",
-                "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/8911/b5d30868-11a8-410b-9fbc-010ecebea773",
+                "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/8911/91c3f2d4-f3b3-44f9-9f80-9f28ee8f5ee9",
+                "label": "img acabamentos 3",
                 "href": "#"
               },
               {
                 "style": {
                   "textPosition": "Top",
                   "textAlignment": "Center"
-                },
-                "label": "img cores 2",
-                "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/8911/2d064777-7dd3-4352-b833-123f2f9bcf57",
-                "href": "#"
+                }
               },
               {
                 "style": {
                   "textPosition": "Top",
                   "textAlignment": "Center"
                 },
-                "label": "img cores 2",
-                "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/8911/2d064777-7dd3-4352-b833-123f2f9bcf57",
-                "href": "#"
-              },
-              {
-                "style": {
-                  "textPosition": "Top",
-                  "textAlignment": "Center"
-                },
-                "label": "img cores 3",
-                "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/8911/896aaf18-6687-42da-a64e-ced12aa7eb0d",
-                "href": "#"
-              },
-              {
-                "style": {
-                  "textPosition": "Top",
-                  "textAlignment": "Center"
-                },
-                "label": "img cores 3",
-                "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/8911/896aaf18-6687-42da-a64e-ced12aa7eb0d",
-                "href": "#"
-              },
-              {
-                "style": {
-                  "textPosition": "Top",
-                  "textAlignment": "Center"
-                },
-                "label": "img cores 4 ",
-                "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/8911/ba24adbb-8cde-4b61-b4b5-ef4494413742",
-                "href": "#"
-              },
-              {
-                "style": {
-                  "textPosition": "Top",
-                  "textAlignment": "Center"
-                },
-                "label": "img cores 4 ",
-                "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/8911/ba24adbb-8cde-4b61-b4b5-ef4494413742",
-                "href": "#"
-              },
-              {
-                "style": {
-                  "textPosition": "Top",
-                  "textAlignment": "Center"
-                },
-                "label": "img cores 4 ",
-                "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/8911/ba24adbb-8cde-4b61-b4b5-ef4494413742",
-                "href": "#"
-              },
-              {
-                "style": {
-                  "textPosition": "Top",
-                  "textAlignment": "Center"
-                },
-                "label": "img cores 4 ",
-                "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/8911/ba24adbb-8cde-4b61-b4b5-ef4494413742",
+                "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/8911/91c3f2d4-f3b3-44f9-9f80-9f28ee8f5ee9",
+                "label": "img acabamentos 3",
                 "href": "#"
               }
             ],
@@ -703,19 +750,16 @@
                   "desktop": "1"
                 },
                 "hide": {
-                  "indicators": true,
-                  "controls": false
+                  "indicators": true
                 }
               },
               "style": {
                 "controlsColor": "Default"
               }
             },
-            "sliderReadMore": {
-              "url": "#"
-            }
+            "sliderReadMore": {}
           },
-          "title": "Cores"
+          "title": "Acabamentos 4"
         }
       ]
     },
