@@ -47,7 +47,7 @@ export default function ReusableSection({
                 className={`font-berthold font-bold text-2xl leading-6 text-center w-fit rounded-3xl py-3 px-8 max-767:text-sm
                   ${
                   link.isWhite
-                    ? "text-black bg-white border border-[#B4B4B4]"
+                    ? "text-[#FE8330] bg-white border border-[#B4B4B4]"
                     : "text-white bg-orange-600"
                 }`}
               >
