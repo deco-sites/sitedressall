@@ -77,9 +77,7 @@ function Navbar({
           logoPosition === "left" ? "justify-center" : "justify-start"
         }`}
       >
-        {items.map((item) => (
-          <NavItem item={item} />
-        ))}
+        {items.map((item) => <NavItem item={item} />)}
       </ul>
       <div
         class={`flex ${
@@ -98,15 +96,18 @@ function Navbar({
         )}
       </div>
       <div class="flex items-center justify-end">
-        {/* {!buttons?.hideSearchButton && (
+        {
+          /* {!buttons?.hideSearchButton && (
           <div class="flex items-center text-xs font-thin gap-1">
             <SearchButton />
             SEARCH
           </div>
-        )} */}
+        )} */
+        }
 
         <Searchbar searchbar={searchbar} />
-        {/* {!buttons?.hideAccountButton && (
+        {
+          /* {!buttons?.hideAccountButton && (
           <a
             class="flex items-center text-xs font-thin"
             href="/account"
@@ -142,7 +143,8 @@ function Navbar({
             {platform === "shopify" && <CartButtonShopify />}
             {platform === "nuvemshop" && <CartButtonNuvemshop />}
           </div>
-        )} */}
+        )} */
+        }
       </div>
     </div>
   );

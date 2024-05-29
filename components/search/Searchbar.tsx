@@ -58,7 +58,7 @@ function Searchbar({
   name = "q",
   loader,
 }: // platform,
-Props) {
+  Props) {
   const id = useId();
   const searchInputRef = useRef<HTMLInputElement>(null);
   const { setQuery, loading } = useSuggestions(loader);
@@ -67,7 +67,11 @@ Props) {
   // const hasTerms = Boolean(searches.length);
 
   return (
-    <form id={id} action={action} class="relative max-w-[337px] w-full m-auto md:m-0">
+    <form
+      id={id}
+      action={action}
+      class="relative max-w-[337px] w-full m-auto md:m-0"
+    >
       <Button
         class="absolute inset-y-1/4 right-[15px]"
         type="submit"
