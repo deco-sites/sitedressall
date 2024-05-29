@@ -9,7 +9,9 @@ function NavItem({ item }: { item: SiteNavigationElement }) {
   return (
     <li class="group flex items-center">
       <a href={url} class="py-6 flex items-center justify-center gap-1">
-        <span class="group-hover:underline leading-none font-medium text-sm text-blackPrimary">{name}</span>
+        <span class="group-hover:underline leading-none font-medium text-sm text-blackPrimary">
+          {name}
+        </span>
         {children && children.length > 0 && (
           <Icon id="ToBottomArrow" size={7} stroke-width={1} class="self-end" />
         )}
