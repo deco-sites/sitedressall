@@ -42,6 +42,10 @@ export interface Props {
   logoPosition?: "left" | "center";
 
   buttons?: Buttons;
+  myarts: {
+    url?: string;
+    text?: string;
+  };
 }
 
 function Header({
@@ -70,14 +74,17 @@ function Header({
     },
   ],
   logo = {
-    src:
-      "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/2291/986b61d4-3847-4867-93c8-b550cb459cc7",
+    src: "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/2291/986b61d4-3847-4867-93c8-b550cb459cc7",
     width: 100,
     height: 16,
     alt: "Logo",
   },
   logoPosition = "center",
   buttons,
+  myarts = {
+    url: "#",
+    text: "EXPONHA SUA ARTE"
+  },
   device,
 }: SectionProps<typeof loader>) {
   const platform = usePlatform();
@@ -92,15 +99,17 @@ function Header({
             {device !== "mobile" && (
               <section class="flex items-center justify-end px-6 py-3 ">
                 <ul class="flex items-center justify-end border-b w-full">
-                  <li>
-                    <a
-                      href="#"
-                      class="flex items-center text-xs text-blackPrimary"
-                    >
-                      <Icon id="Myarts" strokeWidth={1} size={44} />
-                      EXPONHA SUA ARTE
-                    </a>
-                  </li>
+                  {myarts?.url && (
+                    <li>
+                      <a
+                        href={myarts.url}
+                        class="flex items-center text-xs text-blackPrimary"
+                      >
+                        <Icon id="Myarts" strokeWidth={1} size={44} />
+                        {myarts.text}
+                      </a>
+                    </li>
+                  )}
                   <li>
                     <a
                       class="flex items-center text-xs text-blackPrimary ml-[67px]"
