@@ -187,7 +187,9 @@ function ProductInfo({ page, layout }: Props) {
         <span class="text-sm">
           {description && (
             <details>
-              <summary class="cursor-pointer font-bold text-xl text-blackPrimary">detalhes do produto</summary>
+              <summary class="cursor-pointer font-bold text-xl text-blackPrimary">
+                detalhes do produto
+              </summary>
               <div
                 class="ml-2 mt-2"
                 dangerouslySetInnerHTML={{ __html: description }}
