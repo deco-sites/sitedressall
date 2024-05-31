@@ -41,8 +41,8 @@ export default function AddToCartButton(props: Props) {
   const btnProps = useAddToCart(props);
 
   return (
-    <Button {...btnProps} class="btn-primary">
-      Adicionar à Sacola
+    <Button {...btnProps} class="bg-orangePrimary text-white text-xl font-bold rounded-full w-full py-4">
+      ADICIONA AO CARRINHO
     </Button>
   );
 }

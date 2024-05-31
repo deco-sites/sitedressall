@@ -70,7 +70,7 @@ function ProductInfo({ page, layout }: Props) {
   });
 
   return (
-    <div class="flex flex-col px-4" id={id}>
+    <div class="flex flex-col px-4 w-full" id={id}>
       <Breadcrumb itemListElement={breadcrumb.itemListElement} />
       {/* Code and name */}
       <div class="mt-4 sm:mt-8">
@@ -187,7 +187,7 @@ function ProductInfo({ page, layout }: Props) {
         <span class="text-sm">
           {description && (
             <details>
-              <summary class="cursor-pointer">Descrição</summary>
+              <summary class="cursor-pointer font-bold text-xl text-blackPrimary">detalhes do produto</summary>
               <div
                 class="ml-2 mt-2"
                 dangerouslySetInnerHTML={{ __html: description }}
