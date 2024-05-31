@@ -9,11 +9,21 @@ export default {
     extend: {
       animation: {
         sliding: "sliding 30s linear infinite",
+        headerHover: "headerHover 0.5s ease-in-out",
       },
       keyframes: {
         sliding: {
           "0%": { transform: "translateX(0)" },
           "100%": { transform: "translateX(-50%)" },
+        },
+        headerHover: {
+          "0%": {
+            opacity: 0,
+            transform: "translateY(-250px)",
+          },
+          "100%": {
+            transform: "translateY(0)",
+          },
         },
       },
       fontSize: {

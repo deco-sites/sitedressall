@@ -19,8 +19,7 @@ function NavItem({ item }: { item: SiteNavigationElement }) {
 
       {children && children.length > 0 && (
         <div
-          class="fixed hidden hover:flex group-hover:flex bg-base-100 z-50 items-start justify-center gap-6 border-t border-b-2 border-base-200 w-screen mt-[165px]"
-          style={{ top: "0px", left: "0px" }}
+          class="fixed top-0 left-0 hidden group-hover:flex bg-base-100 z-50 items-start justify-center gap-6 border-t border-b-2 border-base-200 w-screen mt-[165px] md:animate-headerHover"
         >
           {image?.url && (
             <Image
