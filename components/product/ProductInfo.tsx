@@ -211,7 +211,7 @@ function ProductInfo({ page, layout }: Props) {
                 detalhes do produto
               </summary>
               <div
-                class="ml-2 mt-2"
+                class="ml-2 mt-2 font-normal"
                 dangerouslySetInnerHTML={{ __html: description }}
               />
             </details>
