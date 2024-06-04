@@ -61,7 +61,7 @@ function ProductInfo({ page, layout }: Props) {
     itemListElement: breadcrumbList?.itemListElement.slice(0, -1),
     numberOfItems: breadcrumbList.numberOfItems - 1,
   };
-  console.log(installments)
+  console.log(installments);
   const eventItem = mapProductToAnalyticsItem({
     product,
     breadcrumbList: breadcrumb,
@@ -74,9 +74,11 @@ function ProductInfo({ page, layout }: Props) {
       {/* <Breadcrumb itemListElement={breadcrumb.itemListElement} /> */}
       {/* Code and name */}
       <div class="flex items-center justify-between md:mt-0 mt-8">
-        {/* <div>
+        {
+          /* <div>
           {gtin && <span class="text-sm text-base-300">Cod. {gtin}</span>}
-        </div> */}
+        </div> */
+        }
         <h1 class="text-2xl uppercase">
           {layout?.name === "concat"
             ? `${isVariantOf?.name} ${name}`
@@ -97,79 +99,85 @@ function ProductInfo({ page, layout }: Props) {
       {/* Prices */}
       <div class="mt-14 flex items-center justify-center gap-24 border-t border-[#B4B4B4] pt-6">
         <div class="flex flex-row gap-2 items-center">
-          {/* {(listPrice ?? 0) > price && (
+          {
+            /* {(listPrice ?? 0) > price && (
             <span class="line-through text-base-300 text-xs">
               {formatPrice(listPrice, offers?.priceCurrency)}
             </span>
-          )} */}
+          )} */
+          }
           <span class="text-4xl text-blackPrimary font-bold">
             {formatPrice(price, offers?.priceCurrency)}
           </span>
         </div>
-        {installments && installments !== "1"  && <span class="text-[#8C8B8B] font-light text-xl">{`${installments} x sem juros`}</span>}
+        {installments && installments !== "1" && (
+          <span class="text-[#8C8B8B] font-light text-xl">
+            {`${installments} x sem juros`}
+          </span>
+        )}
       </div>
       {/* Add to Cart and Favorites button */}
       <div class="mt-4 sm:mt-10 flex flex-col gap-2">
-        {availability === "https://schema.org/InStock" ? (
-          <>
-            {platform === "vtex" && (
-              <>
-                <AddToCartButtonVTEX
+        {availability === "https://schema.org/InStock"
+          ? (
+            <>
+              {platform === "vtex" && (
+                <>
+                  <AddToCartButtonVTEX
+                    eventParams={{ items: [eventItem] }}
+                    productID={productID}
+                    seller={seller}
+                  />
+                  <WishlistButtonVtex
+                    variant="full"
+                    productID={productID}
+                    productGroupID={productGroupID}
+                  />
+                </>
+              )}
+              {platform === "wake" && (
+                <>
+                  <AddToCartButtonWake
+                    eventParams={{ items: [eventItem] }}
+                    productID={productID}
+                  />
+                  <WishlistButtonWake
+                    variant="full"
+                    productID={productID}
+                    productGroupID={productGroupID}
+                  />
+                </>
+              )}
+              {platform === "linx" && (
+                <AddToCartButtonLinx
                   eventParams={{ items: [eventItem] }}
-                  productID={productID}
-                  seller={seller}
-                />
-                <WishlistButtonVtex
-                  variant="full"
                   productID={productID}
                   productGroupID={productGroupID}
                 />
-              </>
-            )}
-            {platform === "wake" && (
-              <>
-                <AddToCartButtonWake
+              )}
+              {platform === "vnda" && (
+                <AddToCartButtonVNDA
+                  eventParams={{ items: [eventItem] }}
+                  productID={productID}
+                  additionalProperty={additionalProperty}
+                />
+              )}
+              {platform === "shopify" && (
+                <AddToCartButtonShopify
                   eventParams={{ items: [eventItem] }}
                   productID={productID}
                 />
-                <WishlistButtonWake
-                  variant="full"
-                  productID={productID}
+              )}
+              {platform === "nuvemshop" && (
+                <AddToCartButtonNuvemshop
                   productGroupID={productGroupID}
+                  eventParams={{ items: [eventItem] }}
+                  additionalProperty={additionalProperty}
                 />
-              </>
-            )}
-            {platform === "linx" && (
-              <AddToCartButtonLinx
-                eventParams={{ items: [eventItem] }}
-                productID={productID}
-                productGroupID={productGroupID}
-              />
-            )}
-            {platform === "vnda" && (
-              <AddToCartButtonVNDA
-                eventParams={{ items: [eventItem] }}
-                productID={productID}
-                additionalProperty={additionalProperty}
-              />
-            )}
-            {platform === "shopify" && (
-              <AddToCartButtonShopify
-                eventParams={{ items: [eventItem] }}
-                productID={productID}
-              />
-            )}
-            {platform === "nuvemshop" && (
-              <AddToCartButtonNuvemshop
-                productGroupID={productGroupID}
-                eventParams={{ items: [eventItem] }}
-                additionalProperty={additionalProperty}
-              />
-            )}
-          </>
-        ) : (
-          <OutOfStock productID={productID} />
-        )}
+              )}
+            </>
+          )
+          : <OutOfStock productID={productID} />}
       </div>
       {/* Shipping Simulation */}
       <div class="mt-8">
