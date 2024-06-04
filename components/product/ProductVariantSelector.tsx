@@ -13,11 +13,20 @@ function VariantSelector({ product }: Props) {
   const possibilities = useVariantPossibilities(hasVariant, product);
 
   return (
-    <ul class="flex flex-col gap-4">
-      {Object.keys(possibilities).map((name) => (
+    <ul class="flex flex-col gap-8">
+      {Object.keys(possibilities).map((name, i) => (
         <li class="flex flex-col gap-2">
-          <span class="text-sm">{name}</span>
-          <ul class="flex flex-row gap-3">
+          <div class="flex mb-4 items-center gap-4">
+            <span class="flex items-center justify-center bg-[#F1F1F1] font-bold text-sectionTitle w-16 h-10 leading-none">
+              {i + 1}
+            </span>
+            <span
+              class={`flex items-center gap-4 text-xl font-bold text-blackPrimary`}
+            >
+              {name}
+            </span>
+          </div>
+          <ul class="ml-[80px] flex flex-row gap-3">
             {Object.entries(possibilities[name]).map(([value, link]) => {
               const relativeUrl = relative(url);
               const relativeLink = relative(link);

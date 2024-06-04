@@ -1,5 +1,3 @@
-import Icon, { AvailableIcons } from "../../components/ui/Icon.tsx";
-
 export type Item = {
   label: string;
   href: string;
@@ -10,9 +8,13 @@ export type Section = {
   items: Item[];
 };
 
-export default function FooterItems(
-  { sections, justify = false }: { sections: Section[]; justify: boolean },
-) {
+export default function FooterItems({
+  sections,
+  justify = false,
+}: {
+  sections: Section[];
+  justify: boolean;
+}) {
   return (
     <>
       {sections.length > 0 && (
@@ -58,9 +60,7 @@ export default function FooterItems(
                     <span>{section.label}</span>
                   </label>
                   <div>
-                    <ul
-                      class={`flex flex-col gap-1`}
-                    >
+                    <ul class={`flex flex-col gap-1`}>
                       {section.items?.map((item) => (
                         <li>
                           <a

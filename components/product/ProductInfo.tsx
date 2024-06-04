@@ -1,5 +1,5 @@
 import { SendEventOnView } from "../../components/Analytics.tsx";
-import Breadcrumb from "../../components/ui/Breadcrumb.tsx";
+// import Breadcrumb from "../../components/ui/Breadcrumb.tsx";
 import AddToCartButtonLinx from "../../islands/AddToCartButton/linx.tsx";
 import AddToCartButtonShopify from "../../islands/AddToCartButton/shopify.tsx";
 import AddToCartButtonVNDA from "../../islands/AddToCartButton/vnda.tsx";
@@ -17,6 +17,7 @@ import { usePlatform } from "../../sdk/usePlatform.tsx";
 import { ProductDetailsPage } from "apps/commerce/types.ts";
 import { mapProductToAnalyticsItem } from "apps/commerce/utils/productToAnalyticsItem.ts";
 import ProductSelector from "./ProductVariantSelector.tsx";
+import Icon from "../ui/Icon.tsx";
 
 interface Props {
   page: ProductDetailsPage | null;
@@ -43,7 +44,6 @@ function ProductInfo({ page, layout }: Props) {
     productID,
     offers,
     name = "",
-    gtin,
     isVariantOf,
     additionalProperty = [],
   } = product;
@@ -71,39 +71,44 @@ function ProductInfo({ page, layout }: Props) {
 
   return (
     <div class="flex flex-col px-4 w-full" id={id}>
-      <Breadcrumb itemListElement={breadcrumb.itemListElement} />
+      {/* <Breadcrumb itemListElement={breadcrumb.itemListElement} /> */}
       {/* Code and name */}
-      <div class="mt-4 sm:mt-8">
-        <div>
+      <div class="flex items-center justify-between md:mt-0 mt-8">
+        {
+          /* <div>
           {gtin && <span class="text-sm text-base-300">Cod. {gtin}</span>}
-        </div>
-        <h1>
-          <span class="font-medium text-xl capitalize">
-            {layout?.name === "concat"
-              ? `${isVariantOf?.name} ${name}`
-              : layout?.name === "productGroup"
-              ? isVariantOf?.name
-              : name}
-          </span>
+        </div> */
+        }
+        <h1 class="text-2xl uppercase">
+          {layout?.name === "concat"
+            ? `${isVariantOf?.name} ${name}`
+            : layout?.name === "productGroup"
+            ? isVariantOf?.name
+            : name}
         </h1>
+        <div class="flex items-center justify-end gap-4">
+          <Icon id="ShareIcon" strokeWidth={1} size={44} />
+          <Icon id="Wishlist" strokeWidth={1} size={44} />
+        </div>
+      </div>
+
+      {/* Sku Selector */}
+      <div class="md:mt-10 mt-6">
+        <ProductSelector product={product} />
       </div>
       {/* Prices */}
-      <div class="mt-4">
+      <div class="mt-14 flex items-center justify-center gap-24 border-t border-[#B4B4B4] pt-6">
         <div class="flex flex-row gap-2 items-center">
           {(listPrice ?? 0) > price && (
             <span class="line-through text-base-300 text-xs">
               {formatPrice(listPrice, offers?.priceCurrency)}
             </span>
           )}
-          <span class="font-medium text-xl text-secondary">
+          <span class="text-4xl text-blackPrimary font-bold">
             {formatPrice(price, offers?.priceCurrency)}
           </span>
         </div>
-        <span class="text-sm text-base-300">{installments}</span>
-      </div>
-      {/* Sku Selector */}
-      <div class="mt-4 sm:mt-6">
-        <ProductSelector product={product} />
+        <span class="text-[#8C8B8B] font-light text-xl">{installments}</span>
       </div>
       {/* Add to Cart and Favorites button */}
       <div class="mt-4 sm:mt-10 flex flex-col gap-2">
@@ -183,11 +188,11 @@ function ProductInfo({ page, layout }: Props) {
         )}
       </div>
       {/* Description card */}
-      <div class="mt-4 sm:mt-6">
+      <div class="md:mt-8 mt-6 px-4 py-5 border-t border-b border-[#B4B4B4]">
         <span class="text-sm">
           {description && (
             <details>
-              <summary class="cursor-pointer font-bold text-xl text-blackPrimary">
+              <summary class="flex items-center justify-between cursor-pointer font-bold text-xl text-blackPrimary marker:content-[''] after:content-['+']">
                 detalhes do produto
               </summary>
               <div
