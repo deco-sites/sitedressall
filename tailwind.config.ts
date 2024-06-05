@@ -37,6 +37,7 @@ export default {
       },
       maxWidth: {
         deskContainer: "1440px",
+        "98vw": "98vw"
       },
       inset: {
         "78": "78%",

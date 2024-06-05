@@ -6,6 +6,16 @@
       "__resolveType": "Header - 01"
     },
     {
+      "__resolveType": "site/sections/Images/Banner.tsx",
+      "imgDesktop": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/8911/0071f190-8aba-4ce4-882b-f37fc19cc95e",
+      "imgMob": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/8911/59c6aaf7-aad7-45a5-9b06-c84ae8099b71",
+      "title": "<h2><strong>Dress</strong>FRAME<br>CURITIBA - PR</h2>",
+      "subtitle": "Rod Curitiba Ponta Grossa BR 277, 2160",
+      "cta": "ver no mapa",
+      "ctaName": "ver mapa",
+      "ctaUrl": "/"
+    },
+    {
       "__resolveType": "site/sections/Institutional/InstitutionalWithSidebar.tsx",
       "loader": {
         "__resolveType": "Preview site/loaders/sidebarMenu.ts"
