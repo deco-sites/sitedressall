@@ -82,19 +82,22 @@ function ProductCard({
             class={clx(
               "absolute top-0 left-0",
               "z-10 w-full",
-              "flex items-center justify-end"
+              "flex items-center justify-end",
             )}
           >
             {/* Discount % */}
-            {/* <div class="text-sm px-3">
+            {
+              /* <div class="text-sm px-3">
               <span class="font-bold">
                 {listPrice && price
                   ? `${Math.round(((listPrice - price) / listPrice) * 100)}% `
                   : ""}
               </span>
               OFF
-            </div> */}
-            {/* <div class="lg:group-hover:block">
+            </div> */
+            }
+            {
+              /* <div class="lg:group-hover:block">
               {platform === "vtex" && (
                 <WishlistButtonVtex
                   productGroupID={productGroupID}
@@ -107,7 +110,8 @@ function ProductCard({
                   productID={productID}
                 />
               )}
-            </div> */}
+            </div> */
+            }
           </div>
 
           {/* Product Images */}
@@ -117,7 +121,7 @@ function ProductCard({
             class={clx(
               "absolute top-0 left-0",
               "grid grid-cols-1 grid-rows-1",
-              "w-full"
+              "w-full",
             )}
           >
             <Image
@@ -130,7 +134,7 @@ function ProductCard({
                 "bg-base-100",
                 "object-cover",
                 "rounded w-full",
-                "col-span-full row-span-full"
+                "col-span-full row-span-full",
               )}
               sizes="(max-width: 640px) 50vw, 20vw"
               preload={preload}
@@ -148,7 +152,7 @@ function ProductCard({
                 "object-cover",
                 "rounded w-full",
                 "col-span-full row-span-full",
-                "transition-opacity opacity-0"
+                "transition-opacity opacity-0",
               )}
               sizes="(max-width: 640px) 50vw, 20vw"
               loading="lazy"
@@ -158,7 +162,8 @@ function ProductCard({
         </figure>
 
         {/* SKU Selector */}
-        {/* <ul class="flex items-center justify-center gap-2">
+        {
+          /* <ul class="flex items-center justify-center gap-2">
           {variants
             .map(([value, link]) => [value, relative(link)] as const)
             .map(([value, link]) => (
@@ -175,10 +180,12 @@ function ProductCard({
                 </a>
               </li>
             ))}
-        </ul> */}
+        </ul> */
+        }
 
         {/* Name/Description */}
-        {/* <div class="flex flex-col">
+        {
+          /* <div class="flex flex-col">
           <h2
             class="truncate text-base lg:text-lg uppercase"
             dangerouslySetInnerHTML={{ __html: name ?? "" }}
@@ -188,30 +195,37 @@ function ProductCard({
             class="truncate text-xs"
             dangerouslySetInnerHTML={{ __html: description ?? "" }}
           />
-        </div> */}
+        </div> */
+        }
 
         {/* Price from/to */}
-        {/* <div class="flex gap-2 items-center justify-end font-light">
+        {
+          /* <div class="flex gap-2 items-center justify-end font-light">
           <span class="line-through text-sm">
             {formatPrice(listPrice, offers?.priceCurrency)}
           </span>
           <span>
             {formatPrice(price, offers?.priceCurrency)}
           </span>
-        </div> */}
+        </div> */
+        }
 
         {/* Installments */}
-        {/* <span class="flex justify-end gap-2 font-light text-sm truncate">
+        {
+          /* <span class="flex justify-end gap-2 font-light text-sm truncate">
           ou {installments}
-        </span> */}
+        </span> */
+        }
 
-        {/* <a
+        {
+          /* <a
           href={relativeUrl}
           aria-label="view product"
           class="btn btn-block"
         >
           Ver produto
-        </a> */}
+        </a> */
+        }
       </div>
     </div>
   );
