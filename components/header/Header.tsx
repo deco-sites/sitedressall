@@ -8,7 +8,6 @@ import type { SiteNavigationElement } from "apps/commerce/types.ts";
 import type { SectionProps } from "deco/types.ts";
 import Alert from "./Alert.tsx";
 import Navbar from "./Navbar.tsx";
-import { headerHeight } from "./constants.ts";
 import Icon from "../ui/Icon.tsx";
 import Modal from "../ui/Modal.tsx";
 import { useSignal } from "@preact/signals";
@@ -174,7 +173,7 @@ function Header({
           </div>
         </Modal>
       )}
-      <header style={{ height: headerHeight }}>
+      <header>
         <Drawers menu={{ items }} searchbar={searchbar} platform={platform}>
           <div class="bg-white fixed w-full z-50">
             {alerts && alerts.length > 0 && <Alert alerts={alerts} />}
