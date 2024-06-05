@@ -354,5 +354,19 @@
   "/.deco/blocks/Preview%20site%2Floaders%2FList%2FSections.tsx.json": {
     "blockType": "loaders",
     "__resolveType": "site/loaders/List/Sections.tsx"
+  },
+  "/.deco/blocks/pages-Sobre%2520N%25C3%25B3s-184935.json": {
+    "name": "Sobre Nós",
+    "path": "/sobre-nos",
+    "blockType": "pages",
+    "__resolveType": "website/pages/Page.tsx"
+  },
+  "/.deco/blocks/Preview%20vtex%2Floaders%2Fnavbar.ts.json": {
+    "blockType": "loaders",
+    "__resolveType": "vtex/loaders/navbar.ts"
+  },
+  "/.deco/blocks/Preview%20site%2Floaders%2FsidebarMenu.ts.json": {
+    "blockType": "loaders",
+    "__resolveType": "site/loaders/sidebarMenu.ts"
   }
 }

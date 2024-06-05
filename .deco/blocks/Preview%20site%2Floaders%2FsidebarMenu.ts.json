@@ -1,0 +1,25 @@
+{
+  "__resolveType": "site/loaders/sidebarMenu.ts",
+  "links": [
+    {
+      "url": "/sobre-nos",
+      "label": "Sobre Nós"
+    },
+    {
+      "url": "/sou-arquiteto",
+      "label": "Sou Arquiteto"
+    },
+    {
+      "url": "/sou-artista",
+      "label": "Sou artista"
+    },
+    {
+      "url": "/central-de-ajuda",
+      "label": "Central de Ajuda"
+    },
+    {
+      "label": "Trocas e Devoluções",
+      "url": "/trocas-e-devolucoes"
+    }
+  ]
+}
