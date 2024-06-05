@@ -30,14 +30,14 @@ const Banner = (
       </Picture>
       <div class="absolute bottom-8 left-4 md:bottom-4 lg:bottom-8 lg:left-8">
         {title &&
-          <div
-            class="text-white text-[40px] leading-[48px] mb-4 lg:text-[64px] lg:leading-[75px]"
-            dangerouslySetInnerHTML={{ __html: title }}
-          />
-        }
+          (
+            <div
+              class="text-white text-[40px] leading-[48px] mb-4 lg:text-[64px] lg:leading-[75px]"
+              dangerouslySetInnerHTML={{ __html: title }}
+            />
+          )}
         {subtitle &&
-          <p class="text-sm text-white mb-5">{subtitle}</p>
-        }
+          <p class="text-sm text-white mb-5">{subtitle}</p>}
         {ctaName && ctaUrl &&
           (
             <a
