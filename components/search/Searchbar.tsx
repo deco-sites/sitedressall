@@ -11,7 +11,6 @@
 
 // import ProductCard from "../../components/product/ProductCard.tsx";
 import Button from "../../components/ui/Button.tsx";
-import Icon from "../../components/ui/Icon.tsx";
 // import Slider from "../../components/ui/Slider.tsx";
 import { sendEvent } from "../../sdk/analytics.tsx";
 import { useId } from "../../sdk/useId.ts";
@@ -61,7 +60,7 @@ function Searchbar({
   Props) {
   const id = useId();
   const searchInputRef = useRef<HTMLInputElement>(null);
-  const { setQuery, loading } = useSuggestions(loader);
+  const { setQuery } = useSuggestions(loader);
   // const { products = [], searches = [] } = payload.value ?? {};
   // const hasProducts = Boolean(products.length);
   // const hasTerms = Boolean(searches.length);

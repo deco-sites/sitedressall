@@ -10,6 +10,10 @@ import Alert from "./Alert.tsx";
 import Navbar from "./Navbar.tsx";
 import { headerHeight } from "./constants.ts";
 import Icon from "../ui/Icon.tsx";
+import Modal from "../ui/Modal.tsx";
+import { useSignal } from "@preact/signals";
+import Image from "apps/website/components/Image.tsx";
+import Button from "../ui/Button.tsx";
 
 export interface Logo {
   src: ImageWidget;
@@ -45,6 +49,10 @@ export interface Props {
   myarts: {
     url?: string;
     text?: string;
+  };
+  modal?: {
+    active: boolean;
+    image: ImageWidget;
   };
 }
 
@@ -87,12 +95,85 @@ function Header({
     text: "EXPONHA SUA ARTE",
   },
   device,
+  modal = {
+    active: false,
+    image: "https://via.placeholder.com/354x474?text=354x474",
+  },
 }: SectionProps<typeof loader>) {
   const platform = usePlatform();
   const items = navItems ?? [];
-
+  const open = useSignal(true);
   return (
     <>
+      {modal?.active && (
+        <Modal
+          loading="lazy"
+          open={open.value}
+          onClose={() => (open.value = false)}
+        >
+          <div class="modal-box p-0 max-w-none w-fit bg-white flex items-center justify-center rounded-[20px]">
+            <div class="p-8 max-w-[616px] w-full">
+              <h2 class="font-bold text-blackPrimary text-5xl mb-8">
+                quer ganhar 10% off?
+              </h2>
+              <p class="mb-8">
+                cadastre-se para receber o cupom no e-mail e ficar por dentro
+                das novidades e promoções.
+              </p>
+              <form class="flex flex-col gap-8">
+                <input
+                  type="email"
+                  name="modal-email"
+                  id="modal-email"
+                  required
+                  placeholder="Insira seu email"
+                  class="w-full px-8 h-[43px] border rounded-full border-[#4F4F4F]"
+                />
+                <input
+                  type="text"
+                  name="modal-first-name"
+                  id="modal-first-name"
+                  required
+                  placeholder="Insira seu primeiro nome"
+                  class="w-full px-8 h-[43px] border rounded-full border-[#4F4F4F]"
+                />
+                <div class="flex items-center gap-2">
+                  <input
+                    type="checkbox"
+                    name="modal-need-help"
+                    id="modal-need-help"
+                    required
+                  />
+                  <label htmlFor="nl-need-help">
+                    Preciso de ajuda para escolher e comprar
+                  </label>
+                </div>
+                <button
+                  type="submit"
+                  disabled
+                  class="text-[#D9D9D9] bg-[#B4B4B4] rounded-full w-full h-[43px]"
+                >
+                  enviar
+                </button>
+              </form>
+            </div>
+            <div class="h-full relative">
+              <Button
+                class="flex items-center justify-center absolute bg-white w-11 h-11 right-[17px] top-[17px] z-[99999999999999]"
+                onClick={() => (open.value = false)}
+              >
+                <Icon id="XMark" size={24} strokeWidth={2} />
+              </Button>
+              <Image
+                src={modal.image}
+                width={354}
+                height={451}
+                class="rounded-r-[20px]"
+              />
+            </div>
+          </div>
+        </Modal>
+      )}
       <header style={{ height: headerHeight }}>
         <Drawers menu={{ items }} searchbar={searchbar} platform={platform}>
           <div class="bg-white fixed w-full z-50">

@@ -1,6 +1,6 @@
 import { ProductDetailsPage } from "apps/commerce/types.ts";
 import Image from "apps/website/components/Image.tsx";
-import Icon from "../../../components/ui/Icon.tsx";
+// import Icon from "../../../components/ui/Icon.tsx";
 import Slider from "../../../components/ui/Slider.tsx";
 import ProductImageZoom from "../../../islands/ProductImageZoom.tsx";
 import { useId } from "../../../sdk/useId.ts";
@@ -63,7 +63,8 @@ export default function GallerySlider(props: Props) {
           ))}
         </Slider>
 
-        <Slider.PrevButton
+        {
+          /* <Slider.PrevButton
           class="no-animation absolute left-2 top-1/2 btn btn-circle btn-outline"
           disabled
         >
@@ -75,7 +76,8 @@ export default function GallerySlider(props: Props) {
           disabled={images.length < 2}
         >
           <Icon size={24} id="ChevronRight" strokeWidth={3} />
-        </Slider.NextButton>
+        </Slider.NextButton> */
+        }
 
         <div class="absolute top-2 right-2 bg-base-100 rounded-full">
           <ProductImageZoom

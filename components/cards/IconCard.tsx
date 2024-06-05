@@ -9,7 +9,6 @@ import {
   borderWidthClasses,
   colorClasses,
   Colors,
-  flex,
 } from "../../constants.tsx";
 import type { ImageWidget } from "apps/admin/widgets.ts";
 
@@ -76,12 +75,8 @@ export default function Card({
         />
       </div>
       <div class="flex-auto flex flex-col gap-1 lg:gap-2">
-        <div class="text-base lg:text-xl leading-7">
-          {label}
-        </div>
-        <p class="text-sm leading-5">
-          {description}
-        </p>
+        <div class="text-base lg:text-xl leading-7">{label}</div>
+        <p class="text-sm leading-5">{description}</p>
       </div>
     </div>
   );

@@ -19,7 +19,6 @@ function Navbar({
   items,
   searchbar,
   logo,
-  buttons,
   logoPosition = "left",
   device,
 }: {
