@@ -33,7 +33,7 @@ export default {
       colors: {
         orangePrimary: "#FE8330",
         blackPrimary: "#3C3C3B",
-        middleGray: "#D9D9D9"
+        middleGray: "#D9D9D9",
       },
       maxWidth: {
         deskContainer: "1440px",
