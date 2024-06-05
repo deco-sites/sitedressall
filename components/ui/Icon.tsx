@@ -51,7 +51,8 @@ export type AvailableIcons =
   | "Myaccount"
   | "Myarts"
   | "Minicart"
-  | "ToBottomArrow";
+  | "ToBottomArrow"
+  | "ShareIcon";
 
 interface Props extends JSX.SVGAttributes<SVGSVGElement> {
   /**

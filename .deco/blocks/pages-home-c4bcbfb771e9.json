@@ -12,7 +12,7 @@
         {
           "alt": "banner",
           "action": {
-            "href": "/",
+            "href": "/Quadros",
             "label": "explore o acervo",
             "title": "Caixa colecionável",
             "subTitle": "Somente durante a promo: edição limitada e colecionável da nossa caixa livro decorativa, produzida pela nossa artista Mariana San Martin."
@@ -972,13 +972,13 @@
         "socialIcons": [
           {
             "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/8911/37d8c09d-87c0-4b49-ad0c-1adcdf320db0",
-            "socialUrl": "#",
-            "alt": "teste"
+            "alt": "teste",
+            "socialUrl": "/"
           },
           {
             "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/8911/568343ab-2ff6-4b6b-b9b0-e3deae1b6a08",
-            "alt": "qa",
-            "socialUrl": "adasd"
+            "alt": "Instagram",
+            "socialUrl": "https://www.instagram.com/dress.all/"
           }
         ]
       }
