@@ -27,8 +27,21 @@
       "name": "lero lero",
       "sections": [
         {
-          "__resolveType": "site/sections/Content/RichText.tsx",
-          "text": "<h2>Sobre nós</h2><p>A DressALL nasce na Itália para suprir a expectativa da vida moderna que se alimenta de uma nova maneira de viver a comunicação com iluminação, traduzindo matéria-prima em funcionalidade.&nbsp; <br>Desfrutando da interface Itália x Brasil, com autenticidade e atemporalidade, oferece um repertório de produtos sob o prisma da indústria design.&nbsp; Desde 2013 com sede fabril em Curitiba, a DressALL conta com mais de 70 colaboradores, entre eles arquitetos e engenheiros especializados no desenvolvimento de produtos de alta performance.&nbsp; Com alto potencial produtivo e tecnológico desfruta de máquinas italianas, alemãs e japonesas para atender expectativas de excelência e precisão.</p>"
+          "__resolveType": "site/sections/Content/RichTextV2.tsx",
+          "texts": [
+            {
+              "type": "Título",
+              "text": "<p>Sobre nós</p>"
+            },
+            {
+              "type": "Paragrafo",
+              "text": "<p>A DressALL nasce na Itália para suprir a expectativa da vida moderna que se alimenta de uma nova maneira de viver a comunicação com iluminação, traduzindo matéria-prima em funcionalidade.&nbsp;</p>"
+            },
+            {
+              "type": "Paragrafo",
+              "text": "<p>Desfrutando da interface Itália x Brasil, com autenticidade e atemporalidade, oferece um repertório de produtos sob o prisma da indústria design.&nbsp; Desde 2013 com sede fabril em Curitiba, a DressALL conta com mais de 70 colaboradores, entre eles arquitetos e engenheiros especializados no desenvolvimento de produtos de alta performance.&nbsp; Com alto potencial produtivo e tecnológico desfruta de máquinas italianas, alemãs e japonesas para atender expectativas de excelência e precisão.</p>"
+            }
+          ]
         },
         {
           "__resolveType": "site/sections/Images/Banner.tsx",
@@ -36,8 +49,26 @@
           "imgMob": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/8911/73edfc8d-255b-4b2a-93b0-c357fb723db9"
         },
         {
-          "__resolveType": "site/sections/Content/RichText.tsx",
-          "text": "<p>Decoma Design é um estúdio italiano de criação fundado em&nbsp; 1986 que desenvolve produtos sobre os pilares do design industrial contemporâneo, oferecendo inovação para os ambientes que abrigam a vida da nova era mundial.</p><p><strong>Missão:</strong> Criar soluções customizadas com tecnologia e design em ambientes.</p><p><strong>Visão:</strong> Inovar o bem-estar com excelência.</p><p><strong>Valores:</strong> Inovação, Excelência, Bem-estar</p>"
+          "__resolveType": "site/sections/Content/RichTextV2.tsx",
+          "texts": [
+            {
+              "type": "Paragrafo",
+              "text": "<p>Decoma Design é um estúdio italiano de criação fundado em&nbsp; 1986 que desenvolve produtos sobre os pilares do design industrial contemporâneo, oferecendo inovação para os ambientes que abrigam a vida da nova era mundial.</p>",
+              "marginTop": true
+            },
+            {
+              "type": "Paragrafo",
+              "text": "<p><strong>Missão:</strong> Criar soluções customizadas com tecnologia e design em ambientes.</p>"
+            },
+            {
+              "type": "Paragrafo",
+              "text": "<p><strong>Visão:</strong> Inovar o bem-estar com excelência.</p>"
+            },
+            {
+              "type": "Paragrafo",
+              "text": "<p><strong>Valores: </strong>Inovação, Excelência, Bem-estar</p>"
+            }
+          ]
         }
       ]
     },
