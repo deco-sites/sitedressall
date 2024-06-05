@@ -368,5 +368,9 @@
   "/.deco/blocks/Preview%20site%2Floaders%2FsidebarMenu.ts.json": {
     "blockType": "loaders",
     "__resolveType": "site/loaders/sidebarMenu.ts"
+  },
+  "/.deco/blocks/Main%20Footer.json": {
+    "blockType": "sections",
+    "__resolveType": "site/sections/Footer/Footer.tsx"
   }
 }

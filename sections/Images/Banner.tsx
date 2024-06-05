@@ -8,7 +8,7 @@ interface Props {
   /** @title Imagem Mobile */
   imgMob: ImageWidget;
   /** @title Título */
-  title: HTMLWidget;
+  title?: HTMLWidget;
   /** @title Subtítulo */
   /** * @format textarea */
   subtitle?: string;
@@ -29,11 +29,15 @@ const Banner = (
         <img class="w-full" src={imgMob} alt="" />
       </Picture>
       <div class="absolute bottom-8 left-4 md:bottom-4 lg:bottom-8 lg:left-8">
-        <div
-          class="text-white text-[40px] leading-[48px] mb-4 lg:text-[64px] lg:leading-[75px]"
-          dangerouslySetInnerHTML={{ __html: title }}
-        />
-        <p class="text-sm text-white mb-5">{subtitle}</p>
+        {title &&
+          <div
+            class="text-white text-[40px] leading-[48px] mb-4 lg:text-[64px] lg:leading-[75px]"
+            dangerouslySetInnerHTML={{ __html: title }}
+          />
+        }
+        {subtitle &&
+          <p class="text-sm text-white mb-5">{subtitle}</p>
+        }
         {ctaName && ctaUrl &&
           (
             <a
