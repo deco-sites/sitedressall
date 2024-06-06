@@ -81,8 +81,7 @@ function Header({
     },
   ],
   logo = {
-    src:
-      "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/2291/986b61d4-3847-4867-93c8-b550cb459cc7",
+    src: "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/2291/986b61d4-3847-4867-93c8-b550cb459cc7",
     width: 100,
     height: 16,
     alt: "Logo",
@@ -168,17 +167,18 @@ function Header({
                 width={354}
                 height={451}
                 class="rounded-r-[20px]"
+                loading={"eager"}
               />
             </div>
           </div>
         </Modal>
       )}
-      <header>
+      <header class="h-[167px]">
         <Drawers menu={{ items }} searchbar={searchbar} platform={platform}>
           <div class="bg-white fixed w-full z-50">
             {alerts && alerts.length > 0 && <Alert alerts={alerts} />}
             {device !== "mobile" && (
-              <section class="flex items-center justify-end px-6 py-3 ">
+              <section class="flex items-center justify-end px-6 py-3">
                 <ul class="flex items-center justify-end border-b w-full">
                   {myarts?.url && (
                     <li>
