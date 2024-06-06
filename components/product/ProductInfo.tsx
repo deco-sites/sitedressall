@@ -29,16 +29,21 @@ interface Props {
      */
     name?: "concat" | "productGroup" | "product";
   };
+  contactUs?: {
+    url?: string;
+  };
 }
 
-function ProductInfo({ page, layout }: Props) {
+function ProductInfo({ page, layout, contactUs }: Props) {
   const platform = usePlatform();
   const id = useId();
 
   if (page === null) {
     throw new Error("Missing Product Details Page Info");
   }
-
+  contactUs = {
+    url: "#",
+  };
   const { breadcrumbList, product } = page;
   const {
     productID,
@@ -74,11 +79,9 @@ function ProductInfo({ page, layout }: Props) {
       {/* <Breadcrumb itemListElement={breadcrumb.itemListElement} /> */}
       {/* Code and name */}
       <div class="flex items-center justify-between md:mt-0 mt-8">
-        {
-          /* <div>
+        {/* <div>
           {gtin && <span class="text-sm text-base-300">Cod. {gtin}</span>}
-        </div> */
-        }
+        </div> */}
         <h1 class="text-2xl uppercase">
           {layout?.name === "concat"
             ? `${isVariantOf?.name} ${name}`
@@ -99,13 +102,11 @@ function ProductInfo({ page, layout }: Props) {
       {/* Prices */}
       <div class="mt-14 flex items-center justify-center gap-24 border-t border-[#B4B4B4] pt-6">
         <div class="flex flex-row gap-2 items-center">
-          {
-            /* {(listPrice ?? 0) > price && (
+          {/* {(listPrice ?? 0) > price && (
             <span class="line-through text-base-300 text-xs">
               {formatPrice(listPrice, offers?.priceCurrency)}
             </span>
-          )} */
-          }
+          )} */}
           <span class="text-4xl text-blackPrimary font-bold">
             {formatPrice(price, offers?.priceCurrency)}
           </span>
@@ -118,66 +119,66 @@ function ProductInfo({ page, layout }: Props) {
       </div>
       {/* Add to Cart and Favorites button */}
       <div class="mt-4 sm:mt-10 flex flex-col gap-2">
-        {availability === "https://schema.org/InStock"
-          ? (
-            <>
-              {platform === "vtex" && (
-                <>
-                  <AddToCartButtonVTEX
-                    eventParams={{ items: [eventItem] }}
-                    productID={productID}
-                    seller={seller}
-                  />
-                  <WishlistButtonVtex
-                    variant="full"
-                    productID={productID}
-                    productGroupID={productGroupID}
-                  />
-                </>
-              )}
-              {platform === "wake" && (
-                <>
-                  <AddToCartButtonWake
-                    eventParams={{ items: [eventItem] }}
-                    productID={productID}
-                  />
-                  <WishlistButtonWake
-                    variant="full"
-                    productID={productID}
-                    productGroupID={productGroupID}
-                  />
-                </>
-              )}
-              {platform === "linx" && (
-                <AddToCartButtonLinx
+        {availability === "https://schema.org/InStock" ? (
+          <>
+            {platform === "vtex" && (
+              <>
+                <AddToCartButtonVTEX
                   eventParams={{ items: [eventItem] }}
+                  productID={productID}
+                  seller={seller}
+                />
+                <WishlistButtonVtex
+                  variant="full"
                   productID={productID}
                   productGroupID={productGroupID}
                 />
-              )}
-              {platform === "vnda" && (
-                <AddToCartButtonVNDA
-                  eventParams={{ items: [eventItem] }}
-                  productID={productID}
-                  additionalProperty={additionalProperty}
-                />
-              )}
-              {platform === "shopify" && (
-                <AddToCartButtonShopify
+              </>
+            )}
+            {platform === "wake" && (
+              <>
+                <AddToCartButtonWake
                   eventParams={{ items: [eventItem] }}
                   productID={productID}
                 />
-              )}
-              {platform === "nuvemshop" && (
-                <AddToCartButtonNuvemshop
+                <WishlistButtonWake
+                  variant="full"
+                  productID={productID}
                   productGroupID={productGroupID}
-                  eventParams={{ items: [eventItem] }}
-                  additionalProperty={additionalProperty}
                 />
-              )}
-            </>
-          )
-          : <OutOfStock productID={productID} />}
+              </>
+            )}
+            {platform === "linx" && (
+              <AddToCartButtonLinx
+                eventParams={{ items: [eventItem] }}
+                productID={productID}
+                productGroupID={productGroupID}
+              />
+            )}
+            {platform === "vnda" && (
+              <AddToCartButtonVNDA
+                eventParams={{ items: [eventItem] }}
+                productID={productID}
+                additionalProperty={additionalProperty}
+              />
+            )}
+            {platform === "shopify" && (
+              <AddToCartButtonShopify
+                eventParams={{ items: [eventItem] }}
+                productID={productID}
+              />
+            )}
+            {platform === "nuvemshop" && (
+              <AddToCartButtonNuvemshop
+                productGroupID={productGroupID}
+                eventParams={{ items: [eventItem] }}
+                additionalProperty={additionalProperty}
+              />
+            )}
+          </>
+        ) : (
+          <OutOfStock productID={productID} />
+        )}
       </div>
       {/* Shipping Simulation */}
       <div class="mt-8">
@@ -194,14 +195,18 @@ function ProductInfo({ page, layout }: Props) {
         )}
       </div>
       {/* Contact Us */}
-      <div class="bg-[#F1F1F1] rounded-[20px] w-full text-center py-4">
-        <p class="text-xl text-blackPrimary mb-2.5">
-          não encontrou o tamanho desejado?
-        </p>
-        <button class="bg-white rounded-full font-bold border border-[#B4B4B4] px-4 py-2">
-          entre em contato conosco
-        </button>
-      </div>
+      {contactUs?.url && (
+        <div class="bg-[#F1F1F1] rounded-[20px] w-full text-center py-4">
+          <p class="text-xl text-blackPrimary mb-2.5">
+            não encontrou o tamanho desejado?
+          </p>
+          <a href={contactUs.url}>
+            <button class="bg-white rounded-full font-bold border border-[#B4B4B4] px-4 py-2">
+              entre em contato conosco
+            </button>
+          </a>
+        </div>
+      )}
       {/* Description card */}
       <div class="md:mt-8 mt-6 px-4 py-5 border-t border-b border-[#B4B4B4] font-bold text-blackPrimary text-[15px]">
         <span class="text-sm">
