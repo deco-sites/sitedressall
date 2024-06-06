@@ -29,21 +29,16 @@ interface Props {
      */
     name?: "concat" | "productGroup" | "product";
   };
-  contactUs?: {
-    url?: string;
-  };
 }
 
-function ProductInfo({ page, layout, contactUs }: Props) {
+function ProductInfo({ page, layout }: Props) {
   const platform = usePlatform();
   const id = useId();
 
   if (page === null) {
     throw new Error("Missing Product Details Page Info");
   }
-  contactUs = {
-    url: "#",
-  };
+
   const { breadcrumbList, product } = page;
   const {
     productID,
@@ -199,18 +194,14 @@ function ProductInfo({ page, layout, contactUs }: Props) {
         )}
       </div>
       {/* Contact Us */}
-      {contactUs?.url && (
-        <div class="bg-[#F1F1F1] rounded-[20px] w-full text-center py-4">
-          <p class="text-xl text-blackPrimary mb-2.5">
-            não encontrou o tamanho desejado?
-          </p>
-          <a href={contactUs.url}>
-            <button class="bg-white rounded-full font-bold border border-[#B4B4B4] px-4 py-2">
-              entre em contato conosco
-            </button>
-          </a>
-        </div>
-      )}
+      <div class="bg-[#F1F1F1] rounded-[20px] w-full text-center py-4">
+        <p class="text-xl text-blackPrimary mb-2.5">
+          não encontrou o tamanho desejado?
+        </p>
+        <button class="bg-white rounded-full font-bold border border-[#B4B4B4] px-4 py-2">
+          entre em contato conosco
+        </button>
+      </div>
       {/* Description card */}
       <div class="md:mt-8 mt-6 px-4 py-5 border-t border-b border-[#B4B4B4] font-bold text-blackPrimary text-[15px]">
         <span class="text-sm">
