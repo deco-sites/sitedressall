@@ -77,10 +77,10 @@ function Result({
           {layout?.variant === "aside" &&
             filters.length > 0 &&
             (isFirstPage || !isPartial) && (
-              <aside class="hidden sm:block w-min min-w-[250px]">
-                <Filters filters={filters} />
-              </aside>
-            )}
+            <aside class="hidden sm:block w-min min-w-[250px]">
+              <Filters filters={filters} />
+            </aside>
+          )}
           <div class="flex-grow" id={id}>
             <ProductGallery
               products={products}
@@ -104,33 +104,37 @@ function Result({
                 <Icon id="ChevronLeft" size={24} strokeWidth={1} />
               </a>
               <div class="flex items-center justify-center gap-4">
-                {pageInfo.previousPage ? (
-                  <>
-                    <span class="text-base font-light text-blackPrimary">
-                      {zeroIndexedOffsetPage}
-                    </span>
-                    <span class="text-base font-light text-blackPrimary">
-                      |
-                    </span>
-                  </>
-                ) : (
-                  ""
-                )}
+                {pageInfo.previousPage
+                  ? (
+                    <>
+                      <span class="text-base font-light text-blackPrimary">
+                        {zeroIndexedOffsetPage}
+                      </span>
+                      <span class="text-base font-light text-blackPrimary">
+                        |
+                      </span>
+                    </>
+                  )
+                  : (
+                    ""
+                  )}
 
                 <span class="underline">{zeroIndexedOffsetPage + 1}</span>
 
-                {pageInfo.nextPage ? (
-                  <>
-                    <span class="text-base font-light text-blackPrimary">
-                      |
-                    </span>
-                    <span class="text-base font-light text-blackPrimary">
-                      {zeroIndexedOffsetPage + 2}
-                    </span>
-                  </>
-                ) : (
-                  ""
-                )}
+                {pageInfo.nextPage
+                  ? (
+                    <>
+                      <span class="text-base font-light text-blackPrimary">
+                        |
+                      </span>
+                      <span class="text-base font-light text-blackPrimary">
+                        {zeroIndexedOffsetPage + 2}
+                      </span>
+                    </>
+                  )
+                  : (
+                    ""
+                  )}
               </div>
               <a
                 aria-label="next page link"
