@@ -20,7 +20,7 @@
           "mobile": 2,
           "desktop": 3
         },
-        "variant": "aside",
+        "variant": "drawer",
         "format": "Pagination"
       },
       "__resolveType": "site/sections/Product/SearchResult.tsx"
