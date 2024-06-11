@@ -9,9 +9,9 @@ import { SendEventOnClick } from "../../components/Analytics.tsx";
 //   default as WishlistButtonWake,
 // } from "../../islands/WishlistButton/vtex.tsx";
 import { clx } from "../../sdk/clx.ts";
-// import { formatPrice } from "../../sdk/format.ts";
+import { formatPrice } from "../../sdk/format.ts";
 import { relative } from "../../sdk/url.ts";
-// import { useOffer } from "../../sdk/useOffer.ts";
+import { useOffer } from "../../sdk/useOffer.ts";
 // import { useVariantPossibilities } from "../../sdk/useVariantPossiblities.ts";
 
 interface Props {
@@ -38,13 +38,13 @@ function ProductCard({
   // platform,
   index,
 }: Props) {
-  const { url, productID, image: images } = product;
+  const { url, productID, image: images, name, offers } = product;
   const id = `product-card-${productID}`;
   // const hasVariant = isVariantOf?.hasVariant ?? [];
   // const productGroupID = isVariantOf?.productGroupID;
   // const description = product.description || isVariantOf?.description;
   const [front, back] = images ?? [];
-  // const { listPrice, price, installments } = useOffer(offers);
+  const { price } = useOffer(offers);
   // const possibilities = useVariantPossibilities(hasVariant, product);
   // const variants = Object.entries(Object.values(possibilities)[0] ?? {});
   const relativeUrl = relative(url);
@@ -75,19 +75,34 @@ function ProductCard({
         }}
       />
 
-      <div class="flex flex-col gap-2 px-2 py-[11px] bg-[#F8F8F8]">
-        <figure class="relative overflow-hidden" style={{ aspectRatio }}>
-          {/* Wishlist button */}
-          <div
-            class={clx(
-              "absolute top-0 left-0",
-              "z-10 w-full",
-              "flex items-center justify-end",
-            )}
-          >
-            {/* Discount % */}
+      <div class="group flex flex-col gap-2 px-2 py-[11px] bg-[#F8F8F8] hover:bg-slate-50 hover:shadow-slate-600/40 hover:shadow-lg">
+        <div class="relative">
+          {/* Name/Description */}
+          <div class="flex flex-col absolute w-full group-hover:bg-slate-50 group-hover:z-[5]">
+            <h2
+              class="truncate text-base lg:text-lg uppercase"
+              dangerouslySetInnerHTML={{ __html: name ?? "" }}
+            />
+
             {
-              /* <div class="text-sm px-3">
+              /* <div
+            class="truncate text-xs"
+            dangerouslySetInnerHTML={{ __html: description ?? "" }}
+          /> */
+            }
+          </div>
+          <figure class="relative overflow-hidden" style={{ aspectRatio }}>
+            {/* Wishlist button */}
+            <div
+              class={clx(
+                "absolute top-0 left-0",
+                "z-10 w-full",
+                "flex items-center justify-end",
+              )}
+            >
+              {/* Discount % */}
+              {
+                /* <div class="text-sm px-3">
               <span class="font-bold">
                 {listPrice && price
                   ? `${Math.round(((listPrice - price) / listPrice) * 100)}% `
@@ -95,9 +110,9 @@ function ProductCard({
               </span>
               OFF
             </div> */
-            }
-            {
-              /* <div class="lg:group-hover:block">
+              }
+              {
+                /* <div class="lg:group-hover:block">
               {platform === "vtex" && (
                 <WishlistButtonVtex
                   productGroupID={productGroupID}
@@ -111,55 +126,69 @@ function ProductCard({
                 />
               )}
             </div> */
-            }
-          </div>
+              }
+            </div>
 
-          {/* Product Images */}
-          <a
-            href={relativeUrl}
-            aria-label="view product"
-            class={clx(
-              "absolute top-0 left-0",
-              "grid grid-cols-1 grid-rows-1",
-              "w-full",
-            )}
-          >
-            <Image
-              src={front.url!}
-              alt={front.alternateName}
-              width={WIDTH}
-              height={HEIGHT}
-              style={{ aspectRatio }}
+            {/* Product Images */}
+            <a
+              href={relativeUrl}
+              aria-label="view product"
               class={clx(
-                "bg-base-100",
-                "object-cover",
-                "rounded w-full",
-                "col-span-full row-span-full",
+                "absolute top-0 left-0",
+                "grid grid-cols-1 grid-rows-1",
+                "w-full",
               )}
-              sizes="(max-width: 640px) 50vw, 20vw"
-              preload={preload}
-              loading={preload ? "eager" : "lazy"}
-              decoding="async"
-            />
-            <Image
-              src={back?.url ?? front.url!}
-              alt={back?.alternateName ?? front.alternateName}
-              width={WIDTH}
-              height={HEIGHT}
-              style={{ aspectRatio }}
-              class={clx(
-                "bg-base-100",
-                "object-cover",
-                "rounded w-full",
-                "col-span-full row-span-full",
-                "transition-opacity opacity-0",
-              )}
-              sizes="(max-width: 640px) 50vw, 20vw"
-              loading="lazy"
-              decoding="async"
-            />
-          </a>
-        </figure>
+            >
+              <Image
+                src={front.url!}
+                alt={front.alternateName}
+                width={WIDTH}
+                height={HEIGHT}
+                style={{ aspectRatio }}
+                class={clx(
+                  "bg-base-100",
+                  "object-cover",
+                  "rounded w-full",
+                  "col-span-full row-span-full",
+                )}
+                sizes="(max-width: 640px) 50vw, 20vw"
+                preload={preload}
+                loading={preload ? "eager" : "lazy"}
+                decoding="async"
+              />
+              <Image
+                src={back?.url ?? front.url!}
+                alt={back?.alternateName ?? front.alternateName}
+                width={WIDTH}
+                height={HEIGHT}
+                style={{ aspectRatio }}
+                class={clx(
+                  "bg-base-100",
+                  "object-cover",
+                  "rounded w-full",
+                  "col-span-full row-span-full",
+                  "transition-opacity opacity-0",
+                )}
+                sizes="(max-width: 640px) 50vw, 20vw"
+                loading="lazy"
+                decoding="async"
+              />
+            </a>
+          </figure>
+          {/* Price from/to */}
+          {
+            <div class="z-[-1] w-full flex gap-2 items-center font-light absolute bottom-0 group-hover:bg-slate-50 group-hover:z-[5]">
+              {
+                /* <span class="line-through text-sm">
+              A PARTIR DE {formatPrice(listPrice, offers?.priceCurrency)}
+            </span> */
+              }
+              <span>
+                A PARTIR DE {formatPrice(price, offers?.priceCurrency)}
+              </span>
+            </div>
+          }
+        </div>
 
         {/* SKU Selector */}
         {
@@ -181,33 +210,6 @@ function ProductCard({
               </li>
             ))}
         </ul> */
-        }
-
-        {/* Name/Description */}
-        {
-          /* <div class="flex flex-col">
-          <h2
-            class="truncate text-base lg:text-lg uppercase"
-            dangerouslySetInnerHTML={{ __html: name ?? "" }}
-          />
-
-          <div
-            class="truncate text-xs"
-            dangerouslySetInnerHTML={{ __html: description ?? "" }}
-          />
-        </div> */
-        }
-
-        {/* Price from/to */}
-        {
-          /* <div class="flex gap-2 items-center justify-end font-light">
-          <span class="line-through text-sm">
-            {formatPrice(listPrice, offers?.priceCurrency)}
-          </span>
-          <span>
-            {formatPrice(price, offers?.priceCurrency)}
-          </span>
-        </div> */
         }
 
         {/* Installments */}
