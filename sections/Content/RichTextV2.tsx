@@ -11,7 +11,7 @@ interface Option {
   text: HTMLWidget;
   /** @title Tamanho da fonte */
   /** @description Se não incluido, caso seja título será padrão 24 ou paragrafo padrão 16 */
-  size?: number
+  size?: number;
   /** @title Exibe margem no topo do texto? */
   marginTop?: boolean;
 }
@@ -28,7 +28,7 @@ const RichTextV2 = ({ texts }: Props) => {
           {option.type === "Título" &&
             (
               <h3
-                style={option.size ? {fontSize: `${option.size}px`} : {}}
+                style={option.size ? { fontSize: `${option.size}px` } : {}}
                 class={`font-bold mb-4 text-xl lg:text-3xl`}
                 dangerouslySetInnerHTML={{ __html: option.text }}
               />
@@ -36,7 +36,7 @@ const RichTextV2 = ({ texts }: Props) => {
           {option.type === "Paragrafo" &&
             (
               <div
-                style={option.size ? {fontSize: `${option.size}px`} : {}}
+                style={option.size ? { fontSize: `${option.size}px` } : {}}
                 class={`mb-3 ${option.marginTop ? "mt-3" : ""}`}
                 dangerouslySetInnerHTML={{ __html: option.text }}
               />
