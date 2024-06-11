@@ -41,8 +41,6 @@ function TabbedProductShelf({
     : 0;
   const { products } = tabs[ti];
 
-  console.log(products, "1234");
-
   if (!products || products.length === 0) {
     return null;
   }

@@ -16,19 +16,16 @@ export default function ProductDetails({ page }: Props) {
   const { breadcrumbList } = page;
   const breadcrumb = {
     ...breadcrumbList,
-    itemListElement: breadcrumbList?.itemListElement.slice(0, -1),
-    numberOfItems: breadcrumbList.numberOfItems - 1,
+    itemListElement: breadcrumbList?.itemListElement,
+    numberOfItems: breadcrumbList.numberOfItems,
   };
+
   return (
-    <div class="w-full container py-8 flex flex-col gap-6 lg:pb-10 md:mt-10">
+    <div class="w-full container py-8 flex flex-col gap-6 lg:pb-10">
       <Breadcrumb itemListElement={breadcrumb.itemListElement} />
       <div class="flex flex-col gap-6 lg:flex-row lg:justify-center">
-        <ImageGallerySlider
-          page={page}
-        />
-        <ProductInfo
-          page={page}
-        />
+        <ImageGallerySlider page={page} />
+        <ProductInfo page={page} />
       </div>
     </div>
   );

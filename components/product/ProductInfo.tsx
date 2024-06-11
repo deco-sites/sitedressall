@@ -17,7 +17,7 @@ import { usePlatform } from "../../sdk/usePlatform.tsx";
 import { ProductDetailsPage } from "apps/commerce/types.ts";
 import { mapProductToAnalyticsItem } from "apps/commerce/utils/productToAnalyticsItem.ts";
 import ProductSelector from "./ProductVariantSelector.tsx";
-import Icon from "../ui/Icon.tsx";
+import ShareProductButton from "../../islands/ShareButton.tsx";
 
 interface Props {
   page: ProductDetailsPage | null;
@@ -61,7 +61,7 @@ function ProductInfo({ page, layout }: Props) {
     itemListElement: breadcrumbList?.itemListElement.slice(0, -1),
     numberOfItems: breadcrumbList.numberOfItems - 1,
   };
-  console.log(installments);
+
   const eventItem = mapProductToAnalyticsItem({
     product,
     breadcrumbList: breadcrumb,
@@ -87,8 +87,8 @@ function ProductInfo({ page, layout }: Props) {
             : name}
         </h1>
         <div class="flex items-center justify-end gap-4">
-          <Icon id="ShareIcon" strokeWidth={1} size={44} />
-          <Icon id="Wishlist" strokeWidth={1} size={44} />
+          <ShareProductButton productName={name} />
+          {/* <Icon id="Wishlist" strokeWidth={1} size={44} /> */}
         </div>
       </div>
 

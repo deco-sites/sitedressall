@@ -54,14 +54,10 @@ function Result({
   const { products, filters, breadcrumb, pageInfo, sortOptions } = page;
   const perPage = pageInfo?.recordPerPage || products.length;
   const url = new URL(_url);
-
   const { format = "Show More" } = layout ?? {};
-
   const id = useId();
-
   const zeroIndexedOffsetPage = pageInfo.currentPage - startingPage;
   const offset = zeroIndexedOffsetPage * perPage;
-
   const isPartial = url.searchParams.get("partial") === "true";
   const isFirstPage = !pageInfo.previousPage;
 
@@ -78,7 +74,8 @@ function Result({
         )}
 
         <div class="flex flex-row">
-          {layout?.variant === "aside" && filters.length > 0 &&
+          {layout?.variant === "aside" &&
+            filters.length > 0 &&
             (isFirstPage || !isPartial) && (
             <aside class="hidden sm:block w-min min-w-[250px]">
               <Filters filters={filters} />
@@ -97,25 +94,55 @@ function Result({
 
         {format == "Pagination" && (
           <div class="flex justify-center my-4">
-            <div class="join">
+            <div class="join flex items-center justify-center">
               <a
                 aria-label="previous page link"
                 rel="prev"
                 href={pageInfo.previousPage ?? "#"}
-                class="btn btn-ghost join-item"
+                class="mr-6"
               >
-                <Icon id="ChevronLeft" size={24} strokeWidth={2} />
+                <Icon id="ChevronLeft" size={24} strokeWidth={1} />
               </a>
-              <span class="btn btn-ghost join-item">
-                Page {zeroIndexedOffsetPage + 1}
-              </span>
+              <div class="flex items-center justify-center gap-4">
+                {pageInfo.previousPage
+                  ? (
+                    <>
+                      <span class="text-base font-light text-blackPrimary">
+                        {zeroIndexedOffsetPage}
+                      </span>
+                      <span class="text-base font-light text-blackPrimary">
+                        |
+                      </span>
+                    </>
+                  )
+                  : (
+                    ""
+                  )}
+
+                <span class="underline">{zeroIndexedOffsetPage + 1}</span>
+
+                {pageInfo.nextPage
+                  ? (
+                    <>
+                      <span class="text-base font-light text-blackPrimary">
+                        |
+                      </span>
+                      <span class="text-base font-light text-blackPrimary">
+                        {zeroIndexedOffsetPage + 2}
+                      </span>
+                    </>
+                  )
+                  : (
+                    ""
+                  )}
+              </div>
               <a
                 aria-label="next page link"
                 rel="next"
                 href={pageInfo.nextPage ?? "#"}
-                class="btn btn-ghost join-item"
+                class="ml-6 rotate-180"
               >
-                <Icon id="ChevronRight" size={24} strokeWidth={2} />
+                <Icon id="ChevronLeft" size={24} strokeWidth={1} />
               </a>
             </div>
           </div>
@@ -131,7 +158,7 @@ function Result({
             item_list_id: breadcrumb.itemListElement?.at(-1)?.item,
             items: page.products?.map((product, index) =>
               mapProductToAnalyticsItem({
-                ...(useOffer(product.offers)),
+                ...useOffer(product.offers),
                 index: offset + index,
                 product,
                 breadcrumbList: page.breadcrumb,
@@ -144,9 +171,7 @@ function Result({
   );
 }
 
-function SearchResult(
-  { page, ...props }: ReturnType<typeof loader>,
-) {
+function SearchResult({ page, ...props }: ReturnType<typeof loader>) {
   if (!page) {
     return <NotFound />;
   }
