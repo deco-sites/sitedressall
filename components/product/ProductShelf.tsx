@@ -22,15 +22,11 @@ export interface Props {
     headerAlignment?: "center" | "left";
     headerfontSize?: "Normal" | "Large" | "Small";
     showArrows?: boolean;
+    showDots?: boolean;
   };
 }
 
-function ProductShelf({
-  products,
-  title,
-  description,
-  layout,
-}: Props) {
+function ProductShelf({ products, title, description, layout }: Props) {
   const id = useId();
   const platform = usePlatform();
 
@@ -66,7 +62,7 @@ function ProductShelf({
         class={clx(
           "grid",
           layout?.showArrows && "grid-cols-[48px_1fr_48px]",
-          "px-0 md:px-5 container",
+          "px-0 container"
         )}
       >
         <Slider class="carousel carousel-center sm:carousel-end sm:gap-1 row-start-2 row-end-5">
@@ -76,7 +72,7 @@ function ProductShelf({
               class={clx(
                 "carousel-item",
                 slideDesktop[layout?.numberOfSliders?.desktop ?? 3],
-                slideMobile[layout?.numberOfSliders?.mobile ?? 1],
+                slideMobile[layout?.numberOfSliders?.mobile ?? 1]
               )}
             >
               <ProductCard
@@ -103,6 +99,21 @@ function ProductShelf({
             </div>
           </>
         )}
+        {layout?.showDots && (
+          <ul class="flex items-end justify-center gap-2">
+            {products?.map((_, index) => (
+              <li class="">
+                <Slider.Dot index={index}>
+                  {index + 1}
+                  {index === products.length - 1 ? null : (
+                    <span class="ml-2 text-blackPrimary font-bold">|</span>
+                  )}
+                </Slider.Dot>
+              </li>
+            ))}
+          </ul>
+        )}
+
         <Slider.JS rootId={id} />
         <SendEventOnView
           id={id}
@@ -114,7 +125,7 @@ function ProductShelf({
                 mapProductToAnalyticsItem({
                   index,
                   product,
-                  ...(useOffer(product.offers)),
+                  ...useOffer(product.offers),
                 })
               ),
             },
