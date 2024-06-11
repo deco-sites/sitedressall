@@ -1,0 +1,98 @@
+{
+  "name": "Sou artista",
+  "path": "/sou-artista",
+  "sections": [
+    {
+      "__resolveType": "Header - 01"
+    },
+    {
+      "__resolveType": "site/sections/Images/Banner.tsx",
+      "imgMob": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/8911/59a5d592-5049-46f0-a21b-0a1d7b1ba644",
+      "imgDesktop": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/8911/0f8da0ee-02c1-4d15-b68f-0c4fe9a73f99"
+    },
+    {
+      "__resolveType": "site/sections/Institutional/InstitutionalWithSidebar.tsx",
+      "sections": [
+        {
+          "__resolveType": "site/sections/Content/RichTextV2.tsx",
+          "texts": [
+            {
+              "type": "Título",
+              "text": "<p>Tudo o que você precisa saber para expor e vender</p>",
+              "size": 20
+            },
+            {
+              "type": "Título",
+              "text": "<p>1. como funciona</p>",
+              "size": 20,
+              "marginTop": true
+            }
+          ]
+        },
+        {
+          "__resolveType": "site/sections/Images/ListImages.tsx",
+          "images": [
+            {
+              "src": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/8911/b10967f7-a255-4e5f-8f52-3d3c8b7ac402",
+              "text": "1. crie uma conta"
+            },
+            {
+              "src": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/8911/fa975576-e1a4-432c-8d87-21905fc603a6",
+              "text": "2. envie seus trabalhos para nossa curadoria"
+            },
+            {
+              "src": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/8911/deb716e3-cc37-498f-b81b-d16476c039ac",
+              "text": "3. nós divulgamos eles em todos os canais"
+            },
+            {
+              "src": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/8911/d9d6bede-af03-47bf-9ae1-e0f48b4671eb",
+              "text": "4. produzimos, enviamos e pagamos sua comissão"
+            }
+          ]
+        },
+        {
+          "__resolveType": "site/sections/Content/RichTextV2.tsx",
+          "texts": [
+            {
+              "type": "Título",
+              "text": "<p>2. por que vender</p>",
+              "size": 20,
+              "marginTop": true
+            },
+            {
+              "type": "Paragrafo",
+              "text": "<p>Sabemos que vender em escala envolve vários desafios, da produção ao atendimento. Por isso nós fazemos tudo mesmo! A divulgação, a venda, a produção, o envio e o atendimento ao cliente. Assim você pode focar no que mais gosta e mais interessa e deixar o resto com a gente.</p>"
+            },
+            {
+              "type": "Paragrafo",
+              "text": "<p><strong>Transparência e segurança para vender</strong></p>"
+            },
+            {
+              "type": "Paragrafo",
+              "text": "<p>Sabemos que vender em escala envolve vários desafios, da produção ao atendimento. Por isso nós fazemos tudo mesmo! A divulgação, a venda, a produção, o envio e o atendimento ao cliente. Assim você pode focar no que mais gosta e mais interessa e deixar o resto com a gente.</p>"
+            },
+            {
+              "type": "Título",
+              "text": "<p>3. qualidade que te valoriza</p>",
+              "size": 20
+            },
+            {
+              "type": "Paragrafo",
+              "text": "<p>Nós cortamos intermediários e desenvolvemos um produto proprietário, que maximiza a valorização das obras, sem precisar cobrar caro pelo acabamentos. Mantendo o valor concentrado na produção artística. Todos envolvidos na produção são artesãos dedicados e atentos aos mínimos detalhes, para que seu trabalho esteja muito bem representado no produto final.</p>"
+            }
+          ]
+        }
+      ],
+      "loader": {
+        "__resolveType": "Preview site/loaders/sidebarMenu.ts"
+      }
+    },
+    {
+      "__resolveType": "Main Footer"
+    }
+  ],
+  "seo": {
+    "__resolveType": "website/sections/Seo/SeoV2.tsx"
+  },
+  "__resolveType": "website/pages/Page.tsx"
+}

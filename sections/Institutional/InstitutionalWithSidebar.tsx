@@ -4,10 +4,10 @@ import { useId } from "../../sdk/useId.ts";
 
 interface Props {
   /** @title Navegação Lateral */
-  loader: NavigationLoader;
+  loader?: NavigationLoader;
 
   /** @title Seções */
-  sections: Section[];
+  sections?: Section[];
 }
 
 const InstitutionalWithSidebar = ({ loader, sections }: Props) => {
@@ -16,7 +16,7 @@ const InstitutionalWithSidebar = ({ loader, sections }: Props) => {
       <div class="flex">
         <div class="w-full max-w-sm hidden lg:block">
           <nav>
-            {loader.links.map(({ label, url }, index) => {
+            {loader?.links.map(({ label, url }, index) => {
               const isActive = index === loader.activeIndex;
 
               return (
@@ -37,7 +37,7 @@ const InstitutionalWithSidebar = ({ loader, sections }: Props) => {
         </div>
         <div class="w-full">
           <div class="max-w-3xl">
-            {sections.map(({ Component, props }) =>
+            {sections && sections?.map(({ Component, props }) =>
               Component ? <Component key={useId()} {...props} /> : <></>
             )}
           </div>

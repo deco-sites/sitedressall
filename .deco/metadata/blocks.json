@@ -372,5 +372,11 @@
   "/.deco/blocks/Main%20Footer.json": {
     "blockType": "sections",
     "__resolveType": "site/sections/Footer/Footer.tsx"
+  },
+  "/.deco/blocks/pages-Sou%2520artista-738642.json": {
+    "name": "Sou artista",
+    "path": "/sou-artista",
+    "blockType": "pages",
+    "__resolveType": "website/pages/Page.tsx"
   }
 }
