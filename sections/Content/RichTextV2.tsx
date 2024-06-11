@@ -29,7 +29,9 @@ const RichTextV2 = ({ texts }: Props) => {
             (
               <h3
                 style={option.size ? { fontSize: `${option.size}px` } : {}}
-                class={`font-bold mb-4 text-xl lg:text-3xl ${option.marginTop ? "mt-6" : ""}`}
+                class={`font-bold mb-4 text-xl lg:text-3xl ${
+                  option.marginTop ? "mt-6" : ""
+                }`}
                 dangerouslySetInnerHTML={{ __html: option.text }}
               />
             )}
