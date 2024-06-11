@@ -42,13 +42,11 @@
   ],
   "lint": {
     "rules": {
-      "tags": [
-        "fresh",
-        "recommended"
-      ]
+      "tags": ["fresh", "recommended"]
     }
   },
-  "nodeModulesDir": false,
+
+  "nodeModulesDir": true,
   "compilerOptions": {
     "jsx": "react-jsx",
     "jsxImportSource": "preact",
