@@ -7,7 +7,7 @@
     },
     {
       "__resolveType": "site/sections/Images/Banner.tsx",
-      "imgMob": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/8911/59a5d592-5049-46f0-a21b-0a1d7b1ba644",
+      "imgMob": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/8911/370129e8-2c06-46a7-b622-777b8051f503",
       "imgDesktop": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/8911/0f8da0ee-02c1-4d15-b68f-0c4fe9a73f99"
     },
     {
@@ -81,6 +81,13 @@
               "text": "<p>Nós cortamos intermediários e desenvolvemos um produto proprietário, que maximiza a valorização das obras, sem precisar cobrar caro pelo acabamentos. Mantendo o valor concentrado na produção artística. Todos envolvidos na produção são artesãos dedicados e atentos aos mínimos detalhes, para que seu trabalho esteja muito bem representado no produto final.</p>"
             }
           ]
+        },
+        {
+          "__resolveType": "site/sections/InformativoComBotão.tsx",
+          "title": "<p>seja um artista <strong>Dress</strong>Frame</p>",
+          "subtitle": "Junte-se a nós para transformar a forma de consumir arte",
+          "ctaLabel": "quero me cadastrar",
+          "ctaUrl": "/sou-artista-cadastro"
         }
       ],
       "loader": {
