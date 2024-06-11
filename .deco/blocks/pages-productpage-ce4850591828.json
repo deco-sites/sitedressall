@@ -33,7 +33,8 @@
           "mobile": 2,
           "desktop": 4
         },
-        "showArrows": false
+        "showArrows": false,
+        "showDots": true
       },
       "products": {
         "__resolveType": "Preview shopify/loaders/ProductList.ts"
