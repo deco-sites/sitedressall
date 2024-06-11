@@ -29,11 +29,14 @@
       "cardLayout": {
         "__resolveType": "Product Card Layout - 01"
       },
-      "startingPage": 1,
+      "startingPage": 0,
       "__resolveType": "site/sections/Product/SearchResult.tsx"
     },
     {
       "__resolveType": "Footer - 04"
+    },
+    {
+      "__resolveType": "Product Shelf - 01"
     }
   ],
   "__resolveType": "website/pages/Page.tsx"
