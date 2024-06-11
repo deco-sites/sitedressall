@@ -15,6 +15,7 @@
       "__resolveType": "Header - 01"
     },
     {
+      "__resolveType": "site/sections/Product/SearchResult.tsx",
       "page": {
         "__resolveType": "PLP Shopify"
       },
@@ -29,39 +30,7 @@
       "cardLayout": {
         "__resolveType": "Product Card Layout - 01"
       },
-      "startingPage": 0,
-      "__resolveType": "site/sections/Product/SearchResult.tsx"
-    },
-    {
-      "__resolveType": "site/sections/Product/ProductShelf.tsx",
-      "title": "para combinar junto",
-      "layout": {
-        "headerfontSize": "Normal",
-        "headerAlignment": "left",
-        "numberOfSliders": {
-          "mobile": 2,
-          "desktop": 4
-        },
-        "showArrows": false
-      },
-      "products": {
-        "__resolveType": "Preview shopify/loaders/ProductList.ts"
-      },
-      "cardLayout": {
-        "hide": {},
-        "basics": {
-          "oldPriceSize": "Small",
-          "contentAlignment": "Left"
-        },
-        "onMouseOver": {
-          "card": "None",
-          "image": "Change image"
-        },
-        "elementsPositions": {
-          "skuSelector": "Top",
-          "favoriteIcon": "Top right"
-        }
-      }
+      "startingPage": 0
     },
     {
       "__resolveType": "Footer - 04"

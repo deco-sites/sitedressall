@@ -25,7 +25,52 @@
     },
     {
       "__resolveType": "Main Footer"
+    },
+    {
+      "__resolveType": "site/sections/Product/ProductShelf.tsx",
+      "title": "para combinar junto",
+      "layout": {
+        "headerfontSize": "Normal",
+        "headerAlignment": "left",
+        "numberOfSliders": {
+          "mobile": 2,
+          "desktop": 4
+        },
+        "showArrows": false
+      },
+      "products": {
+        "__resolveType": "Preview shopify/loaders/ProductList.ts"
+      },
+      "cardLayout": {
+        "hide": {},
+        "basics": {
+          "oldPriceSize": "Small",
+          "contentAlignment": "Left"
+        },
+        "onMouseOver": {
+          "card": "None",
+          "image": "Change image"
+        },
+        "elementsPositions": {
+          "skuSelector": "Top",
+          "favoriteIcon": "Top right"
+        }
+      }
     }
   ],
-  "__resolveType": "website/pages/Page.tsx"
+  "__resolveType": "website/pages/Page.tsx",
+  "products": {
+    "__resolveType": "shopify/loaders/ProductList.ts",
+    "props": {
+      "sort": "title-ascending",
+      "count": 10,
+      "collection": "Abstrato"
+    },
+    "filters": {
+      "tags": [],
+      "productTypes": [],
+      "productVendors": [],
+      "variantOptions": []
+    }
+  }
 }
