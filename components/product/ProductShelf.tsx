@@ -62,7 +62,7 @@ function ProductShelf({ products, title, description, layout }: Props) {
         class={clx(
           "grid",
           layout?.showArrows && "grid-cols-[48px_1fr_48px]",
-          "px-0 container"
+          "px-0 container",
         )}
       >
         <Slider class="carousel carousel-center sm:carousel-end sm:gap-1 row-start-2 row-end-5">
@@ -72,7 +72,7 @@ function ProductShelf({ products, title, description, layout }: Props) {
               class={clx(
                 "carousel-item",
                 slideDesktop[layout?.numberOfSliders?.desktop ?? 3],
-                slideMobile[layout?.numberOfSliders?.mobile ?? 1]
+                slideMobile[layout?.numberOfSliders?.mobile ?? 1],
               )}
             >
               <ProductCard
@@ -105,9 +105,9 @@ function ProductShelf({ products, title, description, layout }: Props) {
               <li class="">
                 <Slider.Dot index={index}>
                   {index + 1}
-                  {index === products.length - 1 ? null : (
-                    <span class="ml-2 text-blackPrimary font-bold">|</span>
-                  )}
+                  {index === products.length - 1
+                    ? null
+                    : <span class="ml-2 text-blackPrimary font-bold">|</span>}
                 </Slider.Dot>
               </li>
             ))}
