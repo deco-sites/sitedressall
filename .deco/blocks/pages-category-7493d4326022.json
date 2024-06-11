@@ -33,9 +33,6 @@
       "__resolveType": "site/sections/Product/SearchResult.tsx"
     },
     {
-      "__resolveType": "Footer - 04"
-    },
-    {
       "__resolveType": "site/sections/Product/ProductShelf.tsx",
       "title": "para combinar junto",
       "layout": {
@@ -65,6 +62,9 @@
           "favoriteIcon": "Top right"
         }
       }
+    },
+    {
+      "__resolveType": "Footer - 04"
     }
   ],
   "__resolveType": "website/pages/Page.tsx",
