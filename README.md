@@ -9,7 +9,7 @@ in minutes.
 </div>
 
 ## Features
-This starter brings:
+This starter brings:s
 
 <ul>
   <li>Home, product and listing pages</li>
