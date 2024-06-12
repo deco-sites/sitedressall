@@ -1,0 +1,27 @@
+{
+  "name": "Sou Artista - Cadastro",
+  "path": "/sou-artista#cadastro",
+  "sections": [
+    {
+      "__resolveType": "Header - 01"
+    },
+    {
+      "__resolveType": "site/sections/Images/Banner.tsx",
+      "imgDesktop": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/8911/7b41b5cb-e753-4f86-bce0-ffe9c1faf053",
+      "imgMob": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/8911/de2d7e79-0d0e-47d4-8211-a0b658a23614"
+    },
+    {
+      "__resolveType": "site/sections/Institutional/InstitutionalWithSidebar.tsx",
+      "loader": {
+        "__resolveType": "Preview site/loaders/sidebarMenu.ts"
+      }
+    },
+    {
+      "__resolveType": "Main Footer"
+    }
+  ],
+  "seo": {
+    "__resolveType": "website/sections/Seo/SeoV2.tsx"
+  },
+  "__resolveType": "website/pages/Page.tsx"
+}
