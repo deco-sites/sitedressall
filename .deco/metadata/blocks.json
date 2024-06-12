@@ -378,11 +378,5 @@
     "path": "/sou-artista",
     "blockType": "pages",
     "__resolveType": "website/pages/Page.tsx"
-  },
-  "/.deco/blocks/pages-Sou%2520Artista%2520-%2520Cadastro-523149.json": {
-    "name": "Sou Artista - Cadastro",
-    "path": "/sou-artista#cadastro",
-    "blockType": "pages",
-    "__resolveType": "website/pages/Page.tsx"
   }
 }

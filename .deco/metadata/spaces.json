@@ -5149,7 +5149,7 @@
             "content": [
               {
                 "type": "stack",
-                "width": 22.33375156838143,
+                "width": 41.66666666666667,
                 "isClosable": true,
                 "reorderEnabled": true,
                 "title": "",
@@ -5171,7 +5171,7 @@
               },
               {
                 "type": "stack",
-                "width": 77.66624843161857,
+                "width": 58.333333333333336,
                 "isClosable": true,
                 "reorderEnabled": true,
                 "title": "",
@@ -5226,6 +5226,22 @@
           }
         }
       }
+    },
+    {
+      "id": "/.deco/blocks/pages-Sou%2520Artista%2520-%2520Cadastro-676708.json",
+      "name": "Sou Artista - Cadastro",
+      "pinned": false,
+      "icon": "file",
+      "layout": [],
+      "tabs": {}
+    },
+    {
+      "id": "/.deco/blocks/pages-Sou%2520Artista%2520-%2520Cadastro-798562.json",
+      "name": "Sou Artista - Cadastro",
+      "pinned": false,
+      "icon": "file",
+      "layout": [],
+      "tabs": {}
     }
   ]
 }
