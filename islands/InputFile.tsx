@@ -1,8 +1,10 @@
 import { useState } from "preact/hooks";
-import { JSX } from 'preact/jsx-runtime';
+import { JSX } from "preact/jsx-runtime";
 
 const InputFile = () => {
-  const [inputMessage, setInputMessage] = useState<string | undefined>(undefined);
+  const [inputMessage, setInputMessage] = useState<string | undefined>(
+    undefined,
+  );
   const inputMessageDefault = "upload";
 
   const handleChange = (event: JSX.TargetedEvent<HTMLInputElement, Event>) => {
