@@ -2,6 +2,7 @@
 // This file SHOULD be checked into source version control.
 // This file is automatically updated during development when running `dev.ts`.
 
+import * as $$$$$$$$$0 from "./actions/postShopifyUser.ts";
 import * as $$$$$$$$$$$0 from "./apps/decohub.ts";
 import * as $$$$$$$$$$$1 from "./apps/site.ts";
 import * as $$$2 from "./loaders/availableIcons.ts";
@@ -135,6 +136,9 @@ const manifest = {
     "site/sections/TabSection.tsx": $$$$$$55,
     "site/sections/TabSectionSlider.tsx": $$$$$$56,
     "site/sections/Theme/Theme.tsx": $$$$$$57,
+  },
+  "actions": {
+    "site/actions/postShopifyUser.ts": $$$$$$$$$0,
   },
   "apps": {
     "site/apps/decohub.ts": $$$$$$$$$$$0,
