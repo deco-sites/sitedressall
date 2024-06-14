@@ -1,0 +1,32 @@
+{
+  "name": "Sou Artista - Cadastrar",
+  "path": "/sou-artista/cadastrar",
+  "sections": [
+    {
+      "__resolveType": "Header - 01"
+    },
+    {
+      "__resolveType": "site/sections/Images/Banner.tsx",
+      "imgDesktop": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/8911/d9cca0ec-2e97-4ad1-a171-4d13a78d465b",
+      "imgMob": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/8911/bb5c1607-8bc2-40e9-acec-7ea2602b51e8"
+    },
+    {
+      "__resolveType": "site/sections/Institutional/InstitutionalWithSidebar.tsx",
+      "sections": [
+        {
+          "__resolveType": "site/sections/Forms/SouArtistaForm.tsx"
+        }
+      ],
+      "loader": {
+        "__resolveType": "Preview site/loaders/sidebarMenu.ts"
+      }
+    },
+    {
+      "__resolveType": "Main Footer"
+    }
+  ],
+  "seo": {
+    "__resolveType": "website/sections/Seo/SeoV2.tsx"
+  },
+  "__resolveType": "website/pages/Page.tsx"
+}

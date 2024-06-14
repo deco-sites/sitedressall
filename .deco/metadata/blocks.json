@@ -378,5 +378,11 @@
     "path": "/sou-artista",
     "blockType": "pages",
     "__resolveType": "website/pages/Page.tsx"
+  },
+  "/.deco/blocks/pages-Sou%2520Artista%2520-%2520Cadastrar-630058.json": {
+    "name": "Sou Artista - Cadastrar",
+    "path": "/sou-artista/cadastrar",
+    "blockType": "pages",
+    "__resolveType": "website/pages/Page.tsx"
   }
 }
