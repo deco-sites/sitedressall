@@ -12,7 +12,7 @@ interface Props {
 
 const InstitutionalWithSidebar = ({ loader, sections }: Props) => {
   return (
-    <div class="pt-8 px-9">
+    <div class="pt-8 px-4 lg:px-9">
       <div class="flex">
         <div class="w-full max-w-sm hidden lg:block">
           <nav>
