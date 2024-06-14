@@ -24,10 +24,10 @@ const action = async (
   _req?: Request,
 ) => {
   const myHeaders = new Headers();
-  myHeaders.append(
-    "X-Shopify-Access-Token",
-    "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",
-  );
+  // myHeaders.append(
+  //   "X-Shopify-Access-Token",
+  //   "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",
+  // );
   myHeaders.append("Content-Type", "application/json");
 
   const customerData = props;
