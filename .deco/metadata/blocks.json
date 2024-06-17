@@ -384,5 +384,9 @@
     "path": "/sou-artista/cadastrar",
     "blockType": "pages",
     "__resolveType": "website/pages/Page.tsx"
+  },
+  "/.deco/blocks/Preview%20site%2Factions%2FpostShopifyUser.ts.json": {
+    "blockType": "actions",
+    "__resolveType": "site/actions/postShopifyUser.ts"
   }
 }
