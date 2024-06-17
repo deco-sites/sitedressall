@@ -67,7 +67,7 @@ const action = async (
       "https://19816d-54.myshopify.com/admin/api/2024-04/graphql.json",
       requestOptions,
     );
-    const result = await response.text();
+    const result = await response.json();
     return result;
   } catch (error) {
     console.error(error);
