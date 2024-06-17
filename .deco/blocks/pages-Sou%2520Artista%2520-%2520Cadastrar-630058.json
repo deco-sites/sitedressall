@@ -18,7 +18,7 @@
           "accessToken": {
             "__resolveType": "website/loaders/secret.ts",
             "name": "access token",
-            "encrypted": "fbdb8492f483f42e5ab55aaec9feb94549525f3244f9bf5c9642e4cee98a489ec72dcc6da91520ca32113b071d9c86ed"
+            "encrypted": "68c08c3c7b18cc3aee584b47bf928f50a95c5583f8696175456a1665421bfa572a1f0a2d5171a9a6e12b4eb571649aee"
           }
         }
       ],
