@@ -5,13 +5,13 @@ import { useRef } from "preact/hooks";
 import { invoke } from "../../runtime.ts";
 import { useState } from "preact/hooks";
 
-const SouArtistaFormIsland = ({accessToken}: any) => {
+const SouArtistaFormIsland = ({ accessToken }: any) => {
   const formRef = useRef(null);
   const [pessoaJuridica, setPessoaJuridica] = useState(false);
   const [error, setError] = useState(false);
   const [sucess, setSuccess] = useState(false);
 
-  console.log(accessToken, 'toooken')
+  console.log(accessToken, "toooken");
 
   const handleSubmit = async (e: JSX.TargetedSubmitEvent<HTMLFormElement>) => {
     e.preventDefault();

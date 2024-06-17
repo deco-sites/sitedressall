@@ -1,14 +1,14 @@
 import SouArtistaFormIsland from "../../islands/Forms/SouArtistaFormIsland.tsx";
 import { Secret } from "apps/website/loaders/secret.ts";
 
-interface SouArtistaFormProps{
-  accessToken: Secret
+interface SouArtistaFormProps {
+  accessToken: Secret;
 }
 
-const SouArtistaForm = ({accessToken}: SouArtistaFormProps) => {
+const SouArtistaForm = ({ accessToken }: SouArtistaFormProps) => {
   return (
     <div>
-      <SouArtistaFormIsland accessToken={accessToken}/>
+      <SouArtistaFormIsland accessToken={accessToken} />
     </div>
   );
 };
