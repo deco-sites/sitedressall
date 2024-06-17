@@ -388,5 +388,9 @@
   "/.deco/blocks/Preview%20site%2Factions%2FpostShopifyUser.ts.json": {
     "blockType": "actions",
     "__resolveType": "site/actions/postShopifyUser.ts"
+  },
+  "/.deco/blocks/Preview%20website%2Floaders%2Fsecret.ts.json": {
+    "blockType": "loaders",
+    "__resolveType": "website/loaders/secret.ts"
   }
 }

@@ -14,7 +14,12 @@
       "__resolveType": "site/sections/Institutional/InstitutionalWithSidebar.tsx",
       "sections": [
         {
-          "__resolveType": "site/sections/Forms/SouArtistaForm.tsx"
+          "__resolveType": "site/sections/Forms/SouArtistaForm.tsx",
+          "accessToken": {
+            "__resolveType": "website/loaders/secret.ts",
+            "name": "access token",
+            "encrypted": "fbdb8492f483f42e5ab55aaec9feb94549525f3244f9bf5c9642e4cee98a489ec72dcc6da91520ca32113b071d9c86ed"
+          }
         }
       ],
       "loader": {
