@@ -15,6 +15,21 @@
       "__resolveType": "Header - 01"
     },
     {
+      "__resolveType": "site/sections/Category/CategoryBanner.tsx",
+      "banners": [
+        {
+          "image": {
+            "desktop": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/8911/427a58b3-a52b-4481-962b-b48036fcffd7",
+            "mobile": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/8911/c4f93f75-15d8-43b9-95ce-2aece98415bd",
+            "alt": "optional"
+          },
+          "matcher": "/*",
+          "title": "Título",
+          "subtitle": "Subtitulo"
+        }
+      ]
+    },
+    {
       "__resolveType": "site/sections/Product/SearchResult.tsx",
       "page": {
         "__resolveType": "PLP Shopify"

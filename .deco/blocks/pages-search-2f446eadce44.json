@@ -12,9 +12,20 @@
       "__resolveType": "Header - 01"
     },
     {
-      "page": {
-        "__resolveType": "PLP Shopify"
-      },
+      "__resolveType": "site/sections/Search/DynamicBanner.tsx",
+      "banners": [
+        {
+          "image": {
+            "desktop": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/8911/9e173587-0d01-48b0-b608-130c7ff95dde",
+            "mobile": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/8911/f1fb42cb-0204-4846-a9ed-3600182c0c1e"
+          },
+          "title": "BEST SELLERS",
+          "subtitle": "<p><span>Fizemos uma curadoria enxuta em nosso acervo e trouxemos os best sellers somados às principais tendências de decoração, tudo numa única coleção. Para quem tem medo de errar na hora de escolher seus quadros ou para quem ainda está indeciso, essa coleção reúne o melhor para todos os gostos, com obras que podem se encaixar nos mais diversos estilos de decoração.</span></p>"
+        }
+      ]
+    },
+    {
+      "__resolveType": "site/sections/Product/SearchResult.tsx",
       "layout": {
         "columns": {
           "mobile": 2,
@@ -23,7 +34,9 @@
         "variant": "aside",
         "format": "Pagination"
       },
-      "__resolveType": "site/sections/Product/SearchResult.tsx"
+      "page": {
+        "__resolveType": "PLP Shopify"
+      }
     },
     {
       "__resolveType": "site/sections/Product/ProductShelf.tsx",
