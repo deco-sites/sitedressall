@@ -53,7 +53,7 @@ export interface Props {
   /** @title Integration */
   page: ProductListingPage | null;
   layout?: Layout;
-  banners?: Banner[]
+  banners?: Banner[];
   /** @description 0 for ?page=0 as your first page */
   startingPage?: 0 | 1;
 }
@@ -71,7 +71,7 @@ function Result({
   layout,
   startingPage = 0,
   url: _url,
-  banners
+  banners,
 }: Omit<Props, "page"> & {
   page: ProductListingPage;
   url: string;
@@ -85,7 +85,9 @@ function Result({
   const offset = zeroIndexedOffsetPage * perPage;
   const isPartial = url.searchParams.get("partial") === "true";
   const isFirstPage = !pageInfo.previousPage;
-  const searchBanner = banners?.find(({ search }) => search && url.search.includes(`?q=${search}`));
+  const searchBanner = banners?.find(({ search }) =>
+    search && url.search.includes(`?q=${search}`)
+  );
   const defaultBanner = banners?.find(({ search }) => !search);
   const banner = searchBanner || defaultBanner || null;
 
@@ -93,10 +95,10 @@ function Result({
     <>
       <div class="max-w-[1440px] mx-auto px-4 sm:py-10">
         <div class="flex lg:hidden">
-          <Breadcrumb itemListElement={breadcrumb.itemListElement}/>
+          <Breadcrumb itemListElement={breadcrumb.itemListElement} />
         </div>
         <div>
-          <BannerSearch banner={banner}/>
+          <BannerSearch banner={banner} />
         </div>
         {(isFirstPage || !isPartial) && (
           <SearchControls
