@@ -7,8 +7,32 @@ import SearchControls from "../../islands/SearchControls.tsx";
 import { useId } from "../../sdk/useId.ts";
 import { useOffer } from "../../sdk/useOffer.ts";
 import ProductGallery, { Columns } from "../product/ProductGallery.tsx";
+import type { ImageWidget } from "apps/admin/widgets.ts";
+import BannerSearch from "./BannerSearch.tsx";
+import Breadcrumb from "../../components/ui/Breadcrumb.tsx";
 
 export type Format = "Show More" | "Pagination";
+
+export interface Banner {
+  /** @title Busca */
+  /** @description Texto da busca, ex: Caso queira que o banner exiba quando for busca 'masculino' digite masculino neste campo e toda busca onde houver esse mesmo texto o banner aparecerá. Caso não hovuer nenhum texto esse banner exibirá em toda busca  */
+  search?: string;
+  /** @title Título */
+  /** @description Título a ser exibido ao lado do banner */
+  title?: string;
+  /** @title Subtítulo / Paragrafo */
+  /** @description Texto a ser exibido ao lado do banner */
+  /** @format rich-text*/
+  subtitle?: string;
+  image: {
+    /** @description Imagem para Desktop */
+    desktop: ImageWidget;
+    /** @description Imagem para Mobile */
+    mobile: ImageWidget;
+    /** @description Texto alternativo da imagem */
+    alt?: string;
+  };
+}
 
 export interface Layout {
   /**
@@ -29,7 +53,7 @@ export interface Props {
   /** @title Integration */
   page: ProductListingPage | null;
   layout?: Layout;
-
+  banners?: Banner[]
   /** @description 0 for ?page=0 as your first page */
   startingPage?: 0 | 1;
 }
@@ -47,6 +71,7 @@ function Result({
   layout,
   startingPage = 0,
   url: _url,
+  banners
 }: Omit<Props, "page"> & {
   page: ProductListingPage;
   url: string;
@@ -60,10 +85,19 @@ function Result({
   const offset = zeroIndexedOffsetPage * perPage;
   const isPartial = url.searchParams.get("partial") === "true";
   const isFirstPage = !pageInfo.previousPage;
+  const searchBanner = banners?.find(({ search }) => search && url.search.includes(`?q=${search}`));
+  const defaultBanner = banners?.find(({ search }) => !search);
+  const banner = searchBanner || defaultBanner || null;
 
   return (
     <>
-      <div class="container px-4 sm:py-10">
+      <div class="max-w-[1440px] mx-auto px-4 sm:py-10">
+        <div class="flex lg:hidden">
+          <Breadcrumb itemListElement={breadcrumb.itemListElement}/>
+        </div>
+        <div>
+          <BannerSearch banner={banner}/>
+        </div>
         {(isFirstPage || !isPartial) && (
           <SearchControls
             sortOptions={sortOptions}
