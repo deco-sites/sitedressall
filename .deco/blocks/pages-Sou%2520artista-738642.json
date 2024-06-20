@@ -88,9 +88,6 @@
           "subtitle": "Junte-se a nós para transformar a forma de consumir arte",
           "ctaLabel": "quero me cadastrar",
           "ctaUrl": "/sou-artista-cadastro"
-        },
-        {
-          "__resolveType": "site/sections/Forms/SouArtistaForm.tsx"
         }
       ],
       "loader": {
