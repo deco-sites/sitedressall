@@ -42,6 +42,78 @@
           "title": "PRODUTO",
           "subtitle": "<p><span>Fizemos uma curadoria enxuta em nosso acervo e trouxemos os best sellers somados às principais tendências de decoração, tudo numa única coleção. Para quem tem medo de errar na hora de escolher seus quadros ou para quem ainda está indeciso, essa coleção reúne o melhor para todos os gostos, com obras que podem se encaixar nos mais diversos estilos de decoração.</span></p>"
         }
+      ],
+      "sliders": {
+        "layout": {
+          "hide": {
+            "indicators": true,
+            "controls": false
+          },
+          "itemWidth": 115,
+          "gap": {
+            "mobile": "8",
+            "desktop": "8"
+          }
+        },
+        "style": {
+          "controlsOutline": false
+        }
+      },
+      "items": [
+        {
+          "icon": "ArrowsPointingOut",
+          "layout": {
+            "iconPosition": "Top"
+          },
+          "style": {
+            "background": {
+              "bgColor": "Transparent"
+            },
+            "border": {
+              "width": "None",
+              "color": "Transparent",
+              "radius": "None"
+            }
+          },
+          "label": "abstrato",
+          "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/8911/20bbbd32-9b14-4091-971c-9b0d981855c2",
+          "url": "/s?q=abstrato"
+        },
+        {
+          "label": "minimalista",
+          "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/8911/759615c8-9b6c-4eba-8be0-6b56d7ef0493",
+          "url": "/s?q=minimalista"
+        },
+        {
+          "label": "fotografia",
+          "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/8911/cf3edf45-1269-4fc8-89a5-1343e754cfcf",
+          "url": "/s?q=fotografia"
+        },
+        {
+          "label": "preto e branco",
+          "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/8911/6246f379-eb78-40f5-b003-f9cabbfd36f9",
+          "url": "/s?q=preto-e-branco"
+        },
+        {
+          "label": "colagem",
+          "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/8911/9473eaf1-e9b6-43c1-ab82-9e55fbc2eb97",
+          "url": "/s?q=colagem"
+        },
+        {
+          "label": "natureza",
+          "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/8911/c87f7bf3-5d97-4762-ae10-fff63d655b93",
+          "url": "/s?q=natureza"
+        },
+        {
+          "label": "abstrato",
+          "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/8911/b46e1d91-85c2-43a8-adaa-5b940369ddc2",
+          "url": "/s?q=abstrato"
+        },
+        {
+          "label": "abstrato 3",
+          "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/8911/34bcbb77-5e07-41c2-a34f-ae74eeb3cc41",
+          "url": "/s?q=abstrato3"
+        }
       ]
     },
     {

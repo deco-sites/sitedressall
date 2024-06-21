@@ -22,7 +22,7 @@ function BannerSearch(props: any) {
         <Source
           src={image.desktop}
           width={1440}
-          height={200}
+          // height={200}
           media="(min-width: 767px)"
         />
         <img class="" src={image.desktop} alt={image.alt ?? title} />

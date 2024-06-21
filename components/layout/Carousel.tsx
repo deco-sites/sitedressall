@@ -52,7 +52,7 @@ function Section({ interval = 0, layout, children }: Props) {
       <div id={id} class="relative max-w-deskContainer m-auto">
         <Slider
           class={clx(
-            "relative carousel carousel-center",
+            "relative carousel carousel-center w-full",
             layout?.gap?.mobile
               ? grid.gap.mobile[layout.gap.mobile]
               : grid.gap.mobile[2],
