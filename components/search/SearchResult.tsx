@@ -11,7 +11,9 @@ import type { ImageWidget } from "apps/admin/widgets.ts";
 import BannerSearch from "./BannerSearch.tsx";
 import Breadcrumb from "../../components/ui/Breadcrumb.tsx";
 import Carousel, { Props as CarouselProps } from "../layout/Carousel.tsx";
-import RoundedImageCard, { Props as RoundedImageCardProps} from './RoundedImageCard.tsx'
+import RoundedImageCard, {
+  Props as RoundedImageCardProps,
+} from "./RoundedImageCard.tsx";
 
 export type Format = "Show More" | "Pagination";
 
@@ -79,7 +81,7 @@ function Result({
   banners,
   items,
   sliders,
-  placeholderItems
+  placeholderItems,
 }: Omit<Props, "page"> & {
   page: ProductListingPage;
   url: string;
@@ -98,7 +100,9 @@ function Result({
   );
   const defaultBanner = banners?.find(({ search }) => !search);
   const banner = searchBanner || defaultBanner || null;
-  const ITEMS: RoundedImageCardProps[] = new Array(placeholderItems || 10).fill({});
+  const ITEMS: RoundedImageCardProps[] = new Array(placeholderItems || 10).fill(
+    {},
+  );
   const allItems = !items || items?.length === 0 ? ITEMS : items;
 
   return (
@@ -123,16 +127,20 @@ function Result({
           {layout?.variant === "aside" &&
             filters.length > 0 &&
             (isFirstPage || !isPartial) && (
-              <aside class="hidden lg:block w-full max-w-[205px]">
-                <Filters filters={filters} />
-              </aside>
-            )}
+            <aside class="hidden lg:block w-full max-w-[205px]">
+              <Filters filters={filters} />
+            </aside>
+          )}
           <div class="flex-grow max-w-[1024px] w-full" id={id}>
             <div>
               <Carousel
                 layout={{ itemWidth: 115 }}
                 {...sliders}
-                children={allItems.map((item) => <RoundedImageCard {...item} />)}
+                children={allItems.map((item) => (
+                  <RoundedImageCard
+                    {...item}
+                  />
+                ))}
               />
             </div>
             <ProductGallery
