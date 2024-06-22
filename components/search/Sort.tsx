@@ -43,7 +43,7 @@ function Sort({ sortOptions }: Props) {
 
   return (
     <div class="border border-[#3c3c3b] py-2 px-4">
-      <label htmlFor="sort" class="">Ordenar: </label>
+      <label htmlFor="sort" class="">Ordenar:</label>
       <select
         id="sort"
         name="sort"
