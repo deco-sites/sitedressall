@@ -174,7 +174,7 @@ function Header({
           </div>
         </Modal>
       )}
-      <header class="h-[167px]">
+      <header class="md:h-[167px] h-[110px]">
         <Drawers menu={{ items }} searchbar={searchbar} platform={platform}>
           <div class="bg-white fixed w-full z-50">
             {alerts && alerts.length > 0 && <Alert alerts={alerts} />}
