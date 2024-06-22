@@ -6,9 +6,6 @@
       "__resolveType": "Header - 01"
     },
     {
-      "__resolveType": "Sidebar - Versão Mobile"
-    },
-    {
       "__resolveType": "site/sections/Images/Banner.tsx",
       "imgDesktop": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/8911/0071f190-8aba-4ce4-882b-f37fc19cc95e",
       "imgMob": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/8911/59c6aaf7-aad7-45a5-9b06-c84ae8099b71",
