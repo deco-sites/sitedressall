@@ -47,7 +47,7 @@
         "layout": {
           "hide": {
             "indicators": true,
-            "controls": false
+            "controls": true
           },
           "itemWidth": 115,
           "gap": {

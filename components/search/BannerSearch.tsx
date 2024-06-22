@@ -28,7 +28,7 @@ function BannerSearch(props: any) {
         <img class="" src={image.desktop} alt={image.alt ?? title} />
       </Picture>
 
-      <div class="max-w-[670px] flex flex-col justify-center p-4 lg:px-8 lg:py-0">
+      <div class="max-w-[670px] flex flex-col justify-center py-4 lg:px-8 lg:py-0">
         <h1 class="lg:text-[32px] text-xl font-bold mb-4">
           {title}
         </h1>

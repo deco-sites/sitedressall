@@ -42,13 +42,13 @@ function Sort({ sortOptions }: Props) {
   const sort = useSort();
 
   return (
-    <>
-      <label for="sort" class="sr-only">Ordenar por</label>
+    <div class="border border-[#3c3c3b] py-2 px-4">
+      <label htmlFor="sort" class="">Ordenar: </label>
       <select
         id="sort"
         name="sort"
         onInput={applySort}
-        class="w-min h-[36px] px-1 rounded m-2 text-base-content cursor-pointer outline-none"
+        class="w-min h-[36px] px-1 rounded text-base-content cursor-pointer outline-none"
       >
         {sortOptions.map(({ value, label }) => ({
           value,
@@ -60,7 +60,7 @@ function Sort({ sortOptions }: Props) {
           </option>
         ))}
       </select>
-    </>
+    </div>
   );
 }
 

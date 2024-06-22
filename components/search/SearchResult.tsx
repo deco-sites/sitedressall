@@ -114,7 +114,8 @@ function Result({
         <div>
           <BannerSearch banner={banner} />
         </div>
-        {(isFirstPage || !isPartial) && (
+        <div class="hidden lg:flex">
+          {(isFirstPage || !isPartial) && (
           <SearchControls
             sortOptions={sortOptions}
             filters={filters}
@@ -122,17 +123,21 @@ function Result({
             displayFilter={layout?.variant === "drawer"}
           />
         )}
+        </div>
 
         <div class="flex flex-row lg:justify-between">
           {layout?.variant === "aside" &&
             filters.length > 0 &&
             (isFirstPage || !isPartial) && (
-            <aside class="hidden lg:block w-full max-w-[205px]">
-              <Filters filters={filters} />
-            </aside>
-          )}
+              <aside class="hidden lg:block w-full max-w-[205px]">
+                <Filters filters={filters} />
+              </aside>
+            )}
           <div class="flex-grow max-w-[1024px] w-full" id={id}>
             <div>
+              <div>
+                <h3 class="font-bold text-base text-[#3c3c3b] mb-4">CATEGORIAS EM DESTAQUE</h3>
+              </div>
               <Carousel
                 layout={{ itemWidth: 115 }}
                 {...sliders}
