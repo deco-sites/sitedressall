@@ -72,7 +72,9 @@ function Filters({ filters }: Props) {
         .filter(isToggle)
         .map((filter) => (
           <li class="flex flex-col gap-4">
-            <span class="font-bold text-base text-[#3c3c3b] uppercase">{filter.label}</span>
+            <span class="font-bold text-base text-[#3c3c3b] uppercase">
+              {filter.label}
+            </span>
             <FilterValues {...filter} />
           </li>
         ))}
