@@ -6,18 +6,7 @@
       "__resolveType": "Header - 01"
     },
     {
-      "__resolveType": "site/sections/Institutional/SidebarMenuMobile.tsx",
-      "loader": {
-        "__resolveType": "Preview site/loaders/sidebarMenu.ts"
-      },
-      "sliders": {
-        "layout": {
-          "hide": {
-            "controls": true,
-            "indicators": true
-          }
-        }
-      }
+      "__resolveType": "Sidebar - Versão Mobile"
     },
     {
       "__resolveType": "site/sections/Images/Banner.tsx",

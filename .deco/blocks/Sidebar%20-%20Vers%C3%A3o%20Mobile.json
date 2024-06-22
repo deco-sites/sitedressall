@@ -1,0 +1,21 @@
+{
+  "__resolveType": "site/sections/Institutional/SidebarMenuMobile.tsx",
+  "loader": {
+    "__resolveType": "Preview site/loaders/sidebarMenu.ts"
+  },
+  "sliders": {
+    "layout": {
+      "hide": {
+        "controls": true,
+        "indicators": true
+      },
+      "gap": {
+        "mobile": "1",
+        "desktop": "1"
+      }
+    },
+    "style": {
+      "controlsColor": "Default"
+    }
+  }
+}

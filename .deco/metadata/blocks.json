@@ -392,5 +392,9 @@
   "/.deco/blocks/Preview%20website%2Floaders%2Fsecret.ts.json": {
     "blockType": "loaders",
     "__resolveType": "website/loaders/secret.ts"
+  },
+  "/.deco/blocks/Sidebar%20-%20Vers%C3%A3o%20Mobile.json": {
+    "blockType": "sections",
+    "__resolveType": "site/sections/Institutional/SidebarMenuMobile.tsx"
   }
 }
