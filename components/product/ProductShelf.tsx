@@ -49,7 +49,7 @@ function ProductShelf({ products, title, description, layout }: Props) {
     5: "w-1/5",
   };
   return (
-    <div class="w-full container py-8 flex flex-col gap-6 lg:py-10">
+    <div class="w-full container py-8 px-4 flex flex-col gap-6 lg:py-10">
       <Header
         title={title || ""}
         description={description || ""}

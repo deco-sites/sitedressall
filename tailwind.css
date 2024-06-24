@@ -3,10 +3,16 @@
 @tailwind utilities;
 
 @layer base {
+  @font-face {
+    font-family: 'Berthold';
+    font-style: normal;
+    font-weight: 400;
+    src: url(/static/fonts/berthold-akzidenz-grotesk.otf) format("opentype");
+  }
 
   /* Allow changing font family via CMS */
   html {
-    font-family: var(--font-family);
+    font-family: 'Berthold';
   }
 
   mark {
