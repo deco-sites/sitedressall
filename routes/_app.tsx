@@ -27,7 +27,6 @@ export default defineApp(async (_req, ctx) => {
           rel="stylesheet"
         />
 
-
         {/* Web Manifest */}
         <link rel="manifest" href={asset("/site.webmanifest")} />
 
@@ -61,28 +60,38 @@ export default defineApp(async (_req, ctx) => {
             __html: `
             @font-face {
               font-family: "berthold";
-              src: url(${asset("/fonts/berthold-akzidenz-grotesk.otf")}) format("opentype");
+              src: url(${
+              asset("/fonts/berthold-akzidenz-grotesk.otf")
+            }) format("opentype");
               font-weight: 400;
             }
 
             @font-face {
               font-family: "berthold";
-              src: url(${asset("/fonts/berthold-akzidenz-grotesk-bold.otf")}) format("opentype");
+              src: url(${
+              asset("/fonts/berthold-akzidenz-grotesk-bold.otf")
+            }) format("opentype");
               font-weight: 700;
             }
 
             @font-face {
               font-family: "berthold";
-              src: url(${asset("/fonts/berthold-akzidenz-grotesk-medium.otf")}) format("opentype");
+              src: url(${
+              asset("/fonts/berthold-akzidenz-grotesk-medium.otf")
+            }) format("opentype");
               font-weight: 500;
             }
 
             @font-face {
               font-family: "berthold";
-              src: url(${asset("/fonts/berthold-akzidenz-grotesk-light.otf")}) format("opentype");
+              src: url(${
+              asset("/fonts/berthold-akzidenz-grotesk-light.otf")
+            }) format("opentype");
               font-weight: 300;
             }
-            `}} />
+            `,
+          }}
+        />
       </Head>
 
       {/* Rest of Preact tree */}
