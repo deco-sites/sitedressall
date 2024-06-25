@@ -1,7 +1,7 @@
 import Button from "../../components/ui/Button.tsx";
 import Icon from "../../components/ui/Icon.tsx";
 import Filters from "../../components/search/Filters.tsx";
-// import Sort from "../../components/search/Sort.tsx";
+import Sort from "../../components/search/Sort.tsx";
 import Drawer from "../../components/ui/Drawer.tsx";
 import Breadcrumb from "../../components/ui/Breadcrumb.tsx";
 import { useSignal } from "@preact/signals";
@@ -15,7 +15,7 @@ export type Props =
   };
 
 function SearchControls(
-  { filters, breadcrumb, displayFilter }: Props,
+  { filters, breadcrumb, displayFilter, sortOptions }: Props,
 ) {
   const open = useSignal(false);
 
@@ -42,14 +42,14 @@ function SearchControls(
         </>
       }
     >
-      <div class="flex flex-col justify-between lg:mb-4 lg:p-4 sm:mb-0 sm:p-0 sm:gap-4 sm:flex-row sm:h-[53px] sm:border-b sm:border-base-200">
+      <div class="flex flex-col justify-between lg:p-4 sm:mb-0 sm:p-0 sm:gap-4 sm:flex-row sm:h-[53px] sm:border-b sm:border-base-200">
         <div class="hidden flex-row items-center sm:p-0 lg:flex">
           <Breadcrumb itemListElement={breadcrumb?.itemListElement} />
         </div>
 
         <div class="flex flex-row items-center justify-between border-b border-base-200 sm:gap-4 sm:border-none">
           <Button
-            class={`w-full px-4 py-2 border-y border-x-0 border-[#d9d9d9] ${
+            class={`w-full px-4 block lg:hidden py-2 border-y border-x-0 border-[#d9d9d9] ${
               displayFilter ? "btn-ghost" : "btn-ghost"
             }`}
             onClick={() => {
@@ -82,6 +82,7 @@ function SearchControls(
               ))}
             />
           </Button>
+          {sortOptions.length > 0 && <Sort sortOptions={sortOptions} />}
         </div>
       </div>
     </Drawer>

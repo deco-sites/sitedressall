@@ -118,7 +118,7 @@ function Result({
         <div class="px-4">
           <BannerSearch banner={banner} />
         </div>
-        <div class="lg:mt-5">
+        <div class="lg:mt-5 block lg:flex lg:px-4">
           <div class="mb-8 block lg:hidden px-4">
             <div>
               <h3 class="font-bold text-base text-[#3c3c3b] mb-4">

@@ -42,7 +42,7 @@ function Sort({ sortOptions }: Props) {
   const sort = useSort();
 
   return (
-    <div class="border border-[#3c3c3b] px-4 h-[40px] flex justify-center items-center">
+    <div class="border border-[#3c3c3b] px-4 h-[40px] justify-center items-center hidden sm:flex">
       <label htmlFor="sort" class="">Ordenar:</label>
       <select
         id="sort"
