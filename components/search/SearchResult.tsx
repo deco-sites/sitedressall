@@ -111,17 +111,33 @@ function Result({
 
   return (
     <>
-      <div class="max-w-[1440px] mx-auto px-4 sm:py-10">
-        <div class="flex lg:hidden">
+      <div class="max-w-[1440px] mx-auto sm:py-10">
+        <div class="flex lg:hidden px-4">
           <Breadcrumb itemListElement={breadcrumb.itemListElement} />
         </div>
-        <div>
+        <div class="px-4">
           <BannerSearch banner={banner} />
         </div>
-        <div class="hidden lg:flex mt-5">
-          <div class="flex justify-center items-center">
+        <div class="lg:mt-5">
+          <div class="mb-8 block lg:hidden px-4">
+            <div>
+              <h3 class="font-bold text-base text-[#3c3c3b] mb-4">
+                CATEGORIAS EM DESTAQUE
+              </h3>
+            </div>
+            <Carousel
+              layout={{ itemWidth: 115 }}
+              {...sliders}
+              children={allItems.map((item) => (
+                <RoundedImageCard
+                  {...item}
+                />
+              ))}
+            />
+          </div>
+          <div class="hidden lg:flex justify-center items-center">
             <button
-              class="px-4 border-[#3c3c3b] border h-[40px] justify-center items-center hidden lg:flex mr-10"
+              class="px-4 border-[#3c3c3b] border h-[40px] justify-center items-center hidden lg:flex mr-10 gap-4"
               {...usePartialSection({
                 props: { displayFiltersDesk: !displayFiltersDesk },
               })}
@@ -215,10 +231,10 @@ function Result({
           <div
             class={`flex-grow transition-all ease-in-out pt-4 ${
               displayFiltersDesk ? "max-w-[1024px]" : "max-w-[1440px]"
-            } w-full`}
+            } w-full px-4`}
             id={id}
           >
-            <div class="mb-4 lg:mb-8">
+            <div class="mb-4 lg:mb-8 hidden lg:block">
               <div>
                 <h3 class="font-bold text-base text-[#3c3c3b] mb-4">
                   CATEGORIAS EM DESTAQUE
