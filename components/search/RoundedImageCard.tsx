@@ -27,7 +27,7 @@ export default function RoundedImageCard({
           height={115}
           alt="image"
         />
-        <p class="text-[15px] font-bold text-center mt-2">{label}</p>
+        <p class="text-[15px] rounded-[30px] font-bold text-center mt-1 p-2 hover:bg-[#FE8330] hover:underline hover:text-white">{label}</p>
       </a>
     </div>
   );

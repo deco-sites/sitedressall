@@ -148,6 +148,7 @@ function Result({
                 viewBox="0 0 24 24"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
+                class="z-[-1]"
               >
                 <path
                   d="M3 7H6"
@@ -195,6 +196,7 @@ function Result({
                 viewBox="0 0 24 24"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
+                class="z-[-1]"
               >
                 <path
                   d="M6 9L12 15L18 9"
@@ -230,7 +232,7 @@ function Result({
           )}
           <div
             class={`flex-grow transition-all ease-in-out pt-4 ${
-              displayFiltersDesk ? "max-w-[1024px]" : "max-w-[1440px]"
+              displayFiltersDesk ? "lg-new:max-w-[80vw] max-w-[1024px]" : "max-w-[1440px]"
             } w-full px-4`}
             id={id}
           >

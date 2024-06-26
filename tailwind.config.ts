@@ -49,6 +49,7 @@ export default {
         "max-768": { max: "768px" },
         "max-1023": { max: "1023px" },
         "max-1024": { max: "1024px" },
+        "lg-new": {min: "1025px", max: "1100px"}
       },
       aspectRatio: {
         mobile: "9/16",
