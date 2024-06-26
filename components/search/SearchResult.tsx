@@ -111,14 +111,14 @@ function Result({
 
   return (
     <>
-      <div class="max-w-[1440px] mx-auto sm:py-10">
+      <div class="sm:py-10">
         <div class="flex lg:hidden px-4">
           <Breadcrumb itemListElement={breadcrumb.itemListElement} />
         </div>
-        <div class="px-4">
+        <div class="">
           <BannerSearch banner={banner} />
         </div>
-        <div class="lg:mt-5 block lg:flex lg:px-4">
+        <div class="lg:mt-5 block lg:flex lg:px-4 max-w-[1440px] mx-auto">
           <div class="mb-8 block lg:hidden px-4">
             <div>
               <h3 class="font-bold text-base text-[#3c3c3b] mb-4">
@@ -216,7 +216,7 @@ function Result({
           )}
         </div>
 
-        <div class="flex flex-row lg:justify-between">
+        <div class="flex flex-row lg:justify-between max-w-[1440px] mx-auto">
           {layout?.variant === "aside" &&
             filters.length > 0 &&
             (isFirstPage || !isPartial) && (
