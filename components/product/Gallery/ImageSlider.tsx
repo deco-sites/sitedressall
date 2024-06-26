@@ -35,13 +35,13 @@ export default function GallerySlider(props: Props) {
 
   const { width, height } = layout || { width: 300, height: 370 };
 
-  const aspectRatio = `${width} / ${height}`;
+  // const aspectRatio = `${width} / ${height}`;
 
   return (
-    <div id={id} class="grid grid-flow-row sm:grid-flow-col">
+    <div id={id} class="grid grid-flow-row sm:grid-flow-col lg:flex-[1]">
       {/* Image Slider */}
-      <div class="relative order-1 sm:order-2">
-        <Slider class="carousel carousel-center gap-6 w-screen sm:w-[40vw]">
+      <div class="relative order-1 sm:order-2 lg:max-w-[470px]">
+        <Slider class="carousel carousel-center gap-6 w-screen sm:w-[40vw] lg:w-full">
           {images.map((img, index) => (
             <Slider.Item
               index={index}
@@ -50,7 +50,7 @@ export default function GallerySlider(props: Props) {
               <Image
                 class="w-full"
                 sizes="(max-width: 640px) 100vw, 40vw"
-                style={{ aspectRatio }}
+                // style={{ aspectRatio }}
                 src={img.url!}
                 alt={img.alternateName}
                 width={width}
@@ -94,7 +94,7 @@ export default function GallerySlider(props: Props) {
           <li class="carousel-item min-w-[63px] sm:min-w-[100px]">
             <Slider.Dot index={index}>
               <Image
-                style={{ aspectRatio }}
+                // style={{ aspectRatio }}
                 class="group-disabled:border-base-300 border rounded "
                 width={100}
                 height={123}

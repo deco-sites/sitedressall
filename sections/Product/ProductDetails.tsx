@@ -7,6 +7,8 @@ import Breadcrumb from "../../components/ui/Breadcrumb.tsx";
 export interface Props {
   /** @title Integration */
   page: ProductDetailsPage | null;
+  /** @title Link - Entre em contato */
+  cta: string
 }
 
 export default function ProductDetails({ page }: Props) {
@@ -23,7 +25,7 @@ export default function ProductDetails({ page }: Props) {
   return (
     <div class="w-full container py-8 flex flex-col gap-6 lg:pb-10">
       <Breadcrumb itemListElement={breadcrumb.itemListElement} />
-      <div class="flex flex-col gap-6 lg:flex-row lg:justify-center">
+      <div class="flex flex-col lg:flex-row lg:justify-center">
         <ImageGallerySlider page={page} />
         <ProductInfo page={page} />
       </div>

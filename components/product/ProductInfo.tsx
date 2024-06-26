@@ -70,21 +70,21 @@ function ProductInfo({ page, layout }: Props) {
   });
 
   return (
-    <div class="flex flex-col px-4 w-full" id={id}>
+    <div class="flex flex-col w-full lg:flex-[1]" id={id}>
       {/* <Breadcrumb itemListElement={breadcrumb.itemListElement} /> */}
       {/* Code and name */}
-      <div class="flex items-center justify-between md:mt-0 mt-8">
+      <div class="flex items-center lg:items-start justify-between md:mt-0 mt-8">
         {
           /* <div>
           {gtin && <span class="text-sm text-base-300">Cod. {gtin}</span>}
         </div> */
         }
-        <h1 class="text-2xl uppercase">
+        <h1 class="text-2xl uppercase text-[#3c3c3b]">
           {layout?.name === "concat"
             ? `${isVariantOf?.name} ${name}`
             : layout?.name === "productGroup"
-            ? isVariantOf?.name
-            : name}
+              ? isVariantOf?.name
+              : name}
         </h1>
         <div class="flex items-center justify-end gap-4">
           <ShareProductButton productName={name} />
@@ -98,16 +98,18 @@ function ProductInfo({ page, layout }: Props) {
       </div>
       {/* Prices */}
       <div class="mt-14 flex items-center justify-center gap-24 border-t border-[#B4B4B4] pt-6">
-        <div class="flex flex-row gap-2 items-center">
-          {
-            /* {(listPrice ?? 0) > price && (
+        <div class="flex flex-row gap-2 items-center w-full">
+
+          {/* {(listPrice ?? 0) > price && (
             <span class="line-through text-base-300 text-xs">
               {formatPrice(listPrice, offers?.priceCurrency)}
             </span>
-          )} */
-          }
-          <span class="text-4xl text-blackPrimary font-bold">
+          )} */}
+          <span class="text-4xl text-blackPrimary font-bold flex-[1] text-center">
             {formatPrice(price, offers?.priceCurrency)}
+          </span>
+          <span class="text-[#8c8b8b] text-xl font-light flex-[1] text-center">
+            12x de {formatPrice(price / 12)} sem juros
           </span>
         </div>
         {installments && installments !== "1" && (
