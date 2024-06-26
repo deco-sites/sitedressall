@@ -12,7 +12,7 @@ function BannerSearch(props: any) {
 
   return (
     <div class="flex flex-col lg:flex-row mx-auto">
-      <Picture preload class="w-full">
+      <Picture preload class="w-full lg:w-[40%]">
         <Source
           src={image.mobile}
           width={767}
@@ -28,7 +28,7 @@ function BannerSearch(props: any) {
         <img class="" src={image.desktop} alt={image.alt ?? title} />
       </Picture>
 
-      <div class="flex flex-col justify-center px-4 py-4 lg:px-8 lg:py-0 w-full">
+      <div class="flex flex-col justify-center px-4 py-4 lg:px-8 lg:py-0 w-full lg:w-[60%]">
         <div class="max-w-[670px]">
           <h1 class="lg:text-[32px] text-xl font-bold mb-4">
             {title}
