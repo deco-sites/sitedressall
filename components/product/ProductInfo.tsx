@@ -83,8 +83,8 @@ function ProductInfo({ page, layout }: Props) {
           {layout?.name === "concat"
             ? `${isVariantOf?.name} ${name}`
             : layout?.name === "productGroup"
-              ? isVariantOf?.name
-              : name}
+            ? isVariantOf?.name
+            : name}
         </h1>
         <div class="flex items-center justify-end gap-4">
           <ShareProductButton productName={name} />
@@ -99,12 +99,13 @@ function ProductInfo({ page, layout }: Props) {
       {/* Prices */}
       <div class="mt-14 flex items-center justify-center gap-24 border-t border-[#B4B4B4] pt-6">
         <div class="flex flex-row gap-2 items-center w-full">
-
-          {/* {(listPrice ?? 0) > price && (
+          {
+            /* {(listPrice ?? 0) > price && (
             <span class="line-through text-base-300 text-xs">
               {formatPrice(listPrice, offers?.priceCurrency)}
             </span>
-          )} */}
+          )} */
+          }
           <span class="text-4xl text-blackPrimary font-bold flex-[1] text-center">
             {formatPrice(price, offers?.priceCurrency)}
           </span>

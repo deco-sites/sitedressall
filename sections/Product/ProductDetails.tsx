@@ -8,7 +8,7 @@ export interface Props {
   /** @title Integration */
   page: ProductDetailsPage | null;
   /** @title Link - Entre em contato */
-  cta: string
+  cta: string;
 }
 
 export default function ProductDetails({ page }: Props) {
