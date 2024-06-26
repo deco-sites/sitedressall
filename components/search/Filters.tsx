@@ -5,14 +5,14 @@ import type {
   FilterToggle,
   FilterToggleValue,
   ProductListingPage,
-  SortOption
+  SortOption,
 } from "apps/commerce/types.ts";
 import { parseRange } from "apps/commerce/utils/filters.ts";
 import Sort from "../../components/search/Sort.tsx";
 
 interface Props {
   filters: ProductListingPage["filters"];
-  sortOptions?: SortOption[]
+  sortOptions?: SortOption[];
 }
 
 const isToggle = (filter: Filter): filter is FilterToggle =>
@@ -71,7 +71,11 @@ function FilterValues({ key, values }: FilterToggle) {
 function Filters({ filters, sortOptions }: Props) {
   return (
     <ul class="flex flex-col gap-6 p-4">
-      {sortOptions && sortOptions?.length > 0 && <li class="flex flex-col gap-4"><Sort sortOptions={sortOptions} /></li>}
+      {sortOptions && sortOptions?.length > 0 && (
+        <li class="flex flex-col gap-4">
+          <Sort sortOptions={sortOptions} />
+        </li>
+      )}
       {filters
         .filter(isToggle)
         .map((filter) => (

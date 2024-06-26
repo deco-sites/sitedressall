@@ -232,7 +232,9 @@ function Result({
           )}
           <div
             class={`flex-grow transition-all ease-in-out pt-4 ${
-              displayFiltersDesk ? "lg-new:max-w-[80vw] max-w-[1024px]" : "max-w-[1440px]"
+              displayFiltersDesk
+                ? "lg-new:max-w-[80vw] max-w-[1024px]"
+                : "max-w-[1440px]"
             } w-full px-4`}
             id={id}
           >

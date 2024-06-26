@@ -36,7 +36,7 @@ function SearchControls(
               </Button>
             </div>
             <div class="flex-grow overflow-auto">
-              <Filters filters={filters} sortOptions={sortOptions}/>
+              <Filters filters={filters} sortOptions={sortOptions} />
             </div>
           </div>
         </>
@@ -49,8 +49,9 @@ function SearchControls(
 
         <div class="flex flex-row items-center justify-between border-b border-base-200 sm:gap-4 sm:border-none w-full lg:w-fit">
           <Button
-            class={`w-full px-4 block lg:hidden py-2 border-y border-x-0 border-[#d9d9d9] ${displayFilter ? "btn-ghost" : "btn-ghost"
-              }`}
+            class={`w-full px-4 block lg:hidden py-2 border-y border-x-0 border-[#d9d9d9] ${
+              displayFilter ? "btn-ghost" : "btn-ghost"
+            }`}
             onClick={() => {
               open.value = true;
             }}
@@ -92,7 +93,7 @@ function SearchControls(
                       fill="#3C3C3B"
                     />
                   </svg>
-                </div>
+                </div>,
               ]}
             />
           </Button>
