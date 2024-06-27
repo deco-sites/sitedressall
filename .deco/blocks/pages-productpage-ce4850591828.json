@@ -21,7 +21,15 @@
       "page": {
         "__resolveType": "PDP Shopify"
       },
-      "__resolveType": "site/sections/Product/ProductDetails.tsx"
+      "__resolveType": "site/sections/Product/ProductDetails.tsx",
+      "cta": "/contato",
+      "title": "não encontrou o tamanho desejado?",
+      "ctaText": "entre em contato conosco",
+      "installments": {
+        "showInstallments": true,
+        "maxInstallment": 12,
+        "minValue": 0
+      }
     },
     {
       "__resolveType": "site/sections/Product/ProductShelf.tsx",
@@ -33,7 +41,7 @@
           "mobile": 2,
           "desktop": 4
         },
-        "showArrows": false,
+        "showArrows": true,
         "showDots": true
       },
       "products": {

@@ -18,6 +18,8 @@ import { ProductDetailsPage } from "apps/commerce/types.ts";
 import { mapProductToAnalyticsItem } from "apps/commerce/utils/productToAnalyticsItem.ts";
 import ProductSelector from "./ProductVariantSelector.tsx";
 import ShareProductButton from "../../islands/ShareButton.tsx";
+import { Returns } from '../../loaders/ParcelamentoConfig.tsx'
+import Icon from "../../components/ui/Icon.tsx";
 
 interface Props {
   page: ProductDetailsPage | null;
@@ -29,9 +31,13 @@ interface Props {
      */
     name?: "concat" | "productGroup" | "product";
   };
+  title?: string
+  ctaText?: string
+  cta?: string
+  installmentsConfig?: Returns
 }
 
-function ProductInfo({ page, layout }: Props) {
+function ProductInfo({ page, layout, title, cta, ctaText, installmentsConfig }: Props) {
   const platform = usePlatform();
   const id = useId();
 
@@ -52,7 +58,6 @@ function ProductInfo({ page, layout }: Props) {
     price = 0,
     listPrice,
     seller = "1",
-    installments,
     availability,
   } = useOffer(offers);
   const productGroupID = isVariantOf?.productGroupID ?? "";
@@ -69,6 +74,17 @@ function ProductInfo({ page, layout }: Props) {
     listPrice,
   });
 
+  const maxInstallments = installmentsConfig?.maxInstallment;
+  const minValue = installmentsConfig?.minValue;
+  let installments = maxInstallments;
+
+  if (minValue && minValue > 0 && maxInstallments) {
+    const calculatedInstallments = Math.ceil(price / minValue);
+    installments = calculatedInstallments > maxInstallments ? maxInstallments : calculatedInstallments;
+  }
+
+  const installmentValue = installments ? price / installments : false;
+
   return (
     <div class="flex flex-col w-full lg:flex-[1]" id={id}>
       {/* <Breadcrumb itemListElement={breadcrumb.itemListElement} /> */}
@@ -83,12 +99,14 @@ function ProductInfo({ page, layout }: Props) {
           {layout?.name === "concat"
             ? `${isVariantOf?.name} ${name}`
             : layout?.name === "productGroup"
-            ? isVariantOf?.name
-            : name}
+              ? isVariantOf?.name
+              : name}
         </h1>
         <div class="flex items-center justify-end gap-4">
           <ShareProductButton productName={name} />
-          {/* <Icon id="Wishlist" strokeWidth={1} size={44} /> */}
+          <button>
+            <Icon id="Wishlist" strokeWidth={1} size={44} />
+          </button>
         </div>
       </div>
 
@@ -109,15 +127,18 @@ function ProductInfo({ page, layout }: Props) {
           <span class="text-4xl text-blackPrimary font-bold flex-[1] text-center">
             {formatPrice(price, offers?.priceCurrency)}
           </span>
-          <span class="text-[#8c8b8b] text-xl font-light flex-[1] text-center">
-            12x de {formatPrice(price / 12)} sem juros
-          </span>
+          {installmentsConfig?.showInstallments && !!installments && !!installmentValue &&
+            <span class="text-[#8c8b8b] text-xl font-light flex-[1] text-center">
+              {installments}x de {formatPrice(installmentValue)} sem juros
+            </span>
+          }
+
         </div>
-        {installments && installments !== "1" && (
+        {/* {installmentsConfig?.showInstallments && (
           <span class="text-[#8C8B8B] font-light text-xl">
-            {`${installments} x sem juros`}
+            {`x sem juros`}
           </span>
-        )}
+        )} */}
       </div>
       {/* Add to Cart and Favorites button */}
       <div class="mt-4 sm:mt-10 flex flex-col gap-2">
@@ -197,14 +218,16 @@ function ProductInfo({ page, layout }: Props) {
         )}
       </div>
       {/* Contact Us */}
-      <div class="bg-[#F1F1F1] rounded-[20px] w-full text-center py-4">
-        <p class="text-xl text-blackPrimary mb-2.5">
-          não encontrou o tamanho desejado?
-        </p>
-        <button class="bg-white rounded-full font-bold border border-[#B4B4B4] px-4 py-2">
-          entre em contato conosco
-        </button>
-      </div>
+      {cta &&
+        <div class="bg-[#F1F1F1] rounded-[20px] w-full text-center py-4">
+          <p class="text-xl text-blackPrimary mb-2.5">
+            {title ?? "não encontrou o tamanho desejado?"}
+          </p>
+          <a href={cta} class="bg-white rounded-full font-bold border border-[#B4B4B4] px-4 py-2">
+            {ctaText ?? "entre em contato conosco"}
+          </a>
+        </div>
+      }
       {/* Description card */}
       <div class="md:mt-8 mt-6 px-4 py-5 border-t border-b border-[#B4B4B4] font-bold text-blackPrimary text-[15px]">
         <span class="text-sm">
