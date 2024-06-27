@@ -3,13 +3,13 @@ import ImageGallerySlider from "../../components/product/Gallery/ImageSlider.tsx
 import ProductInfo from "../../components/product/ProductInfo.tsx";
 import NotFound from "../../sections/Product/NotFound.tsx";
 import Breadcrumb from "../../components/ui/Breadcrumb.tsx";
-import { Returns } from '../../loaders/ParcelamentoConfig.tsx'
+import { Returns } from "../../loaders/ParcelamentoConfig.tsx";
 
 export interface Props {
   /** @title Integration */
   page: ProductDetailsPage | null;
   /** @title Configuração de parcelamento (somente exibição na loja) */
-  installments?: Returns
+  installments?: Returns;
   /** @title Título - Entre em contato */
   title?: string;
   /** @title Texto - Entre em contato */
@@ -18,7 +18,9 @@ export interface Props {
   cta?: string;
 }
 
-export default function ProductDetails({ page, cta, ctaText, title, installments }: Props) {
+export default function ProductDetails(
+  { page, cta, ctaText, title, installments }: Props,
+) {
   if (!page?.seo) {
     return <NotFound />;
   }
@@ -34,7 +36,13 @@ export default function ProductDetails({ page, cta, ctaText, title, installments
       <Breadcrumb itemListElement={breadcrumb.itemListElement} />
       <div class="flex flex-col lg:flex-row lg:justify-center">
         <ImageGallerySlider page={page} />
-        <ProductInfo page={page} installmentsConfig={installments} cta={cta} ctaText={ctaText} title={title} />
+        <ProductInfo
+          page={page}
+          installmentsConfig={installments}
+          cta={cta}
+          ctaText={ctaText}
+          title={title}
+        />
       </div>
     </div>
   );
