@@ -23,6 +23,7 @@ import * as $InputFile from "./islands/InputFile.tsx";
 import * as $Newsletter from "./islands/Newsletter.tsx";
 import * as $OutOfStock from "./islands/OutOfStock.tsx";
 import * as $ProductImageZoom from "./islands/ProductImageZoom.tsx";
+import * as $ProductVariantSelector from "./islands/ProductVariantSelector.tsx";
 import * as $SearchControls from "./islands/SearchControls.tsx";
 import * as $ShareButton from "./islands/ShareButton.tsx";
 import * as $ShippingSimulation from "./islands/ShippingSimulation.tsx";
@@ -56,6 +57,7 @@ const manifest = {
     "./islands/Newsletter.tsx": $Newsletter,
     "./islands/OutOfStock.tsx": $OutOfStock,
     "./islands/ProductImageZoom.tsx": $ProductImageZoom,
+    "./islands/ProductVariantSelector.tsx": $ProductVariantSelector,
     "./islands/SearchControls.tsx": $SearchControls,
     "./islands/ShareButton.tsx": $ShareButton,
     "./islands/ShippingSimulation.tsx": $ShippingSimulation,

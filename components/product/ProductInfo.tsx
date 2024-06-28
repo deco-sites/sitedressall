@@ -16,10 +16,12 @@ import { useOffer } from "../../sdk/useOffer.ts";
 import { usePlatform } from "../../sdk/usePlatform.tsx";
 import { ProductDetailsPage } from "apps/commerce/types.ts";
 import { mapProductToAnalyticsItem } from "apps/commerce/utils/productToAnalyticsItem.ts";
-import ProductSelector from "./ProductVariantSelector.tsx";
+// import ProductSelector from "./ProductVariantSelector.tsx";
+import ProductVariantSelector from "../../islands/ProductVariantSelector.tsx";
 import ShareProductButton from "../../islands/ShareButton.tsx";
 import { Returns } from "../../loaders/ParcelamentoConfig.tsx";
 import Icon from "../../components/ui/Icon.tsx";
+import { ImageWidget } from "apps/admin/widgets.ts";
 
 interface Props {
   page: ProductDetailsPage | null;
@@ -35,10 +37,21 @@ interface Props {
   ctaText?: string;
   cta?: string;
   installmentsConfig?: Returns;
+  imageModalDesk?: ImageWidget;
+  imageModalMob?: ImageWidget;
 }
 
 function ProductInfo(
-  { page, layout, title, cta, ctaText, installmentsConfig }: Props,
+  {
+    page,
+    layout,
+    title,
+    cta,
+    ctaText,
+    installmentsConfig,
+    imageModalDesk,
+    imageModalMob,
+  }: Props,
 ) {
   const platform = usePlatform();
   const id = useId();
@@ -90,7 +103,7 @@ function ProductInfo(
   const installmentValue = installments ? price / installments : false;
 
   return (
-    <div class="flex flex-col w-full lg:flex-[1]" id={id}>
+    <div class="flex flex-col w-full lg:flex-[1] max-w-[736px]" id={id}>
       {/* <Breadcrumb itemListElement={breadcrumb.itemListElement} /> */}
       {/* Code and name */}
       <div class="flex items-center lg:items-start justify-between md:mt-0 mt-8">
@@ -116,7 +129,11 @@ function ProductInfo(
 
       {/* Sku Selector */}
       <div class="md:mt-10 mt-6">
-        <ProductSelector product={product} />
+        <ProductVariantSelector
+          product={product}
+          imageModalDesk={imageModalDesk}
+          imageModalMob={imageModalMob}
+        />
       </div>
       {/* Prices */}
       <div class="mt-14 flex items-center justify-center gap-24 border-t border-[#B4B4B4] pt-6">

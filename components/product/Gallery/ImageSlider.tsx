@@ -2,7 +2,7 @@ import { ProductDetailsPage } from "apps/commerce/types.ts";
 import Image from "apps/website/components/Image.tsx";
 // import Icon from "../../../components/ui/Icon.tsx";
 import Slider from "../../../components/ui/Slider.tsx";
-import ProductImageZoom from "../../../islands/ProductImageZoom.tsx";
+// import ProductImageZoom from "../../../islands/ProductImageZoom.tsx";
 import { useId } from "../../../sdk/useId.ts";
 
 export interface Props {
@@ -38,7 +38,10 @@ export default function GallerySlider(props: Props) {
   // const aspectRatio = `${width} / ${height}`;
 
   return (
-    <div id={id} class="grid grid-flow-row sm:grid-flow-col lg:flex-[1]">
+    <div
+      id={id}
+      class="grid grid-flow-row sm:grid-flow-col lg:flex-[1] lg:max-w-[585px]"
+    >
       {/* Image Slider */}
       <div class="relative order-1 sm:order-2 lg:max-w-[470px]">
         <Slider class="carousel carousel-center gap-6 w-screen sm:w-[40vw] lg:w-full">
@@ -79,19 +82,21 @@ export default function GallerySlider(props: Props) {
         </Slider.NextButton> */
         }
 
-        <div class="absolute top-2 right-2 bg-base-100 rounded-full">
+        {
+          /* <div class="absolute top-2 right-2 bg-base-100 rounded-full">
           <ProductImageZoom
             images={images}
             width={700}
             height={Math.trunc(700 * height / width)}
           />
-        </div>
+        </div> */
+        }
       </div>
 
       {/* Dots */}
-      <ul class="carousel carousel-center gap-1 px-4 sm:px-0 sm:flex-col order-2 sm:order-1">
+      <ul class="carousel carousel-center gap-1 px-4 sm:px-0 sm:flex-col order-2 sm:order-1 max-w-[87px] lg:max-w-[83px]">
         {images.map((img, index) => (
-          <li class="carousel-item min-w-[63px] sm:min-w-[100px]">
+          <li class="carousel-item w-full">
             <Slider.Dot index={index}>
               <Image
                 // style={{ aspectRatio }}
