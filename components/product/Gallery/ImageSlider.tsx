@@ -40,11 +40,11 @@ export default function GallerySlider(props: Props) {
   return (
     <div
       id={id}
-      class="grid grid-flow-row sm:grid-flow-col lg:flex-[1] lg:max-w-[585px]"
+      class="flex lg:flex-[1] lg:max-w-[585px] px-4 lg:p-0 flex-row lg:flex-row-reverse lg:justify-end"
     >
       {/* Image Slider */}
-      <div class="relative order-1 sm:order-2 lg:max-w-[470px]">
-        <Slider class="carousel carousel-center gap-6 w-screen sm:w-[40vw] lg:w-full">
+      <div class="lg:max-w-[470px] max-w-[600px] w-full">
+        <Slider class="carousel carousel-center gap-6 w-full">
           {images.map((img, index) => (
             <Slider.Item
               index={index}
@@ -65,36 +65,10 @@ export default function GallerySlider(props: Props) {
             </Slider.Item>
           ))}
         </Slider>
-
-        {
-          /* <Slider.PrevButton
-          class="no-animation absolute left-2 top-1/2 btn btn-circle btn-outline"
-          disabled
-        >
-          <Icon size={24} id="ChevronLeft" strokeWidth={3} />
-        </Slider.PrevButton>
-
-        <Slider.NextButton
-          class="no-animation absolute right-2 top-1/2 btn btn-circle btn-outline"
-          disabled={images.length < 2}
-        >
-          <Icon size={24} id="ChevronRight" strokeWidth={3} />
-        </Slider.NextButton> */
-        }
-
-        {
-          /* <div class="absolute top-2 right-2 bg-base-100 rounded-full">
-          <ProductImageZoom
-            images={images}
-            width={700}
-            height={Math.trunc(700 * height / width)}
-          />
-        </div> */
-        }
       </div>
 
       {/* Dots */}
-      <ul class="carousel carousel-center gap-1 px-4 sm:px-0 sm:flex-col order-2 sm:order-1 max-w-[87px] lg:max-w-[83px]">
+      <ul class="carousel carousel-center gap-1 pl-4 lg:pr-4 lg:max-w-[83px]">
         {images.map((img, index) => (
           <li class="carousel-item w-full">
             <Slider.Dot index={index}>

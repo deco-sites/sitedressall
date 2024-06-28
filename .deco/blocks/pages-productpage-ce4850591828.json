@@ -29,7 +29,9 @@
         "showInstallments": true,
         "maxInstallment": 12,
         "minValue": 0
-      }
+      },
+      "imageModalDesk": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/8911/9fd83853-8875-4a53-90c0-117a67f32e4f",
+      "imageModalMob": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/8911/340213f7-ed6b-49db-b144-56ed17d5e79a"
     },
     {
       "__resolveType": "site/sections/Product/ProductShelf.tsx",

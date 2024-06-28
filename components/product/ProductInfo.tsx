@@ -43,8 +43,8 @@ interface Props {
 
 function ProductInfo(
   {
-    page,
     layout,
+    page,
     title,
     cta,
     ctaText,
@@ -106,12 +106,7 @@ function ProductInfo(
     <div class="flex flex-col w-full lg:flex-[1] max-w-[736px]" id={id}>
       {/* <Breadcrumb itemListElement={breadcrumb.itemListElement} /> */}
       {/* Code and name */}
-      <div class="flex items-center lg:items-start justify-between md:mt-0 mt-8">
-        {
-          /* <div>
-          {gtin && <span class="text-sm text-base-300">Cod. {gtin}</span>}
-        </div> */
-        }
+      <div class="items-center lg:items-start justify-between md:mt-0 mt-8 px-4 lg:px-0 hidden lg:flex">
         <h1 class="text-2xl uppercase text-[#3c3c3b]">
           {layout?.name === "concat"
             ? `${isVariantOf?.name} ${name}`
@@ -128,7 +123,7 @@ function ProductInfo(
       </div>
 
       {/* Sku Selector */}
-      <div class="md:mt-10 mt-6">
+      <div class="md:mt-10 mt-6 px-4 lg:px-0">
         <ProductVariantSelector
           product={product}
           imageModalDesk={imageModalDesk}
@@ -136,7 +131,7 @@ function ProductInfo(
         />
       </div>
       {/* Prices */}
-      <div class="mt-14 flex items-center justify-center gap-24 border-t border-[#B4B4B4] pt-6">
+      <div class="mt-14 flex items-center justify-center gap-24 border-t border-[#B4B4B4] pt-6 px-4 lg:px-0">
         <div class="flex flex-row gap-2 items-center w-full">
           {
             /* {(listPrice ?? 0) > price && (
@@ -145,13 +140,13 @@ function ProductInfo(
             </span>
           )} */
           }
-          <span class="text-4xl text-blackPrimary font-bold flex-[1] text-center">
+          <span class="lg:text-4xl text-2xl lg:text-blackPrimary text-black font-bold flex-[1] text-center">
             {formatPrice(price, offers?.priceCurrency)}
           </span>
           {installmentsConfig?.showInstallments && !!installments &&
             !!installmentValue &&
             (
-              <span class="text-[#8c8b8b] text-xl font-light flex-[1] text-center">
+              <span class="lg:text-[#8c8b8b] text-black lg:text-xl text-sm font-light flex-[1] text-center">
                 {installments}x de {formatPrice(installmentValue)} sem juros
               </span>
             )}
@@ -165,7 +160,7 @@ function ProductInfo(
         }
       </div>
       {/* Add to Cart and Favorites button */}
-      <div class="mt-4 sm:mt-10 flex flex-col gap-2">
+      <div class="mt-4 sm:mt-10 flex flex-col gap-2 px-4 lg:px-0">
         {availability === "https://schema.org/InStock"
           ? (
             <>
@@ -244,16 +239,18 @@ function ProductInfo(
       {/* Contact Us */}
       {cta &&
         (
-          <div class="bg-[#F1F1F1] rounded-[20px] w-full text-center py-4">
-            <p class="text-xl text-blackPrimary mb-2.5">
-              {title ?? "não encontrou o tamanho desejado?"}
-            </p>
-            <a
-              href={cta}
-              class="bg-white rounded-full font-bold border border-[#B4B4B4] px-4 py-2"
-            >
-              {ctaText ?? "entre em contato conosco"}
-            </a>
+          <div class="px-4 lg:px-0">
+            <div class="bg-[#F1F1F1] rounded-[20px] w-full text-center py-4 flex flex-col items-center">
+              <p class="text-xl text-blackPrimary mb-2.5">
+                {title ?? "não encontrou o tamanho desejado?"}
+              </p>
+              <a
+                href={cta}
+                class="bg-white rounded-full font-bold border border-[#B4B4B4] px-4 py-2 block w-fit"
+              >
+                {ctaText ?? "entre em contato conosco"}
+              </a>
+            </div>
           </div>
         )}
       {/* Description card */}

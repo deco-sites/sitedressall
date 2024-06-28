@@ -2,7 +2,7 @@ import type { Product } from "apps/commerce/types.ts";
 import { mapProductToAnalyticsItem } from "apps/commerce/utils/productToAnalyticsItem.ts";
 import { SendEventOnView } from "../../components/Analytics.tsx";
 import ProductCard from "../../components/product/ProductCard.tsx";
-import Icon from "../../components/ui/Icon.tsx";
+// import Icon from "../../components/ui/Icon.tsx";
 import Header from "../../components/ui/SectionHeader.tsx";
 import Slider from "../../components/ui/Slider.tsx";
 import { clx } from "../../sdk/clx.ts";
@@ -60,9 +60,7 @@ function ProductShelf({ products, title, description, layout }: Props) {
       <div
         id={id}
         class={clx(
-          "grid",
-          layout?.showArrows && "grid-cols-[48px_1fr_48px]",
-          "px-0 container",
+          "px-0 container flex flex-col relative",
         )}
       >
         <Slider class="carousel carousel-center sm:carousel-end sm:gap-1 row-start-2 row-end-5">
@@ -85,36 +83,86 @@ function ProductShelf({ products, title, description, layout }: Props) {
           ))}
         </Slider>
 
-        {layout?.showArrows && (
+        {
+          /* {layout?.showArrows && (
           <>
-            <div class="relative block z-10 col-start-1 row-start-3">
-              <Slider.PrevButton class="absolute w-12 h-12 flex justify-center items-center">
+            <div class="block z-10 col-start-1 row-start-3">
+              <Slider.PrevButton class="w-12 h-12 flex justify-center items-center">
                 <Icon size={24} id="ChevronLeft" strokeWidth={3} class="w-5" />
               </Slider.PrevButton>
             </div>
-            <div class="relative block z-10 col-start-3 row-start-3">
-              <Slider.NextButton class="absolute w-12 h-12 flex justify-center items-center">
+            <div class="block z-10 col-start-3 row-start-3">
+              <Slider.NextButton class="w-12 h-12 flex justify-center items-center">
                 <Icon size={24} id="ChevronRight" strokeWidth={3} />
               </Slider.NextButton>
             </div>
           </>
-        )}
+        )} */
+        }
         {layout?.showDots && (
-          <ul class="flex items-end justify-center gap-2">
-            {products?.map((_, index) => (
-              <li class="">
-                <Slider.Dot index={index}>
-                  {index + 1}
-                  {index === products.length - 1
-                    ? null
-                    : <span class="ml-2 text-blackPrimary font-bold">|</span>}
-                </Slider.Dot>
-              </li>
-            ))}
-          </ul>
+          <div class="flex justify-center items-center gap-4">
+            {layout?.showArrows && (
+              <>
+                <div class="block z-10 col-start-1 row-start-3">
+                  <Slider.PrevButton class="w-6 h-6 flex justify-center items-center">
+                    <svg
+                      class="pointer-events-none"
+                      width="7"
+                      height="14"
+                      viewBox="0 0 7 14"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M6.5 13L0.5 7L6.5 1"
+                        stroke="black"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                  </Slider.PrevButton>
+                </div>
+              </>
+            )}
+            <ul class="flex items-end justify-center gap-2 dots-container">
+              {products?.map((_, index) => (
+                <li class="">
+                  <Slider.Dot index={index}>
+                    {index + 1}
+                    {index === products.length - 1
+                      ? null
+                      : <span class="ml-2 text-blackPrimary font-bold">|</span>}
+                  </Slider.Dot>
+                </li>
+              ))}
+            </ul>
+            {layout?.showArrows && (
+              <>
+                <div class="block z-10 col-start-3 row-start-3">
+                  <Slider.NextButton class="w-6 h-6 flex justify-center items-center">
+                    <svg
+                      class="pointer-events-none"
+                      width="7"
+                      height="14"
+                      viewBox="0 0 7 14"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M0.5 13L6.5 7L0.5 1"
+                        stroke="black"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                  </Slider.NextButton>
+                </div>
+              </>
+            )}
+          </div>
         )}
 
-        <Slider.JS rootId={id} />
+        <Slider.JS rootId={id} scroll="smooth" infinite />
         <SendEventOnView
           id={id}
           event={{

@@ -5,6 +5,8 @@ import NotFound from "../../sections/Product/NotFound.tsx";
 import Breadcrumb from "../../components/ui/Breadcrumb.tsx";
 import { Returns } from "../../loaders/ParcelamentoConfig.tsx";
 import { ImageWidget } from "apps/admin/widgets.ts";
+import ShareProductButton from "../../islands/ShareButton.tsx";
+import Icon from "../../components/ui/Icon.tsx";
 
 export interface Props {
   /** @title Integration */
@@ -38,9 +40,30 @@ export default function ProductDetails(
   };
 
   return (
-    <div class="w-full max-w-[1440px] mx-auto py-8 flex flex-col gap-6 lg:pb-10 lg:px-8">
-      <Breadcrumb itemListElement={breadcrumb.itemListElement} />
-      <div class="flex flex-col lg:flex-row lg:justify-between">
+    <div class="w-full max-w-[1440px] mx-auto py-8 flex flex-col lg:gap-6 lg:pb-10 lg:px-8">
+      <div class="px-4 lg:px-0 border-b lg:border-none border-[#8c8b8b] mb-4 lg:mb-0 pb-3 lg:pb-0">
+        <Breadcrumb itemListElement={breadcrumb.itemListElement} />
+        <div class="items-center lg:items-start justify-between flex lg:hidden">
+          <h1 class="text-2xl uppercase text-black">
+            {page.product.name}
+            {
+              /* {page.layout?.name === "concat"
+              ? `${isVariantOf?.name} ${name}`
+              : layout?.name === "productGroup"
+                ? isVariantOf?.name
+                : name} */
+            }
+          </h1>
+          <div class="flex items-center justify-end gap-4">
+            {page.product.name &&
+              <ShareProductButton productName={page.product.name} />}
+            <button>
+              <Icon id="Wishlist" strokeWidth={1} size={44} />
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="flex flex-col lg:flex-row lg:justify-between lg:gap-6">
         <ImageGallerySlider page={page} />
         <ProductInfo
           page={page}

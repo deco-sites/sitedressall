@@ -35,72 +35,74 @@ function VariantSelector({ product, imageModalDesk, imageModalMob }: Props) {
                 {name}
               </span>
             </div>
-            {name.toLowerCase() === "tamanho" &&
+            {name.toLowerCase() === "tamanho" && imageModalDesk &&
+              imageModalMob &&
               (
                 <Button
                   class="text-xs font-light text-black underline"
                   onClick={() => openModalSize.value = true}
                 >
-                  vizualise o tamanho ideal
+                  vizualize o tamanho ideal
                 </Button>
               )}
           </div>
-          {/* {imageModalDesk && imageModalMob && */}
-          <Modal
-            loading="lazy"
-            open={openModalSize.value}
-            onClose={() => openModalSize.value = false}
-          >
-            <div class="modal-box w-full max-w-[1020px] relative p-2 lg:p-4 rounded-[20px]">
-              <button
-                onClick={() => openModalSize.value = false}
-                class="absolute top-0 right-0"
+          {imageModalDesk && imageModalMob &&
+            (
+              <Modal
+                loading="lazy"
+                open={openModalSize.value}
+                onClose={() => openModalSize.value = false}
               >
-                <svg
-                  class="pointer-events-none"
-                  width="45"
-                  height="45"
-                  viewBox="0 0 45 45"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M0 0H25C36.0457 0 45 8.95431 45 20V45H20C8.9543 45 0 36.0457 0 25V0Z"
-                    fill="white"
-                  />
-                  <path
-                    d="M35 10L11 34"
-                    stroke="black"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  />
-                  <path
-                    d="M11 10L35 34"
-                    stroke="black"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  />
-                </svg>
-              </button>
-              <div class="hidden lg:block overflow-hidden rounded-[20px]">
-                <Image
-                  src={imageModalDesk ??
-                    "https://placehold.co/987x754/000000/FFFFFF/png"}
-                  width={987}
-                />
-              </div>
-              <div class="block lg:hidden overflow-hidden rounded-[20px]">
-                <Image
-                  src={imageModalMob ??
-                    "https://placehold.co/324x298/000000/FFFFFF/png"}
-                  width={324}
-                />
-              </div>
-            </div>
-          </Modal>
-          {/* } */}
+                <div class="modal-box w-fit max-w-[1020px] relative p-2 lg:p-4 rounded-[20px]">
+                  <button
+                    onClick={() => openModalSize.value = false}
+                    class="absolute top-0 right-0"
+                  >
+                    <svg
+                      class="pointer-events-none"
+                      width="45"
+                      height="45"
+                      viewBox="0 0 45 45"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M0 0H25C36.0457 0 45 8.95431 45 20V45H20C8.9543 45 0 36.0457 0 25V0Z"
+                        fill="white"
+                      />
+                      <path
+                        d="M35 10L11 34"
+                        stroke="black"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                      <path
+                        d="M11 10L35 34"
+                        stroke="black"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                  </button>
+                  <div class="hidden lg:block overflow-hidden rounded-[20px]">
+                    <Image
+                      src={imageModalDesk ??
+                        "https://placehold.co/987x754/000000/FFFFFF/png"}
+                      width={987}
+                    />
+                  </div>
+                  <div class="block lg:hidden overflow-hidden rounded-[20px]">
+                    <Image
+                      src={imageModalMob ??
+                        "https://placehold.co/324x298/000000/FFFFFF/png"}
+                      width={324}
+                    />
+                  </div>
+                </div>
+              </Modal>
+            )}
           <ul class="ml-[80px] flex flex-row gap-3">
             {Object.entries(possibilities[name]).map(([value, link]) => {
               const relativeUrl = relative(url);
