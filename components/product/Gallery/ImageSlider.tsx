@@ -43,7 +43,7 @@ export default function GallerySlider(props: Props) {
       class="flex lg:flex-[1] lg:max-w-[585px] px-4 lg:p-0 flex-row lg:flex-row-reverse lg:justify-end relative"
     >
       {/* Image Slider */}
-      <div class="lg:max-w-[470px] max-w-[600px] w-full h-fit sticky top-0">
+      <div class="lg:max-w-[470px] max-w-[600px] w-full h-fit sticky top-40">
         <Slider class="carousel carousel-center gap-6 w-full">
           {images.map((img, index) => (
             <Slider.Item
@@ -68,7 +68,7 @@ export default function GallerySlider(props: Props) {
       </div>
 
       {/* Dots */}
-      <ul class="carousel carousel-center gap-1 p-0 ml-4 lg:mr-4 lg:ml-0 lg:max-w-[83px] h-fit sticky top-0">
+      <ul class="carousel carousel-center gap-1 p-0 ml-4 lg:mr-4 lg:ml-0 lg:max-w-[83px] h-fit sticky top-40">
         {images.map((img, index) => (
           <li class="carousel-item w-full">
             <Slider.Dot index={index}>
