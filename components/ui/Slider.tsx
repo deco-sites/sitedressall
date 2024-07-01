@@ -166,11 +166,15 @@ const setup = ({ rootId, scroll, interval, infinite }: Props) => {
       elements.forEach((item) => {
         const index = Number(item.target.getAttribute("data-slider-item")) || 0;
         const dot = dots?.item(index);
+        const dotBannerCarrosel = dot?.querySelector<HTMLDivElement>(".dot-banner-carrosel");
 
         if (item.isIntersecting) {
           dot?.setAttribute("disabled", "");
+          if(dotBannerCarrosel) dotBannerCarrosel.style.backgroundColor = "red";
+
         } else {
           dot?.removeAttribute("disabled");
+          if(dotBannerCarrosel) dotBannerCarrosel.style.backgroundColor = "";
         }
 
         if (!infinite) {
