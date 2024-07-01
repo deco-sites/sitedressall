@@ -63,7 +63,7 @@ export default function ProductDetails(
           </div>
         </div>
       </div>
-      <div class="flex flex-col lg:flex-row lg:justify-between lg:gap-6">
+      <div class="flex flex-col lg:flex-row lg:justify-between lg:gap-6 relative lg:static">
         <ImageGallerySlider page={page} />
         <ProductInfo
           page={page}
