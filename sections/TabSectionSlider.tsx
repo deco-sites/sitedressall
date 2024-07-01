@@ -34,7 +34,7 @@ export default function TabSectionSlider({
 
   return (
     <div className="w-full flex flex-col items-start container pt-8 my-0 max-w-deskContainer m-auto justify-between max-1024:flex-col max-1024:items-start lg:w-90vw sm:w-95vw px-4 md:px-0">
-      <div className="font-berthold text-3xl font-bold pb-4 max-w-[390px] max-1024:text-2xl">
+      <div className="font-berthold text-2xl lg:text-3xl font-bold pb-4 max-w-[390px] max-1024:text-2xl">
         {titleDiv}
       </div>
       <div className="flex flex-col ">
@@ -42,7 +42,7 @@ export default function TabSectionSlider({
           {titles.map((el, index: number) => (
             <li key={index}>
               <button
-                className={`tab tab-lg text-base font-medium text-center p-0 uppercase ${
+                className={`tab tab-lg text-sm lg:text-base font-medium text-center p-0 uppercase ${
                   index === indexToRender ? "tab-active" : ""
                 }`}
                 {...usePartialSection({ props: { indexActive: index } })}

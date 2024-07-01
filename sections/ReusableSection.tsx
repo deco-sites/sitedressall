@@ -29,13 +29,13 @@ export default function ReusableSection({
           {title}
         </h1>
         {descriptionTitle && (
-          <p className="max-w-[654px] font-berthold text-base font-normal leading-6 text-left">
+          <p className="max-w-[654px] font-berthold lg:text-base text-sm font-normal leading-6 text-left">
             {descriptionTitle}
           </p>
         )}
       </div>
       <div className="flex flex-col gap-4">
-        <p className="max-w-[654px] font-berthold text-base font-normal leading-6 text-left">
+        <p className="max-w-[654px] font-berthold lg:text-base text-sm font-normal leading-6 text-left mt-4">
           {description}
         </p>
         {links && (
@@ -44,7 +44,7 @@ export default function ReusableSection({
               <a
                 key={index}
                 href={link.url}
-                className={`font-berthold font-bold text-2xl leading-6 text-center w-fit rounded-3xl py-3 px-8 max-767:text-sm
+                className={`font-berthold font-bold lg:text-2xl leading-6 text-center w-fit rounded-3xl py-3 px-8 text-[15px]
                   ${
                   link.isWhite
                     ? "text-[#FE8330] bg-white border border-[#B4B4B4]"

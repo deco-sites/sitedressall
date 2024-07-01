@@ -140,12 +140,19 @@ function CategoryGrid(props: Props) {
                 }`}
               >
                 {title && (
+                  // <h3 class={`text-white text-4xl ${
+                  //   listQTE
+                  //     ? "font-medium "
+                  //     : "md:font-light font-normal lg:text-[64px] lg:leading-[74px] mb-6"
+                  // }`}>
+                  //   {title}
+                  // </h3>
                   <RichText
                     text={title}
-                    textStyle={`text-white ${
+                    textStyle={`text-white text-4xl mb-6 ${
                       listQTE
-                        ? "font-medium text-4xl"
-                        : "md:font-light font-normal md:text-[64px] leading-[74px] text-4xl"
+                        ? "font-medium "
+                        : "md:font-light font-normal lg:text-[64px] lg:leading-[74px]"
                     }`}
                     containerWidth={490}
                   />
@@ -158,7 +165,7 @@ function CategoryGrid(props: Props) {
                   />
                 )}
                 <Button
-                  class="font-bold text-xl text-orangePrimary bg-white py-3 px-8 leading-none rounded-full mt-2.5 hover:bg-orangePrimary hover:text-white hover:underline"
+                  class="font-bold text-[15px] lg:text-xl text-orangePrimary bg-white py-3 px-8 leading-none rounded-full hover:bg-orangePrimary hover:text-white hover:underline mt-6"
                   aria-label={label}
                 >
                   {buttonText}

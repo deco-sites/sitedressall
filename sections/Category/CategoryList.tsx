@@ -56,8 +56,8 @@ function CardText({
         <h3
           class={`${
             textPosition === "inside"
-              ? "text-white font-bold text-sectionTitle"
-              : "text-blackPrimary font-medium text-sectionTitle"
+              ? "text-white font-bold lg:text-sectionTitle text-2xl"
+              : "text-blackPrimary font-medium lg:text-sectionTitle text-2xl"
           }`}
         >
           {label}

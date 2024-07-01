@@ -118,14 +118,14 @@ function BannerItem(
     >
       {action && (
         <div class="absolute top-0 md:bottom-0 bottom-[95px] left-0 right-0 sm:right-auto flex flex-col justify-end gap-4 px-8 py-12">
-          <h1 class="md:font-light font-normal text-white text-[40px] md:text-[96px]">
+          <h1 class="md:font-light font-normal text-white text-[40px] lg:text-[96px]">
             {action.title}
           </h1>
-          <span class="md:font-normal text-sm font-medium md:text-base text-white">
+          <span class="md:font-normal text-sm font-medium lg:text-base text-white">
             {action.subTitle}
           </span>
           <Button
-            class="bg-white text-orangePrimary font-bold text-buttonText md:text-xl rounded-full px-4 py-2 md:px-8 md:py-3 w-fit"
+            class="bg-white text-orangePrimary font-bold text-buttonText lg:text-xl rounded-full px-4 py-2 lg:px-8 lg:py-3 w-fit"
             aria-label={action.label}
           >
             {action.label}
