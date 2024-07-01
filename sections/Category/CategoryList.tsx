@@ -142,7 +142,7 @@ function CategoryList(props: Props) {
   return (
     <div
       id={id}
-      class="py-8 flex flex-col gap-8 lg:gap-10 text-base-content lg:py-10 max-w-deskContainer m-auto px-4 md:px-0"
+      class="py-8 flex flex-col gap-8 lg:gap-10 text-base-content lg:py-10 max-w-deskContainer m-auto px-4 md:px-0 lg:w-90vw sm:w-95vw w-full"
     >
       <div class="flex items-center justify-between">
         <Header
@@ -175,7 +175,7 @@ function CategoryList(props: Props) {
             ({ tag, label, description, href, image, buttonText }, index) => (
               <Slider.Item
                 index={index}
-                class="flex flex-col gap-4 carousel-item md:first:pl-6 first:pl-0 last:pr-6 sm:last:pr-0 w-full md:w-1/4"
+                class="flex flex-col gap-4 carousel-item w-full md:w-1/4"
               >
                 <div href={href} class="flex flex-col gap-4 w-full lg:h-auto">
                   {image && (
@@ -242,7 +242,7 @@ function CategoryList(props: Props) {
           <>
             <Slider.PrevButton
               class={clx(
-                "absolute left-0 w-11 h-11 text-blackPrimary border-blackPrimary border rounded-full flex items-center justify-center bg-white",
+                "absolute left-0 lg:left-[-20px] w-11 h-11 text-blackPrimary border-blackPrimary border rounded-full flex items-center justify-center bg-white",
               )}
               style={{ top: topValue }}
             >
@@ -256,7 +256,7 @@ function CategoryList(props: Props) {
 
             <Slider.NextButton
               class={clx(
-                "absolute right-0 w-11 h-11 text-blackPrimary border-blackPrimary border rounded-full flex items-center justify-center bg-white",
+                "absolute right-0 lg:right-[-20px] w-11 h-11 text-blackPrimary border-blackPrimary border rounded-full flex items-center justify-center bg-white",
               )}
               style={{ top: topValue }}
             >

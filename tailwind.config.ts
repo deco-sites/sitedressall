@@ -35,6 +35,10 @@ export default {
         blackPrimary: "#3C3C3B",
         middleGray: "#D9D9D9",
       },
+      width: {
+        '90vw': '90vw',
+        '95vw': '95vw'
+      },
       maxWidth: {
         deskContainer: "1440px",
         "98vw": "98vw",

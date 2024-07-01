@@ -90,7 +90,7 @@ function CategoryGrid(props: Props) {
   } = props;
   const listQTE = list?.length > 1;
   return (
-    <div id={id} class="container mt-16">
+    <div id={id} class="container mt-16 max-w-deskContainer m-auto lg:w-90vw sm:w-95vw w-full">
       <div
         class={`grid px-4 md:px-0 md:${
           listQTE ? "grid-cols-2" : "grid-cols-1"

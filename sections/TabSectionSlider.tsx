@@ -33,7 +33,7 @@ export default function TabSectionSlider({
     : 0;
 
   return (
-    <div className="w-full flex flex-col items-start container pt-20 my-0 mx-auto justify-between max-1024:flex-col max-1024:items-start max-1024:p-4">
+    <div className="w-full flex flex-col items-start container pt-8 my-0 max-w-deskContainer m-auto justify-between max-1024:flex-col max-1024:items-start lg:w-90vw sm:w-95vw px-4 md:px-0">
       <div className="font-berthold text-3xl font-bold pb-4 max-w-[390px] max-1024:text-2xl">
         {titleDiv}
       </div>

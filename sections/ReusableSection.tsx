@@ -23,7 +23,7 @@ export default function ReusableSection({
   links,
 }: Props) {
   return (
-    <div className="flex justify-between container py-12 items-center max-1024:flex-col max-1024:p-6 max-1024:items-start">
+    <div className="flex justify-between container py-12 max-w-deskContainer mx-auto items-center max-1024:flex-col max-1024:items-start lg:w-90vw sm:w-95vw px-4 md:px-0">
       <div className="max-w-[365px] flex flex-col gap-4">
         <h1 className="font-berthold text-3xl font-bold max-1024:text-2xl">
           {title}
@@ -39,7 +39,7 @@ export default function ReusableSection({
           {description}
         </p>
         {links && (
-          <div className="flex flex-row gap-4">
+          <div className="flex flex-col gap-4 lg:flex-row">
             {links.map((link, index) => (
               <a
                 key={index}
