@@ -54,7 +54,7 @@ function ProductCard({
     <div
       id={id}
       data-deco="view-product"
-      class="card card-compact group w-full lg:border lg:border-transparent lg:p-4"
+      class="card card-compact group w-full lg:border lg:border-transparent"
     >
       {/* Add click event to dataLayer */}
       <SendEventOnClick

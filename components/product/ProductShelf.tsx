@@ -63,7 +63,7 @@ function ProductShelf({ products, title, description, layout }: Props) {
           "px-0 container flex flex-col relative",
         )}
       >
-        <Slider class="carousel carousel-center sm:carousel-end sm:gap-1 row-start-2 row-end-5">
+        <Slider class="carousel carousel-center sm:carousel-end sm:gap-1 row-start-2 row-end-5 lg:gap-6">
           {products?.map((product, index) => (
             <Slider.Item
               index={index}
