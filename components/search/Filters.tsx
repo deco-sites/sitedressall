@@ -8,7 +8,8 @@ import type {
   SortOption,
 } from "apps/commerce/types.ts";
 import { parseRange } from "apps/commerce/utils/filters.ts";
-import Sort from "../../components/search/Sort.tsx";
+// import Sort from "../../components/search/Sort.tsx";
+import Sort from "../../islands/Sort.tsx";
 
 interface Props {
   filters: ProductListingPage["filters"];
