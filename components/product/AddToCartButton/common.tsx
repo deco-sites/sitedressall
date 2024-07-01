@@ -43,7 +43,7 @@ export default function AddToCartButton(props: Props) {
   return (
     <Button
       {...btnProps}
-      class="bg-orangePrimary text-white text-xl font-bold rounded-full w-full py-4"
+      class="bg-orangePrimary text-white text-base lg:text-xl font-bold rounded-full w-full py-4"
     >
       ADICIONA AO CARRINHO
     </Button>
