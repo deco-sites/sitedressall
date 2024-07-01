@@ -131,8 +131,8 @@ function ProductInfo(
         />
       </div>
       {/* Prices */}
-      <div class="mt-14 flex items-center justify-center gap-24 border-t border-[#B4B4B4] pt-6 px-4 lg:px-0">
-        <div class="flex flex-row gap-2 items-center w-full">
+      <div class="mt-14 flex items-center justify-center gap-24 border-t border-[#B4B4B4] pt-6 mx-4 lg:mx-0">
+        <div class="flex flex-row gap-2 items-center w-full justify-between">
           {
             /* {(listPrice ?? 0) > price && (
             <span class="line-through text-base-300 text-xs">
@@ -140,13 +140,13 @@ function ProductInfo(
             </span>
           )} */
           }
-          <span class="lg:text-4xl text-2xl lg:text-blackPrimary text-black font-bold flex-[1] text-center">
+          <span class="lg:text-4xl text-2xl lg:text-blackPrimary text-black font-bold lg:flex-[1] text-center">
             {formatPrice(price, offers?.priceCurrency)}
           </span>
           {installmentsConfig?.showInstallments && !!installments &&
             !!installmentValue &&
             (
-              <span class="lg:text-[#8c8b8b] text-black lg:text-xl text-sm font-light flex-[1] text-center">
+              <span class="lg:text-[#8c8b8b] text-black lg:text-xl text-sm font-light lg:flex-[1] text-center">
                 {installments}x de {formatPrice(installmentValue)} sem juros
               </span>
             )}
