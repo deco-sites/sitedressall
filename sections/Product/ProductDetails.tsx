@@ -41,7 +41,7 @@ export default function ProductDetails(
 
   return (
     <div class="w-full max-w-[1440px] mx-auto py-8 flex flex-col lg:gap-6 lg:pb-10 lg:px-8">
-      <div class="px-4 lg:px-0 border-b lg:border-none border-[#8c8b8b] mb-4 lg:mb-0 pb-3 lg:pb-0">
+      <div class="px-4 lg:px-0 pb-3 lg:pb-0">
         <Breadcrumb itemListElement={breadcrumb.itemListElement} />
         <div class="items-center lg:items-start justify-between flex lg:hidden">
           <h1 class="text-2xl uppercase text-black">

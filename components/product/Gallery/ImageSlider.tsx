@@ -40,7 +40,7 @@ export default function GallerySlider(props: Props) {
   return (
     <div
       id={id}
-      class="flex lg:flex-[1] lg:max-w-[585px] px-4 lg:p-0 flex-row lg:flex-row-reverse lg:justify-end relative"
+      class="flex lg:flex-[1] lg:max-w-[585px] px-4 lg:p-0 flex-row lg:flex-row-reverse lg:justify-end relative border-y lg:border-none border-[#8c8b8b] py-4 lg:py-0 shadow-[0_0_10px_0px_#00000040] lg:shadow-none"
     >
       {/* Image Slider */}
       <div class="lg:max-w-[470px] max-w-[600px] w-full h-fit sticky top-40">
