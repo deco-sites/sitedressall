@@ -40,10 +40,10 @@ export default function GallerySlider(props: Props) {
   return (
     <div
       id={id}
-      class="flex lg:flex-[1] lg:max-w-[585px] px-4 lg:p-0 flex-row lg:flex-row-reverse lg:justify-end border-y lg:border-none border-[#8c8b8b] py-4 lg:py-0 shadow-[0_0_10px_0px_#00000040] lg:shadow-none sticky lg:relative top-28 bg-white"
+      class="flex lg:flex-[1] lg:max-w-[585px] px-4 lg:p-0 flex-row lg:flex-row-reverse lg:justify-end border-y lg:border-none border-[#8c8b8b] py-4 lg:py-0 shadow-[0_0_10px_0px_#00000040] lg:shadow-none sticky lg:relative top-24 lg:top-0 bg-white"
     >
       {/* Image Slider */}
-      <div class="lg:max-w-[470px] max-w-[600px] w-full h-fit lg:sticky top-39">
+      <div class="lg:max-w-[470px] max-w-[600px] w-full h-fit lg:sticky top-24">
         <Slider class="carousel carousel-center gap-6 w-full">
           {images.map((img, index) => (
             <Slider.Item
