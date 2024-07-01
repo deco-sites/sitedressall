@@ -262,7 +262,7 @@ function ProductInfo(
                 detalhes do produto
               </summary>
               <div
-                class="ml-2 mt-2 font-normal"
+                class="mt-2 font-normal"
                 dangerouslySetInnerHTML={{ __html: description }}
               />
             </details>
