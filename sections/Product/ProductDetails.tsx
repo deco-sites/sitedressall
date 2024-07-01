@@ -44,7 +44,7 @@ export default function ProductDetails(
       <div class="px-4 lg:px-0 pb-3 lg:pb-0">
         <Breadcrumb itemListElement={breadcrumb.itemListElement} />
         <div class="items-center lg:items-start justify-between flex lg:hidden">
-          <h1 class="text-2xl uppercase text-black">
+          <h1 class="lg:text-2xl text-base uppercase text-black">
             {page.product.name}
             {
               /* {page.layout?.name === "concat"
